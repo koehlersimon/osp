@@ -10,13 +10,13 @@ OSP uses a template that is almost 100% based on the Bootstrap 5 framework. All 
 
 ## Why you should use OSP
 
-- Decentralized social network
-- 100% control over data and privacy
-- Social media and Enterprise CMS features combined
+- Allows you to setup a decentralized social network
+- Each user (installation) has 100% control over data and privacy
 - High security through the use of TYPO3
 - More freedom and individuality in the design
+- Social media and Enterprise CMS features combined
 
-## Key Functions
+## Key Features
 
 - Post editor with Markdown language
 - Personal wall
@@ -24,9 +24,21 @@ OSP uses a template that is almost 100% based on the Bootstrap 5 framework. All 
 - Static content management
 - Based on Bootstrap 5
 
-## Planned functions
+## Upcoming Features
 
 - Like functionality
 - Comment functionality
-- Friends management
+- Friends API
 - External wall
+- User settings page
+- Static page builder
+
+## When will OSP be officially released?
+
+A first official release of OSP is planned for late August 2020. Then the extension will be available in the official TYPO3 repository and also for Composer.
+
+You can download and test the extension here, but at your own risk! We ask you to refrain from feature requests as we are still in the process of integrating planned features.
+
+## Questions?
+
+If you are interested in contributing or have any other questions: https://simpn-koehler.com/en/contact

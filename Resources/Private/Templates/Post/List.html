@@ -1,0 +1,48 @@
+{namespace textile=SIMONKOEHLER\Textile\ViewHelpers}
+{namespace post=SIMONKOEHLER\Osp\ViewHelpers}
+
+<f:if condition="{posts}">
+	<f:then>
+	<f:for each="{posts}" as="post">
+	<article class="post mb-4" data-posttype="{post.posttype}" id="p{post.uid}">
+		<div class="card bg-white border p-3 mb-2">
+			<div class="d-flex">
+				<div class="mb-2 mr-auto">
+					<strong class="text-primary">{post.ownername}</strong>
+					<small><post:date content="{post.crdate}"/></small>
+				</div>
+				<f:security.ifAuthenticated>
+					<div class="dropdown ml-auto">
+					  <a class="btn btn-default btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">&nbsp;</a>
+					  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+					    <li><f:link.action action="delete" arguments="{post:post}" controller="Post" class="dropdown-item" title="Delete"><i class="fa fa-trash"></i> delete</f:link.action></li>
+					    <li><f:link.action action="edit" arguments="{post:post}" controller="Post" class="dropdown-item" title="Edit"><i class="fa fa-edit"></i> edit</f:link.action></li>
+						<li><h6 class="dropdown-header">Other actions</h6></li>
+						<li><f:link.action pageUid="{settings.pages.post.detail}" action="detail" arguments="{post:post}" controller="Post" class="dropdown-item" title="Permalink"><i class="fa fa-search"></i> detail view</f:link.action></li>
+					  </ul>
+					</div>
+				</f:security.ifAuthenticated>
+			</div>
+
+			<f:format.raw>
+				<f:format.crop maxCharacters="140" append="... <a href='{f:uri.action(action:'detail',controller:'Post',pageUid:'{settings.pages.post.detail}',arguments:'{post:post}')}' class=\"link-info\">more</a>">
+					<textile:parse content="{post.content}"/>
+				</f:format.crop>
+			</f:format.raw>
+			<f:if condition="{post.media}">
+				<f:render partial="Post/Media" arguments="{media:post.media}"/>
+			</f:if>
+			<hr>
+			<f:render partial="Post/Buttons" arguments="{_all}"/>
+		</div>
+
+	</article>
+	</f:for>
+	</f:then>
+	<f:else>
+		<div class="card p-4">
+			<h1>Welcome to OSP!</h1>
+			<p class="lead">We couldn't find any public timeline posts for this account. Please <f:link.page pageUid="{settings.pages.login}">login</f:link.page> to see any private posts.</p>
+		</div>
+	</f:else>
+</f:if>

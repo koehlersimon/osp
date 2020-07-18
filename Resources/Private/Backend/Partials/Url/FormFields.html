@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="url">
+	<f:translate key="tx_sitetools_domain_model_url.url" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="url" /><br />
+<label for="blocked">
+	<f:translate key="tx_sitetools_domain_model_url.blocked" />
+</label><br />
+	<f:form.checkbox property="blocked" value="1" /><br />
+<label for="lastreport">
+	<f:translate key="tx_sitetools_domain_model_url.lastreport" />
+</label><br />
+	<f:form.textfield property="lastreport" value="{url.lastreport->f:format.date()}" /><br />
+</html>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-01T14:26:00Z" product-name="go_sitetools">
+		<header/>
+		<body>
+			<trans-unit id="content_type.description">
+				<source>contentType</source>
+			</trans-unit>
+			<trans-unit id="http_code.description">
+				<source>httpCode</source>
+			</trans-unit>
+			<trans-unit id="header_size.description">
+				<source>headerSize</source>
+			</trans-unit>
+			<trans-unit id="request_size.description">
+				<source>requestSize</source>
+			</trans-unit>
+			<trans-unit id="filetime.description">
+				<source>filetime</source>
+			</trans-unit>
+			<trans-unit id="ssl_verify_result.description">
+				<source>sslVerifyResult</source>
+			</trans-unit>
+			<trans-unit id="redirect_count.description">
+				<source>redirectCount</source>
+			</trans-unit>
+			<trans-unit id="total_time.description">
+				<source>totalTime</source>
+			</trans-unit>
+			<trans-unit id="namelookup_time.description">
+				<source>namelookupTime</source>
+			</trans-unit>
+			<trans-unit id="connect_time.description">
+				<source>connectTime</source>
+			</trans-unit>
+			<trans-unit id="pretransfer_time.description">
+				<source>pretransferTime</source>
+			</trans-unit>
+			<trans-unit id="size_upload.description">
+				<source>sizeUpload</source>
+			</trans-unit>
+			<trans-unit id="size_download.description">
+				<source>sizeDownload</source>
+			</trans-unit>
+			<trans-unit id="speed_download.description">
+				<source>speedDownload</source>
+			</trans-unit>
+			<trans-unit id="speed_upload.description">
+				<source>speedUpload</source>
+			</trans-unit>
+			<trans-unit id="download_content_length.description">
+				<source>downloadContentLength</source>
+			</trans-unit>
+			<trans-unit id="upload_content_length.description">
+				<source>uploadContentLength</source>
+			</trans-unit>
+			<trans-unit id="starttransfer_time.description">
+				<source>starttransferTime</source>
+			</trans-unit>
+			<trans-unit id="redirect_time.description">
+				<source>redirectTime</source>
+			</trans-unit>
+			<trans-unit id="redirect_url.description">
+				<source>redirectUrl</source>
+			</trans-unit>
+			<trans-unit id="primary_ip.description">
+				<source>primaryIp</source>
+			</trans-unit>
+			<trans-unit id="primary_port.description">
+				<source>primaryPort</source>
+			</trans-unit>
+			<trans-unit id="local_ip.description">
+				<source>localIp</source>
+			</trans-unit>
+			<trans-unit id="local_port.description">
+				<source>localPort</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

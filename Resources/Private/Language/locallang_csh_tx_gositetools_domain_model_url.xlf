@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-01T14:26:00Z" product-name="go_sitetools">
+		<header/>
+		<body>
+			<trans-unit id="url.description">
+				<source>url</source>
+			</trans-unit>
+			<trans-unit id="blocked.description">
+				<source>blocked</source>
+			</trans-unit>
+			<trans-unit id="lastreport.description">
+				<source>lastreport</source>
+			</trans-unit>
+			<trans-unit id="reports.description">
+				<source>reports</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

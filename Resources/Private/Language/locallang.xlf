@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-01T14:26:00Z" product-name="go_sitetools">
+		<header/>
+		<body>
+
+			<trans-unit id="be_layout.pagets__default">
+				<source>OSP Homepage Default</source>
+			</trans-unit>
+			<trans-unit id="be_layout.pagets__default">
+				<source>OSP Homepage Default</source>
+			</trans-unit>
+
+
+			<trans-unit id="be_layout.columns.header">
+				<source>Page Header</source>
+			</trans-unit>
+			<trans-unit id="be_layout.columns.left">
+				<source>Left Sidebar</source>
+			</trans-unit>
+			<trans-unit id="be_layout.columns.main">
+				<source>Main Content</source>
+			</trans-unit>
+			<trans-unit id="be_layout.columns.right">
+				<source>Right Sidebar</source>
+			</trans-unit>
+			<trans-unit id="be_layout.columns.footer.one">
+				<source>Footer One</source>
+			</trans-unit>
+			<trans-unit id="be_layout.columns.footer.two">
+				<source>Footer Two</source>
+			</trans-unit>
+			<trans-unit id="be_layout.columns.footer.three">
+				<source>Footer Three</source>
+			</trans-unit>
+			<trans-unit id="be_layout.columns.footer.four">
+				<source>Footer Four</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_osp_domain_model_post">
+				<source>Post</source>
+			</trans-unit>
+			<trans-unit id="tx_osp_domain_model_post.content">
+				<source>Content</source>
+			</trans-unit>
+
+
+		</body>
+	</file>
+</xliff>

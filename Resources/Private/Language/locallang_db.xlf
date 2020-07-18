@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-01T14:26:00Z" product-name="go_sitetools">
+		<header/>
+		<body>
+
+
+			<trans-unit id="tx_osp_domain_model_post">
+				<source>Post</source>
+			</trans-unit>
+			<trans-unit id="tx_osp_domain_model_post.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_osp_domain_model_post.likes">
+				<source>Likes</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_osp_domain_model_like">
+				<source>Like</source>
+			</trans-unit>
+			<trans-unit id="tx_osp_domain_model_like.owner">
+				<source>Owner</source>
+			</trans-unit>
+			<trans-unit id="tx_osp_domain_model_like.parent">
+				<source>Parent Table Uid</source>
+			</trans-unit>
+			<trans-unit id="tx_osp_domain_model_like.parent_type">
+				<source>Parent Table Type</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_osp_domain_model_comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_osp_domain_model_comment.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_osp_domain_model_comment.likes">
+				<source>Likes</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

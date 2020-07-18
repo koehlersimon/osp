@@ -1,0 +1,48 @@
+<div class="card bg-white mb-4">
+    <div class="card-header"><h6 class="m-0"><i class="fa fa-file"></i> Pages</h6></div>
+    <div class="card-body">
+        <ul class="nav flex-column">
+            <f:for each="{menuSecondary}" as="menu">
+
+                <f:if condition="{menu.children}">
+                    <f:then>
+                        <li>
+                           <a class="dropdown-item {f:if(condition:'{menu.active} === 1', then:'active')}"
+                              href="{menu.link}"
+                              target="{menu.target}"
+                              title="{menu.title}"
+                              >
+                              {menu.title}
+                           </a>
+                           <ul class="nav">
+                               <f:for each="{menu.children}" as="menu">
+                                   <li>
+                                      <a class="dropdown-item {f:if(condition:'{menu.active} === 1', then:'active')}"
+                                         href="{menu.link}"
+                                         target="{menu.target}"
+                                         title="{menu.title}"
+                                         >
+                                         {menu.title}
+                                      </a>
+                                   </li>
+                               </f:for>
+                           </ul>
+                        </li>
+                    </f:then>
+                    <f:else>
+                    <li>
+                       <a class="dropdown-item {f:if(condition:'{menu.active} === 1', then:'active')}"
+                          href="{menu.link}"
+                          target="{menu.target}"
+                          title="{menu.title}"
+                          >
+                          {menu.title}
+                       </a>
+                    </li>
+                    </f:else>
+                </f:if>
+
+             </f:for>
+         </ul>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="shadow">
+
+	<f:if condition="{f:count(subject:media)} === 1">
+		<f:then>
+			<a href="{f:uri.image(image:media.0,maxHeight:'1000')}" class="d-inline-block lightbox w-100">
+				<f:image src="{media.0.uid}" treatIdAsReference="1" height="380c" width="600c" class="w-100 h-auto"/>
+			</a>
+		</f:then>
+		<f:else>
+			<div class="row g-0">
+			<f:for each="{media}" as="image" iteration="iterator">
+			<f:if condition="{iterator.isFirst}">
+				<f:then>
+				<div class="col-12">
+					<a href="{f:uri.image(image:image,maxHeight:'1000')}" class="d-inline-block lightbox">
+						<f:image src="{image.uid}" treatIdAsReference="1" height="380c" width="600c" class="w-100 h-auto"/>
+					</a>
+				</div>
+				</f:then>
+				<f:else>
+				<div class="col-3">
+					<a href="{f:uri.image(image:image,maxHeight:'1000')}" class="d-inline-block lightbox h-100">
+						<f:image src="{image.uid}" treatIdAsReference="1" width="180c" height="180c" class="img-fluid"/>
+					</a>
+				</div>
+				</f:else>
+			</f:if>
+			</f:for>
+			</div>
+		</f:else>
+	</f:if>
+
+</div>

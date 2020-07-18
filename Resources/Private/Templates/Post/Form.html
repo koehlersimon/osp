@@ -1,0 +1,35 @@
+<div class="card p-2 p-md-4 bg-white mb-4">
+    <f:flashMessages />
+    <f:form action="form" controller="Post" enctype="multipart/form-data">
+
+        <f:form.hidden name="owner" value="{fe_user.uid}"/>
+        <f:form.hidden name="ownername" value="{fe_user.username}"/>
+        <f:form.textarea id="postInput" name="content" rows="4" cols="80" class="form-control mb-4 autoresize" placeholder="What's on your mind, {fe_user.first_name}?"/>
+
+        <input type="file" name="tx_osp_form[files][]" id="dropArea" class="form-control p-4" accept="image/*" multiple="true"/>
+
+        <div class="text-center d-none">
+            <div class="btn-group">
+                <button id="postStyle" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="popover" data-placement="top" data-container="body" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+                    <i class="fa fa-file-video-o"></i> VIDEO
+                </button>
+                <button id="postStyle" type="button" class="btn btn-sm btn-outline-secondary" data-toggle="popover" data-placement="top" data-container="body" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+                    <i class="fa fa-file-picture-o"></i> IMAGES
+                </button>
+            </div>
+
+            <div class="btn-group">
+                <f:form.radio name="privacy" value="1" class="btn-check" id="privacy-1" />
+                <label class="btn btn-outline-dark btn-sm" for="privacy-1"><i class="fa fa-globe"></i></label>
+
+                <f:form.radio name="privacy" value="2" class="btn-check" id="privacy-2" />
+                <label class="btn btn-outline-dark btn-sm" for="privacy-2"><i class="fa fa-lock"></i></label>
+            </div>
+        </div>
+
+        <button id="postSubmit" type="submit" class="btn btn-block btn-outline-secondary mt-4" disabled><i class="fa fa-angle-right"></i> POST</button>
+
+    </f:form>
+    <div id="postPreview" class="mt-2 mt-md-4"></div>
+    <div id="mediaPreview"></div>
+</div>

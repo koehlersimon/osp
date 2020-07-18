@@ -1,0 +1,10 @@
+<div class="card p-4 bg-white mb-4">
+    <h2>Edit post #{post.uid}</h2>
+    <f:flashMessages />
+    <f:form action="update" controller="Post" enctype="multipart/form-data">
+        <f:form.hidden name="post" value="{post.uid}" />
+        <f:form.textarea id="postInput" name="content" rows="4" cols="80" class="form-control mb-1 autoresize" value="{post.content}"/>
+        <button id="postSubmit" type="submit" name="button" class="btn btn-secondary btn-block" disabled><i class="fa fa-save"></i> SAVE</button>
+    </f:form>
+    <div id="postPreview"></div>
+</div>

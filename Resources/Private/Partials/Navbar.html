@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient {navbar-mb}">
+  <div class="container-md">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <f:link.page pageUid="{rootPageId}" class="navbar-brand"><f:format.raw>{settings.site.navbarBrand}</f:format.raw></f:link.page>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <f:security.ifAuthenticated>
+        <form class="d-flex m-auto">
+            <input class="form-control form-control-sm mr-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-dark btn-sm" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        </f:security.ifAuthenticated>
+        <ul class="navbar-nav ml-auto">
+            <f:security.ifAuthenticated>
+                <f:then>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">{f:if(condition:'{fe_user.0.data.name}', then:'{fe_user.0.data.name} / ')}{f:if(condition:'{user}', then:'{user}', else:'Account')}</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><f:link.page pageUid="{settings.pages.login}" class="dropdown-item" additionalParams="{logintype:'logout'}"><i class="fa fa-support"></i> Logout</f:link.page></li>
+                    </ul>
+                </li>
+                </f:then>
+                <f:else>
+                <li class="nav-item">
+                    <f:link.page pageUid="{settings.pages.login}" class="nav-link"><i class="fa fa-sign-in"></i> Login</f:link.page>
+                </li>
+                </f:else>
+            </f:security.ifAuthenticated>
+        </ul>
+    </div>
+  </div>
+</nav>

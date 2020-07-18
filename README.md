@@ -41,4 +41,4 @@ You can download and test the extension here, but at your own risk! We ask you t
 
 ## Questions?
 
-If you are interested in contributing or have any other questions: https://simpn-koehler.com/en/contact
+If you are interested in contributing or have any other questions: https://simon-koehler.com/en/contact

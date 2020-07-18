@@ -23,6 +23,17 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     protected $persistenceManager;
 
     /**
+     * action home
+     *
+     * @return void
+     */
+    public function homeAction(){
+
+        $this->view->assign('settings',$this->settings);
+        $this->view->assign('posts',$this->postRepository->findAll());
+    }
+
+    /**
      * action list
      *
      * @return void

@@ -7,6 +7,12 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Osp',
+            'Home',
+            'Open Source Platform - Homepage'
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'Osp',
             'Wall',
             'Open Source Platform - Wall'
         );

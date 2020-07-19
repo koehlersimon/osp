@@ -67,6 +67,38 @@ mod {
                 icon = EXT:osp/ext_icon.gif
             }
 
+            wall {
+                title = OSP Wall
+                config {
+                    backend_layout {
+                        colCount = 12
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:osp/Resources/Private/Language/locallang.xlf:be_layout.columns.left
+                                        colPos = 1
+                                        colspan = 3
+                                    }
+                                    2 {
+                                        name = LLL:EXT:osp/Resources/Private/Language/locallang.xlf:be_layout.columns.main
+                                        colPos = 0
+                                        colspan = 6
+                                    }
+                                    3 {
+                                        name = LLL:EXT:osp/Resources/Private/Language/locallang.xlf:be_layout.columns.right
+                                        colPos = 2
+                                        colspan = 3
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:osp/ext_icon.gif
+            }
+
             page {
                 title = OSP Page Default
                 config {

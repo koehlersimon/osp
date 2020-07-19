@@ -24,9 +24,9 @@ call_user_func(
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Osp',
             'Post',
-            [\SIMONKOEHLER\Osp\Controller\PostController::class => 'detail,preview'],
+            [\SIMONKOEHLER\Osp\Controller\PostController::class => 'detail,preview,fetch,provide'],
             // non-cacheable actions
-            [\SIMONKOEHLER\Osp\Controller\PostController::class => 'detail,preview']
+            [\SIMONKOEHLER\Osp\Controller\PostController::class => 'detail,preview,fetch,provide']
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(

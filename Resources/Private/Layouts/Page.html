@@ -1,19 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-
-
-	<f:if condition="{settings.showNavbarContent}">
-		<f:then>
-			<f:render partial="Navbar" arguments="{_all}"/>
-			<f:render partial="NavbarContent" arguments="{_all}"/>
-		</f:then>
-		<f:else>
-			<f:variable name="navbar-mb" value="mb-4"/>
-			<f:render partial="Navbar" arguments="{_all}"/>
-		</f:else>
-	</f:if>
-
+	<f:render partial="Navbar" arguments="{_all}"/>
+	<f:render partial="NavbarContent" arguments="{_all}"/>
 	<f:render section="MainTemplate"/>
-
 	<f:render partial="FooterBlock"/>
-
 </html>

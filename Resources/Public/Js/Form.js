@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 postSubmit.removeAttribute('disabled');
                 postPreview.innerHTML = '<p class="lead">' + postInput.value.trim() + '</p>';
                 loadMarkdownPreview(postInput.value.trim());
+                postSubmit.onclick = function(){
+                    postSubmit.innerHTML = '<div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>';
+                };
             }
         });
 

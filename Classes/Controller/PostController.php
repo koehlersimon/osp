@@ -8,6 +8,15 @@ use TYPO3\CMS\Backend\Utility\BackendUtility;
  */
 class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
+
+    /**
+     * Protected Variable FrontendUserRepository wird mit NULL initialisiert.
+     *
+     * @var \TYPO3\CMS\Extbase\Domain\Repository\FrontendUserRepository
+     * @Inject
+     */
+    protected $frontendUserRepository = NULL;
+
     /**
      * postRepository
      *
@@ -28,7 +37,17 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @return void
      */
     public function homeAction(){
+        $this->settings['fe_user'] = $GLOBALS['TSFE']->fe_user->user;
+        $this->view->assign('settings',$this->settings);
+        $this->view->assign('posts',$this->postRepository->findAll());
+    }
 
+    /**
+     * action homeData
+     *
+     * @return void
+     */
+    public function homeDataAction(){
         $this->view->assign('settings',$this->settings);
         $this->view->assign('posts',$this->postRepository->findAll());
     }
@@ -39,9 +58,10 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @return void
      */
     public function listAction(){
-
+        $this->settings['fe_user'] = $GLOBALS['TSFE']->fe_user->user;
+        //echo $GLOBALS['TSFE']->fe_user->user['ses_tstamp'];
         $this->view->assign('settings',$this->settings);
-        $this->view->assign('posts',$this->postRepository->findAll());
+        $this->view->assign('posts',$this->postRepository->findByOwner($GLOBALS['TSFE']->fe_user->user['uid']));
     }
 
     /**
@@ -63,6 +83,61 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function detailAction(){
         if($this->request->hasArgument('post')){
             $this->view->assign('post', $this->postRepository->findByUid($this->request->getArgument('post')));
+        }
+    }
+
+    /**
+     * action fetch
+     *
+     * @return void
+     */
+    public function fetchAction(){
+
+        // Get Url from post owner fe_user record
+        if($this->request->hasArgument('owner')){
+            $owner = $this->postRepository->frontendUserApiUrl($this->request->getArgument('owner'));
+            $apiBaseUrl = $owner['tx_osp_url'];
+        }
+        else{
+            $apiBaseUrl = $this->settings['site']['baseUrl'];
+        }
+
+        if($this->request->hasArgument('post')){
+            $url = $apiBaseUrl.'?type=910&tx_osp_post[post]='.$this->request->getArgument('post');
+            $get_data = $this->postRepository->callAPI('GET', $url, false);
+            $post = json_decode($get_data);
+            $this->view->assign('post', $post);
+        }
+        else{
+            $post['content'] = 'p(badge bg-danger). No post ID given!';
+            $this->view->assign('post', $post);
+        }
+    }
+
+    /**
+     * action provide
+     * This action provides JSON content of a post
+     * It must be called with the page type 910 and a post ID of an external post
+     *
+     * @return void
+     */
+    public function provideAction(){
+        if($this->request->hasArgument('post')){
+            $post = $this->postRepository->findByUid($this->request->getArgument('post'));
+            if($post){
+                $array['uid'] = $this->request->getArgument('post');
+                $array['content'] = $post->getContent();
+                $array['crdate'] = $post->getCrdate();
+                $array['owner'] = $post->getOwner();
+                $array['ownername'] = $post->getOwnername();
+                $this->view->assign('dataJson',json_encode($array));
+            }
+            else{
+                $this->view->assign('dataJson',json_encode(['content' => '<div class="alert alert-warning">Post ('.$this->request->getArgument('post').') is not accessible or could not be loaded!</div>']));
+            }
+        }
+        else{
+            $this->view->assign('dataJson',json_encode(['content' => '<div class="alert alert-danger">No post ID given!</div>']));
         }
     }
 

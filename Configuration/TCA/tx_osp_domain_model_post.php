@@ -24,10 +24,10 @@ return [
         'iconfile' => 'EXT:osp/Resources/Public/Icons/osp-mini.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, owner, ownername, likes',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, uidext, hidden, owner, ownername, likes',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, crdate, posttype, content, likes, owner, ownername, --div--;Media, media, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime, fe_group;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:fe_group_formlabel'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, uidext, hidden, crdate, posttype, content, likes, owner, ownername, --div--;Media, media, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime, fe_group;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:fe_group_formlabel'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -81,6 +81,15 @@ return [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
                 'eval' => 'datetime',
+            ],
+        ],
+        'uidext' => [
+            'label' => 'External UID',
+            'config' => [
+                'type' => 'input',
+                'size' => 11,
+                'eval' => 'trim,int',
+                'default' => 0
             ],
         ],
         'hidden' => [

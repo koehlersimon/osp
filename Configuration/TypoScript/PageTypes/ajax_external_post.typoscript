@@ -1,0 +1,51 @@
+ajax_external_post = PAGE
+ajax_external_post {
+    config.contentObjectExceptionHandler = 0
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-Type:text/html;charset=utf-8
+        xhtml_cleaning = 0
+        admPanel = 0
+        debug = 0
+    }
+    typeNum = 900
+    10 = COA
+    10 {
+        10 = USER
+        10 {
+            userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+            extensionName = Osp
+            pluginName = Post
+            vendorName = SIMONKOEHLER
+            controller = Post
+            action = external
+            switchableControllerActions {
+                Post {
+                    1 = fetch
+                }
+            }
+            view < plugin.tx_osp.view
+            persistence < plugin.tx_osp.persistence
+            settings < plugin.tx_osp.settings
+        }
+    }
+}
+
+ajax_external_post_fetch < ajax_external_post
+ajax_external_post_fetch.typeNum = 910
+ajax_external_post_fetch.10.10{
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    extensionName = Osp
+    pluginName = Post
+    vendorName = SIMONKOEHLER
+    controller = Post
+    action = provide
+    switchableControllerActions {
+        Post {
+            1 = provide
+        }
+    }
+    view < plugin.tx_osp.view
+    persistence < plugin.tx_osp.persistence
+    settings < plugin.tx_osp.settings
+}

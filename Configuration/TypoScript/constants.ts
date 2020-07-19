@@ -26,8 +26,10 @@ plugin.tx_osp {
 
         }
         pages{
+            # cat=OSP Pages//a; type=string; label=Home page
+            home = 1
             # cat=OSP Pages//a; type=string; label=Main Wall
-            wall = 1
+            wall = 11
             # cat=OSP Pages//a; type=string; label=Login
             login = 3
             post{

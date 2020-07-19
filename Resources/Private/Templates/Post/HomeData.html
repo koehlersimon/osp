@@ -1,0 +1,19 @@
+{namespace textile=SIMONKOEHLER\Textile\ViewHelpers}
+{namespace post=SIMONKOEHLER\Osp\ViewHelpers}
+
+<f:for each="{posts}" as="post" >
+    <f:switch expression="{post.posttype}">
+        <f:case value="0">
+            <f:for each="{posts}" as="post">
+                <f:switch expression="{post.posttype}">
+                    <f:case value="0">
+                        <f:render partial="Post/ListItem" arguments="{settings:settings,post:post}"/>
+                    </f:case>
+                    <f:case value="2">
+                        <f:render partial="Post/ListItemExternal" arguments="{settings:settings,post:post}"/>
+                    </f:case>
+                </f:switch>
+            </f:for>
+        </f:case>
+    </f:switch>
+</f:for>

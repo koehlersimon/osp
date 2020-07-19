@@ -1,5 +1,5 @@
-like = PAGE
-like {
+ajax_like = PAGE
+ajax_like {
     config.contentObjectExceptionHandler = 0
     config {
         disableAllHeaderCode = 1

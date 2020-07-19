@@ -3,7 +3,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <f:link.page pageUid="{rootPageId}" class="navbar-brand"><f:format.raw>{settings.site.navbarBrand}</f:format.raw></f:link.page>
+    <f:link.page pageUid="{site.rootPageId}" class="navbar-brand"><f:format.raw>{settings.site.navbarBrand}</f:format.raw></f:link.page>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <f:security.ifAuthenticated>
         <form class="d-flex m-auto">

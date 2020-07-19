@@ -1,21 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-	<f:variable name="navbar-mb" value="mb-0"/>
+	<f:variable name="navbar-mb" value="mb-4"/>
 	<f:render partial="Navbar" arguments="{_all}"/>
-	<f:if condition="!{settings.layout.disableHeader}">
-		<f:then>
-		<header{f:if(condition:'{settings.layout.headerClasses}', then:' class="{settings.layout.headerClasses}"')}>
-			<f:render partial="HeaderDefault" arguments="{_all}"/>
-			<f:if condition="{settings.layout.showNavbarContent}">
-				<f:then>
-					<f:render partial="NavbarContent" arguments="{_all}"/>
-				</f:then>
-			</f:if>
-		</header>
-		</f:then>
-		<f:else>
-			<div class="p-3"></div>
-		</f:else>
-	</f:if>
 	<f:render section="MainTemplate"/>
 	<f:render partial="FooterBlock"/>
 </html>

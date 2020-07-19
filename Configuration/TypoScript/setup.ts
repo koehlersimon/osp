@@ -13,6 +13,7 @@ plugin.tx_osp {
             }
         }
         pages{
+            home = {$plugin.tx_osp.settings.pages.home}
             wall = {$plugin.tx_osp.settings.pages.wall}
             login = {$plugin.tx_osp.settings.pages.login}
             post{
@@ -110,6 +111,24 @@ page {
     }
 
     headerData{
+        5 = TEXT
+        5.value(
+            <link rel="apple-touch-icon" sizes="57x57" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-57x57.png">
+            <link rel="apple-touch-icon" sizes="60x60" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-60x60.png">
+            <link rel="apple-touch-icon" sizes="72x72" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-72x72.png">
+            <link rel="apple-touch-icon" sizes="76x76" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-76x76.png">
+            <link rel="apple-touch-icon" sizes="114x114" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-114x114.png">
+            <link rel="apple-touch-icon" sizes="120x120" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-120x120.png">
+            <link rel="apple-touch-icon" sizes="144x144" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-144x144.png">
+            <link rel="apple-touch-icon" sizes="152x152" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-152x152.png">
+            <link rel="apple-touch-icon" sizes="180x180" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-180x180.png">
+            <link rel="icon" type="image/png" sizes="192x192" href="typo3conf/ext/osp/Resources/Public/Icons/Public/android-icon-192x192.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="typo3conf/ext/osp/Resources/Public/Icons/Public/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="96x96" href="typo3conf/ext/osp/Resources/Public/Icons/Public/favicon-96x96.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="typo3conf/ext/osp/Resources/Public/Icons/Public/favicon-16x16.png">
+            <link rel="manifest" href="typo3conf/ext/osp/Resources/Public/Icons/Public/manifest.json">
+            <meta name="msapplication-TileImage" content="typo3conf/ext/osp/Resources/Public/Icons/Public/ms-icon-144x144.png">
+        )
         10 = TEXT
         10.value(
             <!--[if lt IE 9]>
@@ -128,6 +147,12 @@ page {
                     margin:0;
                 }
             </style>
+            <script>
+                var osp = {
+                    baseUrl: document.querySelector('base').href,
+                    sex: 'yes'
+                };
+            </script>
         )
     }
 
@@ -138,7 +163,6 @@ page {
         bootstrap.external = 1
         fa = https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
         fa.external = 1
-        lightbox = EXT:osp/Resources/Public/Js/javascript-lightbox/javascriptLightbox.css
     }
 
     includeJSFooterlibs{
@@ -148,8 +172,9 @@ page {
         bootstrap = https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js
         bootstrap.integrity = sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/
         bootstrap.crossorigin = anonymous
-        lightbox = EXT:osp/Resources/Public/Js/javascript-lightbox/javascriptLightbox.js
-        global = EXT:osp/Resources/Public/Js/Global.js
+        lightbox = EXT:osp/Resources/Public/Js/fslightbox.js
+        root = EXT:osp/Resources/Public/Js/Root.js
+        home = EXT:osp/Resources/Public/Js/Home.js
         form = EXT:osp/Resources/Public/Js/Form.js
         like = EXT:osp/Resources/Public/Js/Like.js
     }
@@ -161,6 +186,16 @@ page {
         partialRootPath = EXT:osp/Resources/Private/Partials/
 
         dataProcessing {
+
+            1 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            1 {
+                levels = 3
+                special = directory
+                special.value.data = site:rootPageId
+                expandAll = 1
+                includeSpacer = 1
+                as = menuRoot
+            }
 
             5 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             5 {
@@ -177,6 +212,11 @@ page {
                      references.fieldName = media
                   }
                }
+            }
+
+            10 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
+            10 {
+                as = site
             }
 
             15 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
@@ -221,9 +261,6 @@ page {
             header.select.includeRecordsWithoutDefaultTranslation = 1
             header.slide = -1
 
-            rootPageId = TEXT
-            rootPageId.data = site:rootPageId
-
         }
 
         file.cObject = CASE
@@ -248,6 +285,9 @@ page {
 
             pagets__page = TEXT
             pagets__page.value = EXT:osp/Resources/Private/Templates/Page.html
+
+            pagets__wall = TEXT
+            pagets__wall.value = EXT:osp/Resources/Private/Templates/Wall.html
 
             default = TEXT
             default.value = EXT:osp/Resources/Private/Templates/Default.html

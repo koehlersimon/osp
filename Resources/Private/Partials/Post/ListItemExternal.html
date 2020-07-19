@@ -1,0 +1,31 @@
+<article class="post mb-4" data-posttype="{post.posttype}" data-url="{f:uri.action(action:'fetch',controller:'Post',pageUid:'{settings.pages.home}',arguments:'{post:post.uidext,owner:post.owner}',additionalParams:{type:'900'})}" id="p{post.uid}">
+    <div class="card bg-white border p-3 mb-2">
+        <div class="d-flex">
+            <div class="mb-2 mr-auto">
+                <strong class="text-primary">{post.ownername}</strong>
+                <small><post:date content="{post.crdate}"/></small>
+            </div>
+            <f:security.ifAuthenticated>
+                <div class="dropdown ml-auto">
+                  <a class="btn btn-default btn-sm" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-edit"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                    <li><f:link.action action="delete" arguments="{post:post}" controller="Post" class="dropdown-item" title="Delete"><i class="fa fa-chain-broken"></i> hide</f:link.action></li>
+                    <li><h6 class="dropdown-header">Other actions</h6></li>
+                    <li><f:link.action pageUid="{settings.pages.post.detail}" action="detail" arguments="{post:post}" controller="Post" class="dropdown-item" title="Permalink"><i class="fa fa-search"></i> detail view</f:link.action></li>
+                  </ul>
+                </div>
+            </f:security.ifAuthenticated>
+        </div>
+
+        <div class="content d-flex flex-column">
+            <div class="alert alert-dark text-light d-flex align-items-center">
+                <div class="spinner-border mr-2" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+                <small>Fetching data from external server...</small>
+            </div>
+        </div>
+
+    </div>
+
+</article>

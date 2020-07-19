@@ -1,7 +1,7 @@
 plugin.tx_osp {
     settings{
         site{
-            # cat=OSP Site//a; type=string; label=URL prefix
+            # cat=OSP Site//a; type=string; label=URL prefix ('auto' will not work here, please enter at least '/')
             absRefPrefix = /
             # cat=OSP Site//a; type=string; label=Branding for navbar
             navbarBrand =

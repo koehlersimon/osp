@@ -1,52 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    console.log('Root.js');
-
-    // Choose a method to resize!
-    // Values: onFocus, onLoad, onHover
-    var triggerMethod = 'onLoad';
-
-    function autoResize(el,triggerMethod){
-        let offset = el.offsetHeight - el.clientHeight;
-        el.style.boxSizing = 'border-box';
-        el.style.height = 'auto';
-        el.style.height = el.scrollHeight + offset + 'px';
-        el.removeEventListener(triggerMethod,autoResize.bind());
-        //console.log('Textfield '+triggerMethod+' resized!');
-    }
-
-    document.querySelectorAll('.autoresize').forEach(function (el) {
-        switch (triggerMethod) {
-            case 'onFocus':
-                el.addEventListener('focusin', autoResize.bind(null, el, 'focusin'));
-            break;
-            case 'onLoad':
-                autoResize(el);
-            break;
-            case 'onHover':
-                el.addEventListener('mouseover', autoResize.bind(null, el, 'mouseover'));
-            break;
-            default:
-                autoResize(el,offset);
-        }
-    });
-
-    window.refreshGlobal = function(){
-        externalPosts();
-    }
-
-    function loadExternalPosts(){
-        document.querySelectorAll('[data-posttype="2"]').forEach(function (el) {
-            apiCall(el);
-        });
-    }
-
-    function apiCall(el){
+    /*
+    * Loads the TYPO3 Ajax URL that must begiven in the data attibute
+    * of the target element for instance data-url="https://opensourceproject.org"
+    */
+    var loadExternalPost = function(el){
         let request = new XMLHttpRequest();
         request.open("POST", el.dataset.url, true);
         request.onreadystatechange = function() {
             if (request.readyState === 4 && request.status == "200") {
-                console.log(request.responseText);
                 el.querySelector('.content').innerHTML = request.responseText;
             }
             else{
@@ -59,7 +21,24 @@ document.addEventListener("DOMContentLoaded", function() {
         request.send();
     }
 
-    function isInViewport(element) {
+    /*
+    * Detecting all external posts in the DOM and check if they are visible in the viewport.
+    * If a post is visible AND the target container and does NOT have
+    * the class 'loaded', load the external post.
+    */
+    var checkExternalPosts = function() {
+        var externalPosts = document.querySelectorAll('[data-posttype="2"]');
+        externalPosts.forEach((post, i) => {
+            if(isInViewport(post) && !post.querySelector('.content').classList.contains('loaded')){
+                loadExternalPost(post);
+            }
+        });
+    };
+
+    /*
+    * Checks if an element is inside of the viewport
+    */
+    var isInViewport = function(element) {
         const rect = element.getBoundingClientRect();
         return (
             rect.top >= 0 &&
@@ -74,47 +53,47 @@ document.addEventListener("DOMContentLoaded", function() {
      * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
      * @param  {Function} callback The function to run after scrolling
      */
-    var scrollStop = function (callback) {
-
-    	// Make sure a valid callback was provided
+    var scrollStop = function(callback) {
     	if (!callback || typeof callback !== 'function') return;
-
-    	// Setup scrolling variable
     	var isScrolling;
-
-    	// Listen for scroll events
     	window.addEventListener('scroll', function (event) {
-
-    		// Clear our timeout throughout the scroll
     		window.clearTimeout(isScrolling);
-
-    		// Set a timeout to run after scrolling ends
     		isScrolling = setTimeout(function() {
-
-    			// Run the callback
     			callback();
-
     		}, 66);
-
     	}, false);
-
     };
 
+    /*
+    * Function to resize HTML textareas
+    */
+    var autoResizeTextfields = function(el,triggerMethod){
+        let offset = el.offsetHeight - el.clientHeight;
+        el.style.boxSizing = 'border-box';
+        el.style.height = 'auto';
+        el.style.height = el.scrollHeight + offset + 'px';
+        el.removeEventListener(triggerMethod,autoResizeTextfields.bind());
+    }
+
+    /*
+    * Checking external posts status on scroll stop
+    */
     scrollStop(function () {
-        console.log( 'Scrolling has stopped.' );
-        externalPosts();
+        checkExternalPosts();
     });
 
-    function externalPosts() {
-        var externalPosts = document.querySelectorAll('[data-posttype="2"]');
-        externalPosts.forEach((post, i) => {
-            if(isInViewport(post) && !post.querySelector('.content').classList.contains('loaded')){
-                apiCall(post);
-            }
-            else{
-                console.log('OUT');
-            }
-        });
+    /*
+    * Function attached to the window, to refresh things here from other files
+    */
+    window.refreshGlobal = function(){
+        checkExternalPosts();
     }
+
+    /*
+    * Attach event listeners for resizing to all textareas with '.autoresize' class
+    */
+    document.querySelectorAll('.autoresize').forEach(function (el) {
+        autoResizeTextfields(el);
+    });
 
 });

@@ -44,7 +44,7 @@ class LikeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
                     else{
                         $newLike = new \SIMONKOEHLER\Osp\Domain\Model\Like();
                         $newLike->setOwner($user);
-                        $newLike->setPid(21);
+                        $newLike->setPid($this->settings['storage']['likes']);
                         $newLike->setParent($record);
                         $newLike->setParentType($type);
                         $this->likeRepository->add($newLike);

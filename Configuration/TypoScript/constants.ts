@@ -46,6 +46,8 @@ plugin.tx_osp {
             posts =
             # cat=OSP Storage//a; type=string; label=Comment Storage
             comments =
+            # cat=OSP Storage//a; type=string; label=Likes Storage
+            likes =
         }
         layout{
             # cat=OSP Layout//a; type=integer; label=Disables the "header" block of all pages

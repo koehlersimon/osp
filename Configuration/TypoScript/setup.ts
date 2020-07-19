@@ -25,6 +25,7 @@ plugin.tx_osp {
             media = {$plugin.tx_osp.settings.storage.media}
             posts = {$plugin.tx_osp.settings.storage.posts}
             comments = {$plugin.tx_osp.settings.storage.comments}
+            likes = {$plugin.tx_osp.settings.storage.likes}
         }
         layout{
             disableHeader = {$plugin.tx_osp.settings.layout.disableHeader}

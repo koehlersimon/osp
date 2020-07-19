@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var postContainer = document.getElementById('post-container');
 
-    if(osp['baseUrl'] && postContainer){
+    if(osp['absRefPrefix'] && postContainer){
         loadHome();
     }
 
     function loadHome(){
         let request = new XMLHttpRequest();
-        request.open("POST", osp['baseUrl']+'?type=899', true);
+        request.open("POST", osp['absRefPrefix']+'?type=899', true);
         request.onreadystatechange = function() {
             if (request.readyState === 4 && request.status == "200") {
                 postContainer.innerHTML = request.responseText;

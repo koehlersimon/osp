@@ -2,7 +2,7 @@ plugin.tx_osp {
     settings{
         site{
             # cat=OSP Site//a; type=string; label=Base URL
-            baseUrl = {$plugin.tx_osp.settings.site.baseUrl}
+            absRefPrefix = {$plugin.tx_osp.settings.site.absRefPrefix}
             # cat=OSP Site//a; type=string; label=Navbar Brand
             navbarBrand = {$plugin.tx_osp.settings.site.navbarBrand}
         }
@@ -90,7 +90,7 @@ module.tx_osp {
 }
 
 config.no_cache = 1
-config.baseURL = {$plugin.tx_osp.settings.site.baseUrl}
+config.absRefPrefix = {$plugin.tx_osp.settings.site.absRefPrefix}
 
 page = PAGE
 page {
@@ -149,8 +149,7 @@ page {
             </style>
             <script>
                 var osp = {
-                    baseUrl: document.querySelector('base').href,
-                    sex: 'yes'
+                    absRefPrefix: '{$plugin.tx_osp.settings.site.absRefPrefix}'
                 };
             </script>
         )
@@ -270,15 +269,6 @@ page {
 
             pagets__sidebar_left = TEXT
             pagets__sidebar_left.value = EXT:osp/Resources/Private/Templates/SidebarLeft.html
-
-            pagets__sidebar_right = TEXT
-            pagets__sidebar_right.value = EXT:osp/Resources/Private/Templates/SidebarRight.html
-
-            pagets__sidebar_left_header = TEXT
-            pagets__sidebar_left_header.value = EXT:osp/Resources/Private/Templates/SidebarLeftHeader.html
-
-            pagets__sidebar_right_header = TEXT
-            pagets__sidebar_right_header.value = EXT:osp/Resources/Private/Templates/SidebarRightHeader.html
 
             pagets__post_detail = TEXT
             pagets__post_detail.value = EXT:osp/Resources/Private/Templates/PostDetail.html

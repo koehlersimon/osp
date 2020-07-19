@@ -1,4 +1,9 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:if condition="!{settings.site.absRefPrefix}">
+		<div class="alert alert-warning">
+			The variable <strong>absRefPrefix</strong> is not set.<br>Please set it using the Constant Editor in the backend!
+		</div>
+	</f:if>
 	<f:variable name="navbar-mb" value="mb-4"/>
 	<f:render partial="Navbar" arguments="{_all}"/>
 	<f:render section="MainTemplate"/>

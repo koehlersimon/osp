@@ -5,11 +5,7 @@
 		<f:then>
 		<header{f:if(condition:'{settings.layout.headerClasses}', then:' class="{settings.layout.headerClasses}"')}>
 			<f:render partial="HeaderDefault" arguments="{_all}"/>
-			<f:if condition="{settings.layout.showNavbarContent}">
-				<f:then>
-					<f:render partial="NavbarContent" arguments="{_all}"/>
-				</f:then>
-			</f:if>
+			<f:render partial="NavbarContent" arguments="{_all}"/>
 		</header>
 		</f:then>
 		<f:else>

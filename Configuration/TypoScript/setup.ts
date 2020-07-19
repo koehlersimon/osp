@@ -29,7 +29,6 @@ plugin.tx_osp {
         layout{
             disableHeader = {$plugin.tx_osp.settings.layout.disableHeader}
             headerClasses = {$plugin.tx_osp.settings.layout.headerClasses}
-            showNavbarContent = {$plugin.tx_osp.settings.layout.showNavbarContent}
         }
         menus{
             primary{

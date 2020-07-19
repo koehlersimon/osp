@@ -11,15 +11,15 @@ plugin.tx_osp {
                 # cat=OSP User//a; type=string; label=Profile Picture
                 profilePicture = fileadmin/profile/pp.jpeg
                 # cat=OSP Frontend//a; type=string; label=Usergroup of admin users
-                usergroup = 2
+                usergroup =
             }
             visitor{
                 # cat=OSP Frontend//a; type=string; label=Usergroup of visitors
-                usergroup = 1
+                usergroup =
             }
             external{
                 # cat=OSP Frontend//a; type=string; label=Usergroup for external users or other OSP platforms
-                usergroup = 4
+                usergroup =
             }
         }
         frontend{
@@ -27,33 +27,31 @@ plugin.tx_osp {
         }
         pages{
             # cat=OSP Pages//a; type=string; label=Home page
-            home = 1
+            home =
             # cat=OSP Pages//a; type=string; label=Main Wall
-            wall = 11
+            wall =
             # cat=OSP Pages//a; type=string; label=Login
-            login = 3
+            login =
             post{
                 # cat=OSP Pages//a; type=string; label=Post Form
-                form = 1
+                form =
                 # cat=OSP Pages//a; type=string; label=Post Detail
-                detail = 5
+                detail =
             }
         }
         storage{
             # cat=OSP Storage//a; type=string; label=Media Storage
-            media = 2
+            media =
             # cat=OSP Storage//a; type=string; label=Post Storage
-            posts = 2
+            posts =
             # cat=OSP Storage//a; type=string; label=Comment Storage
-            comments = 2
+            comments =
         }
         layout{
             # cat=OSP Layout//a; type=integer; label=Disables the "header" block of all pages
             disableHeader = 0
             # cat=OSP Layout//a; type=string; label=Header CSS classes
             headerClasses = container h-50
-            # cat=OSP Layout//a; type=string; label=Show navbar over content
-            showNavbarContent = 1
         }
         menus{
             primary{

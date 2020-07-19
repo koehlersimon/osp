@@ -99,7 +99,7 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             $apiBaseUrl = $owner['tx_osp_url'];
         }
         else{
-            $apiBaseUrl = $this->settings['site']['baseUrl'];
+            $apiBaseUrl = $this->settings['site']['absRefPrefix'];
         }
 
         if($this->request->hasArgument('post')){

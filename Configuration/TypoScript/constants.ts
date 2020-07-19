@@ -1,10 +1,10 @@
 plugin.tx_osp {
     settings{
         site{
-            # cat=OSP Site//a; type=string; label=Base URL
-            baseUrl = http://10.0.0.137/osp/
+            # cat=OSP Site//a; type=string; label=URL prefix
+            absRefPrefix = /
             # cat=OSP Site//a; type=string; label=Branding for navbar
-            navbarBrand = OSP <small class="badge bg-primary">1.0.0</small>
+            navbarBrand =
         }
         user{
             admin{

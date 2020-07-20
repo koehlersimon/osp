@@ -60,8 +60,8 @@ plugin.tx_osp {
         pages{
             home = {$plugin.tx_osp.settings.pages.home}
             wall = {$plugin.tx_osp.settings.pages.wall}
-            login = {$plugin.tx_osp.settings.pages.login}
             account{
+                login = {$plugin.tx_osp.settings.pages.account.login}
                 overview = {$plugin.tx_osp.settings.pages.account.overview}
                 edit = {$plugin.tx_osp.settings.pages.account.edit}
             }

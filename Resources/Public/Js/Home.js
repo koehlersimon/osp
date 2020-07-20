@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    console.log('Home.js');
-
     var postContainer = document.getElementById('post-container');
 
     if(osp['absRefPrefix'] && postContainer){

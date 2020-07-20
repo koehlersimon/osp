@@ -1,16 +1,13 @@
+{namespace fallback=SIMONKOEHLER\Fallback\ViewHelpers}
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient {navbar-mb}">
   <div class="container-md">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <f:link.page pageUid="{site.rootPageId}" class="navbar-brand">
-        <f:if condition="{settings.site.navbarBrand}">
-            <f:then>
-                <f:format.raw>{settings.site.navbarBrand}</f:format.raw>
-            </f:then>
-            <f:else>
-                OSP
-            </f:else>
+        <f:if condition="{settings.site.navbarLogo}">
+            <f:image src="{settings.site.navbarLogo}" maxHeight="32"/>
         </f:if>
     </f:link.page>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">

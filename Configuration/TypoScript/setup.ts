@@ -2,7 +2,7 @@ plugin.tx_osp {
     settings{
         site{
             absRefPrefix = {$plugin.tx_osp.settings.site.absRefPrefix}
-            navbarBrand = {$plugin.tx_osp.settings.site.navbarBrand}
+            navbarLogo = {$plugin.tx_osp.settings.site.navbarLogo}
         }
         user{
             admin{

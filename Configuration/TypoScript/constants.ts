@@ -3,8 +3,8 @@ plugin.tx_osp {
         site{
             # cat=OSP Site//a; type=string; label=URL prefix ('auto' will not work here, please enter at least '/')
             absRefPrefix = /
-            # cat=OSP Site//a; type=string; label=Branding for navbar
-            navbarBrand =
+            # cat=OSP Site//a; type=string; label=Logo for navbar
+            navbarLogo = EXT:osp/Resources/Public/Icons/Public/favicon-32x32.png
         }
         user{
             admin{

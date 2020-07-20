@@ -1,26 +1,25 @@
-browserExtensionInterface = PAGE
-browserExtensionInterface {
+page_browser_extension_form = PAGE
+page_browser_extension_form {
     config {
         disableAllHeaderCode = 1
         additionalHeaders = Content-Type:text/html;charset=utf-8
-        #xhtml_cleaning = 0
         admPanel = 0
         debug = 0
     }
-    typeNum = 890
+    typeNum = {$plugin.tx_osp.settings.pages.types.page_browser_extension_form}
     10 = COA
     10 {
         10 = USER
         10 {
             userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
             extensionName = Osp
-            pluginName = Browser
+            pluginName = Form
             vendorName = SIMONKOEHLER
             controller = Browser
-            action = index
+            action = form
             switchableControllerActions {
-                Browser {
-                    1 = index
+                Post {
+                    1 = form
                 }
             }
             view < plugin.tx_osp.view

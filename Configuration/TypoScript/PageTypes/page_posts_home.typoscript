@@ -1,27 +1,25 @@
-ajax_like = PAGE
-ajax_like {
-    config.contentObjectExceptionHandler = 0
+page_posts_home = PAGE
+page_posts_home {
     config {
         disableAllHeaderCode = 1
         additionalHeaders = Content-Type:text/html;charset=utf-8
-        xhtml_cleaning = 0
         admPanel = 0
         debug = 0
     }
-    typeNum = 898
+    typeNum = {$plugin.tx_osp.settings.pages.types.page_posts_home}
     10 = COA
     10 {
         10 = USER
         10 {
             userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
             extensionName = Osp
-            pluginName = Like
+            pluginName = Home
             vendorName = SIMONKOEHLER
-            controller = Like
-            action = like
+            controller = Post
+            action = home
             switchableControllerActions {
-                Like {
-                    1 = like
+                Post {
+                    1 = homeData
                 }
             }
             view < plugin.tx_osp.view

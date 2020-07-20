@@ -1,27 +1,25 @@
-markdownPreview = PAGE
-markdownPreview {
+page_browser_extension = PAGE
+page_browser_extension {
     config {
         disableAllHeaderCode = 1
         additionalHeaders = Content-Type:text/html;charset=utf-8
-        xhtml_cleaning = 0
         admPanel = 0
         debug = 0
     }
-    typeNum = 897
-
+    typeNum = {$plugin.tx_osp.settings.pages.types.page_browser_extension}
     10 = COA
     10 {
         10 = USER
         10 {
             userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
             extensionName = Osp
-            pluginName = Post
+            pluginName = Browser
             vendorName = SIMONKOEHLER
-            controller = Post
-            action = save
+            controller = Browser
+            action = index
             switchableControllerActions {
-                Post {
-                    1 = preview
+                Browser {
+                    1 = index
                 }
             }
             view < plugin.tx_osp.view

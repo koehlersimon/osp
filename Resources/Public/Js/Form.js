@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var params = typeof data == 'string' ? data : Object.keys(data).map(
             function(k){ return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) }
         ).join('&');
-        let url = '?type=897';
+        let url = '?type='+osp['typeNum']['page_markdown_preview'];
         let request = new XMLHttpRequest();
         request.open("POST", url, true);
         request.onreadystatechange = function() {

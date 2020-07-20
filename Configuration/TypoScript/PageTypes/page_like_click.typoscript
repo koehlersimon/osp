@@ -1,26 +1,25 @@
-browserExtensionForm = PAGE
-browserExtensionForm {
+page_like_click = PAGE
+page_like_click {
     config {
         disableAllHeaderCode = 1
         additionalHeaders = Content-Type:text/html;charset=utf-8
-        #xhtml_cleaning = 0
         admPanel = 0
         debug = 0
     }
-    typeNum = 891
+    typeNum = {$plugin.tx_osp.settings.pages.types.page_like_click}
     10 = COA
     10 {
         10 = USER
         10 {
             userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
             extensionName = Osp
-            pluginName = Form
+            pluginName = Like
             vendorName = SIMONKOEHLER
-            controller = Browser
-            action = form
+            controller = Like
+            action = like
             switchableControllerActions {
-                Post {
-                    1 = form
+                Like {
+                    1 = like
                 }
             }
             view < plugin.tx_osp.view

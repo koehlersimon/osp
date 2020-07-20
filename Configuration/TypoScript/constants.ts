@@ -38,6 +38,15 @@ plugin.tx_osp {
                 # cat=OSP Pages//a; type=string; label=Post Detail
                 detail =
             }
+            types{
+                page_posts_home = 800
+                page_markdown_preview = 810
+                page_like_click = 820
+                page_external_post = 830
+                page_external_post_fetch = 840
+                page_browser_extension = 1100
+                page_browser_extension_form = 1110
+            }
         }
         storage{
             # cat=OSP Storage//a; type=string; label=Media Storage
@@ -48,6 +57,8 @@ plugin.tx_osp {
             comments =
             # cat=OSP Storage//a; type=string; label=Likes Storage
             likes =
+            # cat=OSP Storage//a; type=string; label=Frontend User Storage
+            user =
         }
         layout{
             # cat=OSP Layout//a; type=integer; label=Disables the "header" block of all pages

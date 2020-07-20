@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function loadHome(){
         let request = new XMLHttpRequest();
-        request.open("POST", osp['absRefPrefix']+'?type=899', true);
+        request.open("POST", osp['absRefPrefix']+'?type='+osp['typeNum']['page_posts_home'], true);
         request.onreadystatechange = function() {
             if (request.readyState === 4 && request.status == "200") {
                 postContainer.innerHTML = request.responseText;

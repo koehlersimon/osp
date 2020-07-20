@@ -1,27 +1,25 @@
-ajax_home_posts = PAGE
-ajax_home_posts {
-    config.contentObjectExceptionHandler = 0
+page_markdown_preview = PAGE
+page_markdown_preview {
     config {
         disableAllHeaderCode = 1
         additionalHeaders = Content-Type:text/html;charset=utf-8
-        xhtml_cleaning = 0
         admPanel = 0
         debug = 0
     }
-    typeNum = 899
+    typeNum = {$plugin.tx_osp.settings.pages.types.page_markdown_preview}
     10 = COA
     10 {
         10 = USER
         10 {
             userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
             extensionName = Osp
-            pluginName = Home
+            pluginName = Post
             vendorName = SIMONKOEHLER
             controller = Post
-            action = home
+            action = save
             switchableControllerActions {
                 Post {
-                    1 = homeData
+                    1 = preview
                 }
             }
             view < plugin.tx_osp.view

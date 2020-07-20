@@ -75,8 +75,14 @@ plugin.tx_osp {
             home =
             # cat=OSP Pages//a; type=string; label=Main Wall
             wall =
-            # cat=OSP Pages//a; type=string; label=Login
+            # cat=OSP Pages//a; type=string; label=Page with login form
             login =
+            account{
+                # cat=OSP Pages//a; type=string; label=Account overview page
+                overview =
+                # cat=OSP Pages//a; type=string; label=Account edit page
+                edit =
+            }
             post{
                 # cat=OSP Pages//a; type=string; label=Post Form
                 form =

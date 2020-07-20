@@ -61,6 +61,10 @@ plugin.tx_osp {
             home = {$plugin.tx_osp.settings.pages.home}
             wall = {$plugin.tx_osp.settings.pages.wall}
             login = {$plugin.tx_osp.settings.pages.login}
+            account{
+                overview = {$plugin.tx_osp.settings.pages.account.overview}
+                edit = {$plugin.tx_osp.settings.pages.account.edit}
+            }
             post{
                 form = {$plugin.tx_osp.settings.pages.post.form}
                 detail = {$plugin.tx_osp.settings.pages.post.detail}

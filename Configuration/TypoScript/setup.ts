@@ -382,3 +382,10 @@ lib.headerImage {
 }
 
 lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines >
+
+// Set template path for Frontend Login
+plugin.tx_felogin_login {
+    view {
+        templateRootPaths.900 = EXT:osp/Resources/Private/Ext/felogin/Templates/
+    }
+}

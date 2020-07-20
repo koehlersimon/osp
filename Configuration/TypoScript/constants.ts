@@ -10,20 +10,20 @@ plugin.tx_osp {
             admin{
                 # cat=OSP User//a; type=string; label=Profile Picture
                 profilePicture = fileadmin/profile/pp.jpeg
-                # cat=OSP Frontend//a; type=string; label=Usergroup of admin users
+                # cat=OSP User//a; type=string; label=Usergroup of admin users
                 usergroup =
             }
             visitor{
-                # cat=OSP Frontend//a; type=string; label=Usergroup of visitors
+                # cat=OSP User//a; type=string; label=Usergroup of visitors
                 usergroup =
             }
             external{
-                # cat=OSP Frontend//a; type=string; label=Usergroup for external users or other OSP platforms
+                # cat=OSP User//a; type=string; label=Usergroup for external users or other OSP platforms
                 usergroup =
             }
         }
         frontend{
-
+            teaserLength = 300
         }
         pages{
             # cat=OSP Pages//a; type=string; label=Home page

@@ -19,7 +19,7 @@
         </div>
 
         <f:format.raw>
-            <f:format.crop maxCharacters="140" append="... <a href='{f:uri.action(action:'detail',controller:'Post',pageUid:'{settings.pages.post.detail}',arguments:'{post:post}')}' class=\"link-info\">more</a>">
+            <f:format.crop maxCharacters="{settings.frontend.teaserLength}" append="... <a href='{f:uri.action(action:'detail',controller:'Post',pageUid:'{settings.pages.post.detail}',arguments:'{post:post}')}' class=\"link-info\">more</a>">
                 <textile:parse content="{post.content}"/>
             </f:format.crop>
         </f:format.raw>

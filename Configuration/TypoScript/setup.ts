@@ -10,6 +10,9 @@ plugin.tx_osp {
                 usergroup = {$plugin.tx_osp.settings.user.admin.usergroup}
             }
         }
+        frontend{
+            teaserLength = {$plugin.tx_osp.settings.frontend.teaserLength}
+        }
         pages{
             home = {$plugin.tx_osp.settings.pages.home}
             wall = {$plugin.tx_osp.settings.pages.wall}

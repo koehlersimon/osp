@@ -1,9 +1,7 @@
 plugin.tx_osp {
     settings{
         site{
-            # cat=OSP Site//a; type=string; label=Base URL
             absRefPrefix = {$plugin.tx_osp.settings.site.absRefPrefix}
-            # cat=OSP Site//a; type=string; label=Navbar Brand
             navbarBrand = {$plugin.tx_osp.settings.site.navbarBrand}
         }
         user{

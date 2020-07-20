@@ -19,13 +19,13 @@ plugin.tx_osp {
                 detail = {$plugin.tx_osp.settings.pages.post.detail}
             }
             types{
-                page_posts_home = 800
-                page_markdown_preview = 810
-                page_like_click = 820
-                page_external_post = 830
-                page_external_post_fetch = 840
-                page_browser_extension = 1100
-                page_browser_extension_form = 1110
+                page_posts_home = {$plugin.tx_osp.settings.pages.types.page_posts_home}
+                page_markdown_preview = {$plugin.tx_osp.settings.pages.types.page_markdown_preview}
+                page_like_click = {$plugin.tx_osp.settings.pages.types.page_like_click}
+                page_external_post = {$plugin.tx_osp.settings.pages.types.page_external_post}
+                page_external_post_fetch = {$plugin.tx_osp.settings.pages.types.page_external_post_fetch}
+                page_browser_extension = {$plugin.tx_osp.settings.pages.types.page_browser_extension}
+                page_browser_extension_form = {$plugin.tx_osp.settings.pages.types.page_browser_extension_form}
             }
         }
         storage{

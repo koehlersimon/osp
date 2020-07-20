@@ -164,6 +164,9 @@ page {
                 };
             </script>
         )
+        25 = TEXT
+        25.data = TSFE:fe_user|user|tx_osp_custom_css
+        25.wrap = <style>|</style>
     }
 
     includeCSS{

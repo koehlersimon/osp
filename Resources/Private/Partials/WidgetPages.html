@@ -6,18 +6,18 @@
 
                 <f:if condition="{menu.children}">
                     <f:then>
-                        <li>
-                           <a class="dropdown-item {f:if(condition:'{menu.active} === 1', then:'active')}"
+                        <li class="nav-item">
+                           <a class="nav-link {f:if(condition:'{menu.active} === 1', then:'active')}"
                               href="{menu.link}"
                               target="{menu.target}"
                               title="{menu.title}"
                               >
                               {menu.title}
                            </a>
-                           <ul class="nav">
+                           <ul class="nav flex-column">
                                <f:for each="{menu.children}" as="menu">
-                                   <li>
-                                      <a class="dropdown-item {f:if(condition:'{menu.active} === 1', then:'active')}"
+                                   <li class="nav-item pl-3">
+                                      <a class="nav-link py-2 {f:if(condition:'{menu.active} === 1', then:'active')}"
                                          href="{menu.link}"
                                          target="{menu.target}"
                                          title="{menu.title}"
@@ -30,8 +30,8 @@
                         </li>
                     </f:then>
                     <f:else>
-                    <li>
-                       <a class="dropdown-item {f:if(condition:'{menu.active} === 1', then:'active')}"
+                    <li class="nav-item">
+                       <a class="nav-link {f:if(condition:'{menu.active} === 1', then:'active')}"
                           href="{menu.link}"
                           target="{menu.target}"
                           title="{menu.title}"

@@ -23,6 +23,7 @@ plugin.tx_osp {
             }
         }
         frontend{
+            # cat=OSP Frontend//a; type=string; label=Maximum length of post teaser text
             teaserLength = 300
         }
         pages{

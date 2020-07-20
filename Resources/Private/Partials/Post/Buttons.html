@@ -1,5 +1,5 @@
 <div class="btn-group">
-    <f:link.action action="like" controller="Like" class="btn btn-sm btn-default like" arguments="{record:post.uid,type:0}" additionalParams="{type:898}"><i class="fa fa-thumbs-up"></i> like <small class="badge bg-dark">{post.likes}</small></f:link.action>
+    <f:link.action action="like" controller="Like" class="btn btn-sm btn-default like" arguments="{record:post.uid,type:0}" additionalParams="{type:settings.pages.types.page_like_click}"><i class="fa fa-thumbs-up"></i> like <small class="badge bg-dark">{post.likes}</small></f:link.action>
     <a class="btn btn-sm btn-default" href="#" data-dislike="{post.uid}" data-dislike-type="0" disabled><i class="fa fa-thumbs-down"></i> dislike</a>
     <a class="btn btn-sm btn-default" href="#" data-toggle="dropdown"><i class="fa fa-share"></i> share</a>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">

@@ -367,3 +367,15 @@ lib.profileHeader {
 
 #tt_content.stdWrap.dataWrap >
 lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines >
+
+page.2 = TEXT
+page.2 {
+    value = <div class="alert alert-info">STANDARD INHALTE!</div>
+}
+
+[user_country === 'de']
+    page.2 = TEXT
+    page.2 {
+        value = <div class="alert alert-info">DEUTSCHE INHALTE!</div>
+    }
+[global]

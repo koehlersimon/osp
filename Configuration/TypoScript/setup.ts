@@ -307,7 +307,7 @@ page {
 page.10.dataProcessing.25 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
 page.10.dataProcessing.25 {
     table = fe_users
-    pidInList = 4
+    pidInList.dataWrap = {$plugin.tx_osp.settings.storage.user}
     uidInList.stdWrap.data = TSFE:fe_user|user|uid
     recursive = 1
     where = deleted = 0

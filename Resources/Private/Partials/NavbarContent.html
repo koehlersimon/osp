@@ -13,17 +13,6 @@
                 </f:for>
             </ul>
 
-            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Pages</a>
-                    <ul class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
-                        <f:for each="{menuSecondary}" as="menu">
-                            <li><a class="dropdown-item{f:if(condition:'{menu.active} === 1', then:' active')}" href="{menu.link}">{menu.title}</a></li>
-                        </f:for>
-                    </ul>
-                </li>
-            </ul>
-
         </div>
     </div>
 </nav>

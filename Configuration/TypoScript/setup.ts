@@ -202,8 +202,8 @@ page {
 
         dataProcessing {
 
-            1 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            1 {
+            5 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            5 {
                 levels = 3
                 special = directory
                 special.value.data = site:rootPageId
@@ -212,36 +212,9 @@ page {
                 as = menuRoot
             }
 
-            5 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            5 {
-               special = directory
-               special.value = {$plugin.tx_osp.settings.menus.primary.root}
-               levels = 2
-               as = menuPrimary
-               expandAll = 1
-               includeSpacer = 1
-               titleField = nav_title // title
-               dataProcessing {
-                  10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-                  10 {
-                     references.fieldName = media
-                  }
-               }
-            }
-
             10 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
             10 {
                 as = site
-            }
-
-            15 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            15 {
-                levels = 3
-                special = directory
-                special.value = {$plugin.tx_osp.settings.menus.secondary.root}
-                expandAll = 0
-                includeSpacer = 1
-                as = menuSecondary
             }
 
             20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor

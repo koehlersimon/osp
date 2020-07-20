@@ -66,16 +66,6 @@ plugin.tx_osp {
             # cat=OSP Layout//a; type=string; label=Header CSS classes
             headerClasses = container h-50
         }
-        menus{
-            primary{
-                # cat=OSP Menus//a; type=string; label=Menu Primary Root
-                root = 1
-            }
-            secondary{
-                # cat=OSP Menus//a; type=string; label=Menu Secondary Root
-                root = 6
-            }
-        }
     }
 
 }

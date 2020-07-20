@@ -39,14 +39,6 @@ plugin.tx_osp {
             disableHeader = {$plugin.tx_osp.settings.layout.disableHeader}
             headerClasses = {$plugin.tx_osp.settings.layout.headerClasses}
         }
-        menus{
-            primary{
-                root = {$plugin.tx_osp.settings.menus.primary.root}
-            }
-            secondary{
-                root = {$plugin.tx_osp.settings.menus.secondary.root}
-            }
-        }
     }
     persistence {
         storagePid = {$plugin.tx_osp.settings.storage.posts}

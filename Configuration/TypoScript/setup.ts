@@ -331,14 +331,13 @@ lib.userProfileImage {
     }
 }
 
+// Importing page types for Ajax calls
 @import 'EXT:osp/Configuration/TypoScript/PageTypes/*.typoscript'
 
 [frontend.user.isLoggedIn]
     ajaxRequest.20 = TEXT
     ajaxRequest.20.value = Hello World!
 [else]
-    ajaxRequest.20 = TEXT
-    ajaxRequest.20.value = {message:'No access!'}
     markdownPreview.20 = TEXT
     markdownPreview.20.value = <div class="alert alert-info">WARNING: NO PUBLIC ACCESS</div>
     browserExtensionInterface.10 >
@@ -351,10 +350,9 @@ lib.userProfileImage {
 [end]
 
 
-# Profile image
-
-lib.profileHeader = IMG_RESOURCE
-lib.profileHeader {
+// Header Image from page properties
+lib.headerImage = IMG_RESOURCE
+lib.headerImage {
   file {
     import = uploads/media/
     import.data = levelmedia:-1, slide
@@ -365,17 +363,4 @@ lib.profileHeader {
   }
 }
 
-#tt_content.stdWrap.dataWrap >
 lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines >
-
-page.2 = TEXT
-page.2 {
-    value = <div class="alert alert-info">STANDARD INHALTE!</div>
-}
-
-[user_country === 'de']
-    page.2 = TEXT
-    page.2 {
-        value = <div class="alert alert-info">DEUTSCHE INHALTE!</div>
-    }
-[global]

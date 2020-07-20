@@ -53,6 +53,14 @@ call_user_func(
             [\SIMONKOEHLER\Osp\Controller\LikeController::class => 'like']
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Osp',
+            'Account',
+            [\SIMONKOEHLER\Osp\Controller\AccountController::class => 'overview,edit'],
+            // non-cacheable actions
+            [\SIMONKOEHLER\Osp\Controller\AccountController::class => 'overview,edit']
+        );
+
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:osp/Configuration/TypoScript/belayouts.ts">');
 
         $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects']['TYPO3\CMS\Extbase\Domain\Model\FrontendUser'] = array(

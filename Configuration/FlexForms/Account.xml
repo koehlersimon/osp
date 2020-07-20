@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Account Settings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+
+                    <switchableControllerActions>
+                        <TCEforms>
+                            <label>Plugin-Mode</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Account Overview</numIndex>
+                                        <numIndex index="1">Account->overview</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Account Edit Form</numIndex>
+                                        <numIndex index="1">Account->edit</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </switchableControllerActions>
+
+
+                    <settings.editFormPage>
+                       <TCEforms>
+                           <label>Page where the Edit Form Plugin is placed</label>
+                           <config>
+                               <type>group</type>
+                               <internal_type>db</internal_type>
+                               <allowed>pages</allowed>
+                               <size>1</size>
+                               <maxitems>1</maxitems>
+                               <minitems>0</minitems>
+                               <show_thumbs>1</show_thumbs>
+                           </config>
+                       </TCEforms>
+                   </settings.editFormPage>
+
+
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

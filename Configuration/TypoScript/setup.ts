@@ -9,6 +9,50 @@ plugin.tx_osp {
                 profilePicture = {$plugin.tx_osp.settings.user.admin.profilePicture}
                 usergroup = {$plugin.tx_osp.settings.user.admin.usergroup}
             }
+            account{
+                editfields{
+                    username{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.username.show}
+                        editable = {$plugin.tx_osp.settings.user.account.editfields.username.editable}
+                    }
+                    company{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.company.show}
+                    }
+                    title{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.title.show}
+                    }
+                    first_name{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.first_name.show}
+                    }
+                    middle_name{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.middle_name.show}
+                    }
+                    last_name{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.last_name.show}
+                    }
+                    email{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.email.show}
+                    }
+                    telephone{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.telephone.show}
+                    }
+                    country{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.country.show}
+                    }
+                    address{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.address.show}
+                    }
+                    zip{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.zip.show}
+                    }
+                    city{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.city.show}
+                    }
+                    password{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.password.show}
+                    }
+                }
+            }
         }
         frontend{
             teaserLength = {$plugin.tx_osp.settings.frontend.teaserLength}

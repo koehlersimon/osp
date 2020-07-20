@@ -41,6 +41,12 @@ call_user_func(
             'Open Source Platform - Like Plugin'
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'Osp',
+            'Account',
+            'Open Source Platform - User Account'
+        );
+
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('osp', 'Configuration/TypoScript', 'Open Social Project');
 
         // Module System > Backend Users

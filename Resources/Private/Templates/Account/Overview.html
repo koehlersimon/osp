@@ -1,0 +1,79 @@
+<div class="d-flex">
+    <f:if condition="{user.image}">
+        <img src="{f:uri.image(src: user.image)}" alt="{user.username}" width="50" height="50" class="rounded-circle mr-3 mb-3">
+    </f:if>
+    <div class="mr-auto text-right text-md-left">
+        <h3 class="m-0">{user.title} {user.name}</h3>
+        <small><f:translate key="account.overview.member_since"/>: <strong><f:format.date format="d.m.Y / H:i">{user.crdate}</f:format.date></strong></small><br>
+    </div>
+</div>
+
+<hr>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Company</th>
+        <td>
+            <f:if condition="{user.company}">
+                <f:then>{user.company}</f:then>
+                <f:else><span class="text-muted">not given</span></f:else>
+            </f:if>
+        </td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td>
+            <f:if condition="{user.name}">
+                <f:then>{user.title} {user.name}</f:then>
+                <f:else><span class="text-muted">not given</span></f:else>
+            </f:if>
+        </td>
+    </tr>
+    <tr>
+        <th><f:translate key="account.overview.email"/></th>
+        <td>
+            <f:if condition="{user.email}">
+                <f:link.email email="{user.email}">{user.email}</f:link.email>
+            </f:if>
+        </td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>
+            <f:if condition="{user.address}">
+                <f:then>{user.address}</f:then>
+                <f:else><span class="text-muted">not given</span></f:else>
+            </f:if>
+        </td>
+    </tr>
+    <tr>
+        <th>ZIP / City</th>
+        <td>
+            <f:if condition="{user.zip}">
+                <f:then>{user.zip}</f:then>
+                <f:else><span class="text-muted">no zip given</span></f:else>
+            </f:if>
+            <f:if condition="{user.city}">
+                <f:then>{user.city}</f:then>
+                <f:else><span class="text-muted">no city given</span></f:else>
+            </f:if>
+        </td>
+    </tr>
+    <tr>
+        <th>Country</th>
+        <td>
+            <f:if condition="{user.country}">
+                <f:then>{user.country}</f:then>
+                <f:else><span class="text-muted">no country given</span></f:else>
+            </f:if>
+        </td>
+    </tr>
+</table>
+
+<hr>
+
+<f:link.page pageUid="24" class="btn btn-primary">
+    <i class="fa fa-edit"></i> <f:translate key="account.overview.edit_account"/>
+</f:link.page>
+
+<f:link.action pageUid="{settings.pages.posts.form}" class="float-right" arguments="{delete:user.uid}" action="edit"><i class="fa fa-trash"></i> <f:translate key="account.overview.delete_account"/></f:link.action>

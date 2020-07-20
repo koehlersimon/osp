@@ -21,6 +21,50 @@ plugin.tx_osp {
                 # cat=OSP User//a; type=string; label=Usergroup for external users or other OSP platforms
                 usergroup =
             }
+            account{
+                editfields{
+                    username{
+                        show = 1
+                        editable = 1
+                    }
+                    company{
+                        show = 0
+                    }
+                    title{
+                        show = 1
+                    }
+                    first_name{
+                        show = 1
+                    }
+                    middle_name{
+                        show = 1
+                    }
+                    last_name{
+                        show = 1
+                    }
+                    email{
+                        show = 1
+                    }
+                    telephone{
+                        show = 1
+                    }
+                    country{
+                        show = 1
+                    }
+                    address{
+                        show = 1
+                    }
+                    zip{
+                        show = 1
+                    }
+                    city{
+                        show = 1
+                    }
+                    password{
+                        show = 1
+                    }
+                }
+            }
         }
         frontend{
             # cat=OSP Frontend//a; type=string; label=Maximum length of post teaser text

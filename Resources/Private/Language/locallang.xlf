@@ -46,6 +46,62 @@
 			</trans-unit>
 
 
+			<trans-unit id="account.overview.member_since">
+				<source>Member since</source>
+			</trans-unit>
+			<trans-unit id="account.delete_account_finally_question">
+				<source>Do you really want to permanently delete your account?</source>
+			</trans-unit>
+			<trans-unit id="account.overview.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="account.overview.edit_account">
+				<source>Edit account</source>
+			</trans-unit>
+			<trans-unit id="account.overview.delete_account">
+				<source>Delete account</source>
+			</trans-unit>
+			<trans-unit id="account.successfully_saved">
+				<source>Successfully saved!</source>
+			</trans-unit>
+			<trans-unit id="account.edit.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="account.edit.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="account.edit.company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="account.edit.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="account.edit.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="account.edit.first_name">
+				<source>First name</source>
+			</trans-unit>
+			<trans-unit id="account.edit.middle_name">
+				<source>Middle name</source>
+			</trans-unit>
+			<trans-unit id="account.edit.last_name">
+				<source>Last name</source>
+			</trans-unit>
+			<trans-unit id="account.edit.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="account.edit.password">
+				<source>Password</source>
+			</trans-unit>
+			<trans-unit id="account.edit.telephone">
+				<source>Telephone</source>
+			</trans-unit>
+			<trans-unit id="account.edit.zip">
+				<source>ZIP</source>
+			</trans-unit>
+
+
 		</body>
 	</file>
 </xliff>

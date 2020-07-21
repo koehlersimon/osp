@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-01T14:26:00Z" product-name="go_sitetools">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-07-19T14:26:00Z" product-name="osp">
 		<header/>
 		<body>
 			<trans-unit id="content_type.description">

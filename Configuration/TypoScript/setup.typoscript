@@ -95,7 +95,7 @@ page {
         home = EXT:osp/Resources/Public/Js/Home.js
         form = EXT:osp/Resources/Public/Js/Form.js
         like = EXT:osp/Resources/Public/Js/Like.js
-        notifications = EXT:osp/Resources/Public/Js/Notifications.js
+        notification = EXT:osp/Resources/Public/Js/Notification.js
     }
 
     10 = FLUIDTEMPLATE

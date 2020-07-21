@@ -103,7 +103,7 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         }
 
         if($this->request->hasArgument('post')){
-            $url = $apiBaseUrl.'?type=910&tx_osp_post[post]='.$this->request->getArgument('post');
+            $url = $apiBaseUrl.'?type='.$this->settings['pages']['types']['page_external_post_provide'].'&tx_osp_post[post]='.$this->request->getArgument('post');
             $get_data = $this->postRepository->callAPI('GET', $url, false);
             $post = json_decode($get_data);
             $this->view->assign('post', $post);

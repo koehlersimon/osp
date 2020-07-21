@@ -180,13 +180,6 @@ page {
             <link rel="manifest" href="typo3conf/ext/osp/Resources/Public/Icons/Public/manifest.json">
             <meta name="msapplication-TileImage" content="typo3conf/ext/osp/Resources/Public/Icons/Public/ms-icon-144x144.png">
         )
-        10 = TEXT
-        10.value(
-            <!--[if lt IE 9]>
-                <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-            <![endif]-->
-        )
         20 = TEXT
         20.value(
             <style>
@@ -369,14 +362,14 @@ lib.userProfileImage {
 // Importing page types for Ajax calls
 @import 'EXT:osp/Configuration/TypoScript/PageTypes/*.typoscript'
 
-[frontend.user.isLoggedIn]
-    
-[else]
-    page_markdown_preview.20 = TEXT
-    page_markdown_preview.20.value = <div class="alert alert-info">WARNING: NO PUBLIC ACCESS</div>
+
+[!frontend.user.isLoggedIn]
+    page_markdown_preview.10 >
+    page_markdown_preview.10 = TEXT
+    page_markdown_preview.10.value = <div class="alert alert-warning">WARNING: NO PUBLIC ACCESS</div>
     page_browser_extension.10 >
     page_browser_extension.10 = TEXT
-    page_browser_extension.10.value = <div class="alert alert-info">WARNING: NO PUBLIC ACCESS</div>
+    page_browser_extension.10.value = <div class="alert alert-warning">WARNING: NO PUBLIC ACCESS</div>
     page_browser_extension_form.10 >
     page_browser_extension_form.10 = TEXT
     page_browser_extension_form.10.insertData = 1

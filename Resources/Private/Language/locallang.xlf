@@ -12,6 +12,26 @@
 			</trans-unit>
 
 
+			<trans-unit id="fe.navbar.login">
+				<source>LOGIN</source>
+			</trans-unit>
+			<trans-unit id="fe.navbar.search">
+				<source>Search phrases..</source>
+			</trans-unit>
+			<trans-unit id="fe.post.form.whatsonyourmind">
+				<source>What's on your mind, %1$s ?</source>
+			</trans-unit>
+			<trans-unit id="fe.post.form.thank_you">
+				<source>Thank you!</source>
+			</trans-unit>
+			<trans-unit id="fe.post.form.post_saved">
+				<source>Your post has been saved!</source>
+			</trans-unit>
+			<trans-unit id="fe.post.form.send_btn_label">
+				<source>SAVE POST</source>
+			</trans-unit>
+
+
 			<trans-unit id="be_layout.columns.header">
 				<source>Page Header</source>
 			</trans-unit>

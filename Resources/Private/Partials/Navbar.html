@@ -10,7 +10,7 @@
             <f:image src="{settings.site.navbarLogo}" maxHeight="32"/>
         </f:if>
     </f:link.page>
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto d-lg-none">
         <li class="nav-item">
             <f:link.page pageUid="{settings.pages.account.login}" class="nav-link"><i class="fa fa-sign-in"></i> {f:translate(key:'fe.navbar.login',extensionName:'Osp')}</f:link.page>
         </li>
@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <f:security.ifAuthenticated>
         <form class="d-flex m-auto">
-            <input class="form-control form-control-sm mr-2" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control form-control-sm mr-2" type="search" placeholder="{f:translate(key:'fe.navbar.search',extensionName:'Osp')}" aria-label="Search">
             <button class="btn btn-dark btn-sm" type="submit"><i class="fa fa-search"></i></button>
         </form>
         </f:security.ifAuthenticated>

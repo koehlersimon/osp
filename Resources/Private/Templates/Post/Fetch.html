@@ -12,11 +12,9 @@
 		<f:render partial="Post/Buttons" arguments="{_all}"/>
         </f:security.ifAuthenticated>
     </f:then>
-
     <f:else>
         <div class="card p-4 mb-4">
             <p class="danger">We couldn't find this post. Please visit the <f:link.page pageUid="{settings.pages.wall}">Wall</f:link.page> to see other posts.</p>
         </div>
     </f:else>
-
 </f:if>

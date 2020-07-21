@@ -93,8 +93,8 @@ plugin.tx_osp {
                 page_posts_home = 800
                 page_markdown_preview = 810
                 page_like_click = 820
-                page_external_post = 830
-                page_external_post_fetch = 840
+                page_external_post_fetch = 830
+                page_external_post_provide = 840
                 page_browser_extension = 1100
                 page_browser_extension_form = 1110
             }

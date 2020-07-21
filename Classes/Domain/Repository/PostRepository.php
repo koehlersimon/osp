@@ -123,7 +123,7 @@ class PostRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
 	   curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
 	   // EXECUTE:
 	   $result = curl_exec($curl);
-	   if(!$result){die("Connection Failure");}
+	   if(!$result){die("Connection Failure (Failed to connect to: ".$url.")");}
 	   curl_close($curl);
 	   return $result;
 	}

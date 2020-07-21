@@ -1,0 +1,13 @@
+plugin.tx_osp_wall {
+    view {
+        templateRootPaths.0 = EXT:osp/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_osp_wall.view.templateRootPath}
+        partialRootPaths.0 = EXT:osp/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_osp_wall.view.partialRootPath}
+        layoutRootPaths.0 = EXT:osp/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_osp_wall.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_osp.settings.storage.posts}
+    }
+}

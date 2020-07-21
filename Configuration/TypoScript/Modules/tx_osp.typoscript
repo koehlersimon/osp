@@ -1,0 +1,10 @@
+module.tx_osp {
+    view {
+        templateRootPaths {
+            10 = EXT:osp/Resources/Private/Backend/Templates/
+        }
+        layoutRootPaths {
+           10 = EXT:osp/Resources/Private/Backend/Layouts/
+        }
+    }
+}

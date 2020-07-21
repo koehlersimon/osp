@@ -1,0 +1,102 @@
+plugin.tx_osp {
+    settings{
+        site{
+            absRefPrefix = {$plugin.tx_osp.settings.site.absRefPrefix}
+            navbarLogo = {$plugin.tx_osp.settings.site.navbarLogo}
+        }
+        user{
+            admin{
+                profilePicture = {$plugin.tx_osp.settings.user.admin.profilePicture}
+                usergroup = {$plugin.tx_osp.settings.user.admin.usergroup}
+            }
+            account{
+                editfields{
+                    username{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.username.show}
+                        editable = {$plugin.tx_osp.settings.user.account.editfields.username.editable}
+                    }
+                    company{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.company.show}
+                    }
+                    title{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.title.show}
+                    }
+                    first_name{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.first_name.show}
+                    }
+                    middle_name{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.middle_name.show}
+                    }
+                    last_name{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.last_name.show}
+                    }
+                    email{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.email.show}
+                    }
+                    telephone{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.telephone.show}
+                    }
+                    country{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.country.show}
+                    }
+                    address{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.address.show}
+                    }
+                    zip{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.zip.show}
+                    }
+                    city{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.city.show}
+                    }
+                    password{
+                        show = {$plugin.tx_osp.settings.user.account.editfields.password.show}
+                    }
+                }
+            }
+        }
+        frontend{
+            teaserLength = {$plugin.tx_osp.settings.frontend.teaserLength}
+        }
+        pages{
+            home = {$plugin.tx_osp.settings.pages.home}
+            wall = {$plugin.tx_osp.settings.pages.wall}
+            account{
+                login = {$plugin.tx_osp.settings.pages.account.login}
+                overview = {$plugin.tx_osp.settings.pages.account.overview}
+                edit = {$plugin.tx_osp.settings.pages.account.edit}
+            }
+            post{
+                form = {$plugin.tx_osp.settings.pages.post.form}
+                detail = {$plugin.tx_osp.settings.pages.post.detail}
+            }
+            types{
+                page_posts_home = {$plugin.tx_osp.settings.pages.types.page_posts_home}
+                page_markdown_preview = {$plugin.tx_osp.settings.pages.types.page_markdown_preview}
+                page_like_click = {$plugin.tx_osp.settings.pages.types.page_like_click}
+                page_external_post = {$plugin.tx_osp.settings.pages.types.page_external_post}
+                page_external_post_fetch = {$plugin.tx_osp.settings.pages.types.page_external_post_fetch}
+                page_browser_extension = {$plugin.tx_osp.settings.pages.types.page_browser_extension}
+                page_browser_extension_form = {$plugin.tx_osp.settings.pages.types.page_browser_extension_form}
+            }
+        }
+        storage{
+            media = {$plugin.tx_osp.settings.storage.media}
+            posts = {$plugin.tx_osp.settings.storage.posts}
+            comments = {$plugin.tx_osp.settings.storage.comments}
+            likes = {$plugin.tx_osp.settings.storage.likes}
+            user = {$plugin.tx_osp.settings.storage.user}
+        }
+        layout{
+            disableHeader = {$plugin.tx_osp.settings.layout.disableHeader}
+            headerClasses = {$plugin.tx_osp.settings.layout.headerClasses}
+        }
+    }
+    persistence {
+        storagePid = {$plugin.tx_osp.settings.storage.posts}
+    }
+    view {
+        templateRootPaths.0 = EXT:osp/Resources/Private/Templates/
+        partialRootPaths.0 = EXT:osp/Resources/Private/Partials/
+        layoutRootPaths.0 = EXT:osp/Resources/Private/Layouts/
+    }
+}

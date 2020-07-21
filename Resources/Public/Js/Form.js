@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var dropArea = document.getElementById('dropArea');
 
     var loadMarkdownPreview = function(content){
+        postPreview.innerHTML = '<div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>';
         var data = {bodytext: content};
         var params = typeof data == 'string' ? data : Object.keys(data).map(
             function(k){ return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) }

@@ -3,13 +3,13 @@
         <f:then>
         <div class="card-header"><h6 class="m-0 text-center">{fe_user.0.data.name}</h6></div>
         <div class="card-body">
-            <f:link.page pageUid="{settings.pages.login}" class="btn btn-primary btn-block" additionalParams="{logintype:'logout'}"><i class="fa fa-sign-in"></i> Logout</f:link.page>
+            <f:link.page pageUid="{settings.pages.account.login}" class="btn btn-primary btn-block" additionalParams="{logintype:'logout'}"><i class="fa fa-sign-in"></i> Logout</f:link.page>
         </div>
         </f:then>
         <f:else>
         <div class="card-header"><h6 class="m-0"><i class="fa fa-group"></i> User</h6></div>
         <div class="card-body">
-            <f:link.page pageUid="{settings.pages.login}" class="btn btn-primary btn-block"><i class="fa fa-sign-in"></i> Sign In</f:link.page>
+            <f:link.page pageUid="{settings.pages.account.login}" class="btn btn-primary btn-block"><i class="fa fa-sign-in"></i> Sign In</f:link.page>
         </div>
         </f:else>
     </f:security.ifAuthenticated>

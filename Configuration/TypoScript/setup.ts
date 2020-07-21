@@ -370,18 +370,17 @@ lib.userProfileImage {
 @import 'EXT:osp/Configuration/TypoScript/PageTypes/*.typoscript'
 
 [frontend.user.isLoggedIn]
-    ajaxRequest.20 = TEXT
-    ajaxRequest.20.value = Hello World!
+    
 [else]
-    markdownPreview.20 = TEXT
-    markdownPreview.20.value = <div class="alert alert-info">WARNING: NO PUBLIC ACCESS</div>
-    browserExtensionInterface.10 >
-    browserExtensionInterface.10 = TEXT
-    browserExtensionInterface.10.value = <div class="alert alert-info">WARNING: NO PUBLIC ACCESS</div>
-    browserExtensionForm.10 >
-    browserExtensionForm.10 = TEXT
-    browserExtensionForm.10.insertData = 1
-    browserExtensionForm.10.value = <div class="alert alert-info">You must be logged in to write a post! <a href="{site:base}" class="link">Login</a></div>
+    page_markdown_preview.20 = TEXT
+    page_markdown_preview.20.value = <div class="alert alert-info">WARNING: NO PUBLIC ACCESS</div>
+    page_browser_extension.10 >
+    page_browser_extension.10 = TEXT
+    page_browser_extension.10.value = <div class="alert alert-info">WARNING: NO PUBLIC ACCESS</div>
+    page_browser_extension_form.10 >
+    page_browser_extension_form.10 = TEXT
+    page_browser_extension_form.10.insertData = 1
+    page_browser_extension_form.10.value = <div class="alert alert-info">You must be logged in to write a post! <a href="{site:base}" class="link">Login</a></div>
 [end]
 
 

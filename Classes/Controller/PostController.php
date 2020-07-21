@@ -106,12 +106,19 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             $url = $apiBaseUrl.'?type='.$this->settings['pages']['types']['page_external_post_provide'].'&tx_osp_post[post]='.$this->request->getArgument('post');
             $get_data = $this->postRepository->callAPI('GET', $url, false);
             $post = json_decode($get_data);
-            $this->view->assign('post', $post);
+            if($post){
+                $output = $post;
+            }
+            else{
+                $output['content'] = 'p(badge bg-danger p-4). Post data could not be fetched!<br>('.$url.')';
+            }
         }
         else{
-            $post['content'] = 'p(badge bg-danger). No post ID given!';
-            $this->view->assign('post', $post);
+            $output['content'] = 'p(badge bg-danger). No post ID given!';
         }
+
+        $this->view->assign('post', $output);
+
     }
 
     /**

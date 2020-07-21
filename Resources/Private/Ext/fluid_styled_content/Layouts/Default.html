@@ -1,11 +1,18 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-    {data.frame_class}
-
     <f:if condition="{data.frame_class} != none">
         <f:then>
 
-            <div id="c{data.uid}" class="frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}">
+            <f:switch expression="{data.frame_class}">
+                <f:case value="card">
+                    <f:variable name="frameClass" value="card p-3 mb-2 "/>
+                </f:case>
+                <f:defaultCase>
+                    <f:variable name="frameClass" value=""/>
+                </f:defaultCase>
+            </f:switch>
+
+            <div id="c{data.uid}" class="{frameClass}ce_{data.CType}{f:if(condition: data.space_before_class, then: ' {data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' {data.space_after_class}')}">
                 <f:if condition="{data._LOCALIZED_UID}">
                     <a id="c{data._LOCALIZED_UID}"></a>
                 </f:if>

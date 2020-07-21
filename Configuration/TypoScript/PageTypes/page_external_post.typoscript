@@ -1,12 +1,12 @@
-page_external_post = PAGE
-page_external_post {
+page_external_post_fetch = PAGE
+page_external_post_fetch {
     config {
         disableAllHeaderCode = 1
         additionalHeaders = Content-Type:text/html;charset=utf-8
         admPanel = 0
         debug = 0
     }
-    typeNum = {$plugin.tx_osp.settings.pages.types.page_external_post}
+    typeNum = {$plugin.tx_osp.settings.pages.types.page_external_post_fetch}
     10 = COA
     10 {
         10 = USER
@@ -29,9 +29,9 @@ page_external_post {
     }
 }
 
-page_external_post_fetch < ajax_external_post
-page_external_post_fetch.typeNum = 910
-page_external_post_fetch.10.10{
+page_external_post_provide < ajax_external_post
+page_external_post_provide.typeNum = {$plugin.tx_osp.settings.pages.types.page_external_post_provide}
+page_external_post_provide.10.10{
     userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
     extensionName = Osp
     pluginName = Post

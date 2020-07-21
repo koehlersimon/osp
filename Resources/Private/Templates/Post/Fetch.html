@@ -1,6 +1,5 @@
 {namespace textile=SIMONKOEHLER\Textile\ViewHelpers}
 {namespace post=SIMONKOEHLER\Osp\ViewHelpers}
-
 <f:if condition="{post}">
     <f:then>
         <f:format.raw><textile:parse content="{post.content}"/></f:format.raw>

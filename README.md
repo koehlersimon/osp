@@ -33,6 +33,14 @@ OSP uses a template that is almost 100% based on the Bootstrap 5 framework. All 
 - User settings page
 - Static page builder
 
+## OSP on Packagist
+
+https://packagist.org/packages/simonkoehler/osp#dev-master
+
+## Composer Install
+
+```composer req simonkoehler/osp```
+
 ## When will OSP be officially released?
 
 A first official release of OSP is planned for late August 2020. Then the extension will be available in the official TYPO3 repository and also for Composer.

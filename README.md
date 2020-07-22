@@ -50,3 +50,7 @@ You can download and test the extension here, but at your own risk! We ask you t
 ## Questions?
 
 If you are interested in contributing or have any other questions: https://simon-koehler.com/en/contact
+
+## Do you want to learn TYPO3? Here's what you need:
+Video Training TYPO3 9 LTS (German language)
+https://www.digistore24.com/redir/246076/GOCHILLA/

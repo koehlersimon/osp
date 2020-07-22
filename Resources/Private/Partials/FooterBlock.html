@@ -1,7 +1,31 @@
 <footer class="mt-4 text-muted text-center mb-4">
     <div class="container">
 
-        <f:debug title="_all">{_all}</f:debug>
+        <f:if condition="{footer1} || {footer2} || {footer3} || {footer4}">
+            <div class="row">
+                <f:if condition="{footer1}">
+                    <div class="col">
+                        <f:format.raw>{footer1}</f:format.raw>
+                    </div>
+                </f:if>
+                <f:if condition="{footer2}">
+                    <div class="col">
+                        <f:format.raw>{footer2}</f:format.raw>
+                    </div>
+                </f:if>
+                <f:if condition="{footer3}">
+                    <div class="col">
+                        <f:format.raw>{footer3}</f:format.raw>
+                    </div>
+                </f:if>
+                <f:if condition="{footer4}">
+                    <div class="col">
+                        <f:format.raw>{footer4}</f:format.raw>
+                    </div>
+                </f:if>
+            </div>
+        </f:if>
+
 
         <div class="row">
             <div class="col">

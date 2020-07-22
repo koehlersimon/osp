@@ -155,6 +155,26 @@ page {
             header.select.includeRecordsWithoutDefaultTranslation = 1
             header.slide = -1
 
+            footer1 < styles.content.get
+            footer1.select.where = colPos = 200
+            footer1.select.includeRecordsWithoutDefaultTranslation = 1
+            footer1.slide = -1
+
+            footer2 < styles.content.get
+            footer2.select.where = colPos = 210
+            footer2.select.includeRecordsWithoutDefaultTranslation = 1
+            footer2.slide = -1
+
+            footer3 < styles.content.get
+            footer3.select.where = colPos = 220
+            footer3.select.includeRecordsWithoutDefaultTranslation = 1
+            footer3.slide = -1
+
+            footer4 < styles.content.get
+            footer4.select.where = colPos = 230
+            footer4.select.includeRecordsWithoutDefaultTranslation = 1
+            footer4.slide = -1
+
         }
 
         file.cObject = CASE

@@ -8,43 +8,43 @@ call_user_func(
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Osp',
             'Home',
-            'Open Source Platform - Homepage'
+            'OSP - Homepage'
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Osp',
             'Wall',
-            'Open Source Platform - Wall'
+            'OSP - Wall'
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Osp',
             'Post',
-            'Open Source Platform - Post Detail'
+            'OSP - Post Detail'
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Osp',
             'Form',
-            'Open Source Platform - Post Form'
+            'OSP - Post Form'
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Osp',
             'Browser',
-            'Open Source Platform - Browser Interface'
+            'OSP - Browser Interface'
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Osp',
             'Like',
-            'Open Source Platform - Like Plugin'
+            'OSP - Like Plugin'
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Osp',
             'Account',
-            'Open Source Platform - User Account'
+            'OSP - User Account'
         );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('osp', 'Configuration/TypoScript', 'Open Social Project');

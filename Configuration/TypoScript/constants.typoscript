@@ -5,6 +5,8 @@ plugin.tx_osp {
             absRefPrefix = /
             # cat=OSP Site//a; type=string; label=Logo for navbar
             navbarLogo = EXT:osp/Resources/Public/Icons/Public/favicon-32x32.png
+            # cat=OSP Site//a; type=string; label=Copyright text
+            copyrightText = &copy; 2020 made with <a href="https://opensocialproject.org" class="link-secondary" target="_blank">OSP <i class="fa fa-link"></i></a> | <a href="https://github.com/koehlersimon/osp" class="link-secondary" target="_blank">Source <i class="fa fa-github"></i></a>
         }
         user{
             admin{

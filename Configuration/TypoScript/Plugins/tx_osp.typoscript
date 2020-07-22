@@ -3,6 +3,7 @@ plugin.tx_osp {
         site{
             absRefPrefix = {$plugin.tx_osp.settings.site.absRefPrefix}
             navbarLogo = {$plugin.tx_osp.settings.site.navbarLogo}
+            copyrightText = {$plugin.tx_osp.settings.site.copyrightText}
         }
         user{
             admin{

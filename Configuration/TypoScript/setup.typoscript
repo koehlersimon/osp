@@ -192,7 +192,7 @@ page {
             key.override.field = backend_layout
 
             pagets__sidebar_left = TEXT
-            pagets__sidebar_left.value = EXT:osp/Resources/Private/Templates/SidebarLeft.html
+            pagets__sidebar_left.value = EXT:osp/Resources/Private/Templates/Sidebar.html
 
             pagets__post_detail = TEXT
             pagets__post_detail.value = EXT:osp/Resources/Private/Templates/PostDetail.html

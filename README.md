@@ -1,6 +1,6 @@
-# OSP (Open Social Project)
+# OSP (Open Social Project) based on TYPO3 CMS
 
-The alternative Social Media Platform based on TYPO3
+The alternative Social Media application based on TYPO3, Extbase, Fluid and Bootstrap 5. All you need to run your own OSP is a web server that supports the TYPO3 CMS from version 10.4 or higher.
 
 ## What is OSP?
 

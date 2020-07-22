@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     else if (Notification.permission !== "denied") {
         Notification.requestPermission().then(permission => {
-            console.log(permission);
+            //console.log(permission);
         });
     }
 

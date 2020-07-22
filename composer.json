@@ -1,0 +1,16 @@
+{
+    "name": "simonkoehler/osp",
+    "type": "typo3-cms-extension",
+    "description": "The open social project for TYPO3",
+    "homepage": "https://opensocialproject.com",
+    "authors": "Simon Köhler",
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "typo3/cms-core": "^10.4.4"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "osp"
+        }
+    }
+}

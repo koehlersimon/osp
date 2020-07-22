@@ -29,7 +29,7 @@ page_external_post_fetch {
     }
 }
 
-page_external_post_provide < ajax_external_post
+page_external_post_provide < page_external_post_fetch
 page_external_post_provide.typeNum = {$plugin.tx_osp.settings.pages.types.page_external_post_provide}
 page_external_post_provide.10.10{
     userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run

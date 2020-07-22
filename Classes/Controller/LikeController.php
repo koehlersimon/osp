@@ -33,28 +33,34 @@ class LikeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         $record = $this->request->getArgument('record');
         $type = $this->request->getArgument('type');
 
-        if(is_numeric($record) && is_numeric($type)){
+        if($user){
+            if(is_numeric($record) && is_numeric($type)){
 
-            switch ($type) {
-                case 0:
-                    if($this->likeRepository->getLikesFromPost($user,$record)){
-                        $output['msg'] = 'You already liked this!';
-                        $output['label'] = '<i class=\"fa fa-love\"></i> Liked!';
-                    }
-                    else{
-                        $newLike = new \SIMONKOEHLER\Osp\Domain\Model\Like();
-                        $newLike->setOwner($user);
-                        $newLike->setPid($this->settings['storage']['likes']);
-                        $newLike->setParent($record);
-                        $newLike->setParentType($type);
-                        $this->likeRepository->add($newLike);
-                        $this->persistenceManager->persistAll();
-                        $output['msg'] = 'Thank you!';
-                        $output['label'] = '<i class=\"fa fa-love\"></i> Liked!';
-                    }
-                break;
+                switch ($type) {
+                    case 0:
+                        if($this->likeRepository->getLikesFromPost($user,$record)){
+                            $output['msg'] = 'You already liked this!';
+                            $output['label'] = '<i class=\"fa fa-love\"></i> Liked!';
+                        }
+                        else{
+                            $newLike = new \SIMONKOEHLER\Osp\Domain\Model\Like();
+                            $newLike->setOwner($user);
+                            $newLike->setPid($this->settings['storage']['likes']);
+                            $newLike->setParent($record);
+                            $newLike->setParentType($type);
+                            $this->likeRepository->add($newLike);
+                            $this->persistenceManager->persistAll();
+                            $output['msg'] = 'Thank you!';
+                            $output['label'] = '<i class=\"fa fa-love\"></i> Liked!';
+                        }
+                    break;
+                }
+
             }
-
+        }
+        else{
+            $output['msg'] = 'No access';
+            $output['label'] = '<i class=\"fa fa-love\"></i> No access!';
         }
 
         $this->view->assign('json',json_encode($output));

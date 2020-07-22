@@ -3,16 +3,15 @@
 
 <f:if condition="{post}">
     <f:then>
-    <div class="card bg-white p-4 mb-4">
-        <div>
-            <strong class="text-primary">{post.ownername}</strong> <small><post:date content="{post.crdate}"/></small>
-            <f:format.raw><textile:parse content="{post.content}"/></f:format.raw>
-            <f:if condition="{post.media}">
-				<f:render partial="Post/Media" arguments="{media:post.media}"/>
-			</f:if>
-			<hr>
-			<f:render partial="Post/Buttons" arguments="{_all}"/>
-        </div>
+
+    <div>
+        <strong class="text-primary">{post.ownername}</strong> <small><post:date content="{post.crdate}"/></small>
+        <f:format.raw><textile:parse content="{post.content}"/></f:format.raw>
+        <f:if condition="{post.media}">
+			<f:render partial="Post/Media" arguments="{media:post.media}"/>
+		</f:if>
+		<hr>
+		<f:render partial="Post/Buttons" arguments="{_all}"/>
     </div>
 
     <f:security.ifAuthenticated>
@@ -25,9 +24,7 @@
     </f:security.ifAuthenticated>
     </f:then>
     <f:else>
-    <div class="card p-4 mb-4">
         <p class="danger">We couldn't find this post. Please visit the <f:link.page pageUid="{settings.pages.wall}">Wall</f:link.page> to see other posts.</p>
-    </div>
     </f:else>
 </f:if>
 

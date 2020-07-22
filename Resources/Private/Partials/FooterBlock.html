@@ -1,9 +1,12 @@
 <footer class="mt-4 text-muted text-center mb-4">
     <div class="container">
+
+        <f:debug title="_all">{_all}</f:debug>
+
         <div class="row">
             <div class="col">
                 <div class="card bg-white border-top py-4">
-                    <small>{settings.site.copyrightText}</small>
+                    <small><f:format.raw>{settings.site.copyrightText}</f:format.raw></small>
                 </div>
             </div>
         </div>

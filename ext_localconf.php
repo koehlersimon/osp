@@ -61,11 +61,23 @@ call_user_func(
             [\SIMONKOEHLER\Osp\Controller\AccountController::class => 'overview,edit']
         );
 
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:osp/Configuration/TypoScript/belayouts.ts">');
-
         $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects']['TYPO3\CMS\Extbase\Domain\Model\FrontendUser'] = array(
             'className' => 'SIMONKOEHLER\Osp\Domain\Model\User'
         );
+
+        $icons = [
+            'osp-wall' => 'EXT:osp/Resources/Public/Icons/osp.svg',
+            'osp-form' => 'EXT:osp/Resources/Public/Icons/osp.svg',
+            'osp-home' => 'EXT:osp/Resources/Public/Icons/osp.svg',
+        ];
+        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+        foreach ($icons as $identifier => $path) {
+            $iconRegistry->registerIcon(
+                $identifier,
+                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+                ['source' => $path]
+            );
+        }
 
         // Hook into the page module
         // $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/db_layout.php']['drawHeaderHook']['osp'] = \SIMONKOEHLER\Osp\Hook\PageHook::class . '->render';

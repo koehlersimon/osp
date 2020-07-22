@@ -3,7 +3,14 @@
     "type": "typo3-cms-extension",
     "description": "The open social project for TYPO3",
     "homepage": "https://opensocialproject.com",
-    "authors": "Simon Köhler",
+    "authors": [
+        {
+            "name": "Simon Köhler",
+            "email": "info@opensocialproject.com",
+            "homepage": "https://simon-koehler.com/en",
+            "role": "Developer"
+        }
+    ],
     "license": "GPL-3.0-or-later",
     "require": {
         "typo3/cms-core": "^10.4.4"

@@ -7,33 +7,18 @@
             <f:image src="{settings.site.navbarLogo}" maxHeight="32"/>
         </f:if>
     </f:link.page>
-    <f:security.ifAuthenticated>
-    <f:then>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navtoggle" aria-controls="navtoggle" aria-expanded="false" aria-label="Toggle navigation">
         <i class="navbar-toggler-icon"></i>
     </button>
     <div class="collapse navbar-collapse" id="navtoggle">
+        <f:render partial="NavbarNav" arguments="{menuRoot:menuRoot}"/>
+        <f:security.ifAuthenticated>
         <form class="d-flex m-auto my-3">
             <input class="form-control form-control-sm mr-2" type="search" placeholder="{f:translate(key:'fe.navbar.search',extensionName:'Osp')}" aria-label="Search">
             <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-search"></i></button>
         </form>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">{f:if(condition:'{fe_user.0.data.name}', then:'{fe_user.0.data.name} / ')}{f:if(condition:'{user}', then:'{user}', else:'Account')}</a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><f:link.page pageUid="{settings.pages.account.login}" class="dropdown-item" additionalParams="{logintype:'logout'}"><i class="fa fa-support"></i> Logout</f:link.page></li>
-                </ul>
-            </li>
-        </ul>
+        </f:security.ifAuthenticated>
     </div>
-    </f:then>
-    <f:else>
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <f:link.page pageUid="{settings.pages.account.login}" class="nav-link"><i class="fa fa-sign-in"></i> {f:translate(key:'fe.navbar.login',extensionName:'Osp')}</f:link.page>
-        </li>
-    </ul>
-    </f:else>
-    </f:security.ifAuthenticated>
   </div>
 </nav>

@@ -1,0 +1,57 @@
+<ul class="navbar-nav ml-auto">
+    <f:for each="{menuRoot}" as="menu">
+        <f:if condition="{menu.children}">
+            <f:then>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle {f:if(condition:'{menu.active} === 1', then:'active')}"
+                      href="#"
+                      target="{menu.target}"
+                      title="{menu.title}"
+                      data-toggle="dropdown"
+                      >
+                      {menu.title}
+                   </a>
+                   <ul class="dropdown-menu">
+                       <f:for each="{menu.children}" as="menu">
+                           <li class="nav-item">
+                              <a class="dropdown-item {f:if(condition:'{menu.active} === 1', then:'active')}"
+                                 href="{menu.link}"
+                                 target="{menu.target}"
+                                 title="{menu.title}"
+                                 >
+                                 {menu.title}
+                              </a>
+                           </li>
+                       </f:for>
+                   </ul>
+                </li>
+            </f:then>
+            <f:else>
+            <li class="nav-item">
+               <a class="nav-link {f:if(condition:'{menu.active} === 1', then:'active')}"
+                  href="{menu.link}"
+                  target="{menu.target}"
+                  title="{menu.title}"
+                  >
+                  {menu.title}
+               </a>
+            </li>
+            </f:else>
+        </f:if>
+     </f:for>
+     <f:security.ifAuthenticated>
+     <f:then>
+     <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">{f:if(condition:'{fe_user.0.data.name}', then:'{fe_user.0.data.name} / ')}{f:if(condition:'{user}', then:'{user}', else:'Account')}</a>
+         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <li><f:link.page pageUid="{settings.pages.account.login}" class="dropdown-item" additionalParams="{logintype:'logout'}"><i class="fa fa-support"></i> Logout</f:link.page></li>
+         </ul>
+     </li>
+     </f:then>
+     <f:else>
+         <li class="nav-item">
+             <f:link.page pageUid="{settings.pages.account.login}" class="nav-link"><i class="fa fa-sign-in"></i> {f:translate(key:'fe.navbar.login',extensionName:'Osp')}</f:link.page>
+         </li>
+     </f:else>
+     </f:security.ifAuthenticated>
+ </ul>

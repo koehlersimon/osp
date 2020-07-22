@@ -118,6 +118,15 @@ page {
                 as = menuRoot
             }
 
+            6 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            6 {
+                levels = 2
+                entryLevel = 2
+                expandAll = 1
+                includeSpacer = 1
+                as = menuSub
+            }
+
             10 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
             10 {
                 as = site

@@ -1,6 +1,7 @@
 {
     "name": "simonkoehler/osp",
     "type": "typo3-cms-extension",
+    "version": "0.0.1",
     "description": "The open social project for TYPO3",
     "homepage": "https://opensocialproject.com",
     "authors": [
@@ -13,11 +14,17 @@
     ],
     "license": "GPL-3.0-or-later",
     "require": {
-        "typo3/cms-core": "^10.4.4"
+        "typo3/cms-core": "^10.4.4",
+        "simonkoehler/textile": "^10.4.4"
     },
     "extra": {
         "typo3/cms": {
             "extension-key": "osp"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "SIMONKOEHLER\\Osp\\": "Classes/"
         }
     }
 }

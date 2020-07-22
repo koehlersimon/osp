@@ -1,9 +1,9 @@
 {namespace fallback=SIMONKOEHLER\Fallback\ViewHelpers}
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient {navbar-mb}">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark {navbar-mb}">
   <div class="container-md">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="navbar-toggler-icon"></i>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navtoggle" aria-controls="navtoggle" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="navbar-toggler-icon"></i>
     </button>
     <f:link.page pageUid="{site.rootPageId}" class="navbar-brand m-auto">
         <f:if condition="{settings.site.navbarLogo}">
@@ -15,7 +15,7 @@
             <f:link.page pageUid="{settings.pages.account.login}" class="nav-link"><i class="fa fa-sign-in"></i> {f:translate(key:'fe.navbar.login',extensionName:'Osp')}</f:link.page>
         </li>
     </ul>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <div class="collapse navbar-collapse" id="navtoggle">
         <f:security.ifAuthenticated>
         <form class="d-flex m-auto my-3">
             <input class="form-control form-control-sm mr-2" type="search" placeholder="{f:translate(key:'fe.navbar.search',extensionName:'Osp')}" aria-label="Search">

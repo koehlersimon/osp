@@ -1,18 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    let likeEvent = document.addEventListener('click',function(e){
-        if(e.target.classList.contains('like')){
-            if(e.target.getAttribute('href') !== '#' && e.target.getAttribute('href') !== '') {
-                like(e.target);
-            }
-            else{
-                alert("Nope!");
-            }
-            e.preventDefault();
-        }
-    });
-
-    function like(link){
+    var likeClick = function(link){
         let request = new XMLHttpRequest();
         request.open("POST", link.href, true);
         request.onreadystatechange = function() {
@@ -28,5 +16,17 @@ document.addEventListener("DOMContentLoaded", function() {
         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         request.send();
     }
+
+    let likeEvent = document.addEventListener('click',function(e){
+        if(e.target.classList.contains('like')){
+            if(e.target.getAttribute('href') !== '#' && e.target.getAttribute('href') !== '') {
+                likeClick(e.target);
+            }
+            else{
+                e.target.innerHTML = 'Oopps!';
+            }
+            e.preventDefault();
+        }
+    });
 
 });

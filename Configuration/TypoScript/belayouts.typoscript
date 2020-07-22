@@ -100,7 +100,7 @@ mod {
             }
 
             page {
-                title = OSP Page Default
+                title = OSP Page
                 config {
                     backend_layout {
                         colCount = 12
@@ -132,7 +132,7 @@ mod {
             }
 
             sidebar_left {
-                title = OSP Sidebar left
+                title = OSP Sidebar Left
                 config {
                     backend_layout {
                         colCount = 12

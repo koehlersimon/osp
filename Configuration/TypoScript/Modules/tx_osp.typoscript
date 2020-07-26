@@ -7,4 +7,10 @@ module.tx_osp {
            10 = EXT:osp/Resources/Private/Backend/Layouts/
         }
     }
+    persistence {
+        storagePid = {$plugin.tx_osp.settings.storage.posts}
+    }
+    settings{
+        
+    }
 }

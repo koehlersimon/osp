@@ -99,3 +99,7 @@ CREATE TABLE fe_users (
 	tx_osp_header_image int(11) unsigned DEFAULT '0' NOT NULL,
 	tx_osp_custom_css text
 );
+
+CREATE TABLE tt_content (
+	osp_menu_expand_all int(11) DEFAULT '0' NOT NULL,
+);

@@ -1,5 +1,5 @@
-page_posts_home = PAGE
-page_posts_home {
+page_posts_list = PAGE
+page_posts_list {
     config {
         disableAllHeaderCode = 1
         additionalHeaders = Content-Type:text/html;charset=utf-8
@@ -7,20 +7,20 @@ page_posts_home {
         debug = 0
         no_cache = 1
     }
-    typeNum = {$plugin.tx_osp.settings.pages.types.page_posts_home}
+    typeNum = {$plugin.tx_osp.settings.pages.types.page_posts_list}
     10 = COA
     10 {
         10 = USER
         10 {
             userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
             extensionName = Osp
-            pluginName = Home
+            pluginName = List
             vendorName = SIMONKOEHLER
             controller = Post
-            action = home
+            action = list
             switchableControllerActions {
                 Post {
-                    1 = homeData
+                    1 = listAjax
                 }
             }
             view < plugin.tx_osp.view

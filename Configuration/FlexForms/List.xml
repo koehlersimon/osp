@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>List Plugin Settings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+
+                    <switchableControllerActions>
+                        <TCEforms>
+                            <label>Plugin-Mode</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">All internal Posts</numIndex>
+                                        <numIndex index="1">Post->list</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Posts of the current User</numIndex>
+                                        <numIndex index="1">Post->listUser</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">All External Posts</numIndex>
+                                        <numIndex index="1">Post->listAllExternal</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">Posts of external User</numIndex>
+                                        <numIndex index="1">Post->listUserExternal</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </switchableControllerActions>
+
+                    <settings.output_style>
+                       <TCEforms>
+                           <label>Output Style</label>
+                           <config>
+                               <type>select</type>
+                               <renderType>selectSingle</renderType>
+                               <items type="array">
+                                   <numIndex index="1" type="array">
+                                       <numIndex index="0">Infinite scroll loading</numIndex>
+                                       <numIndex index="1">infinite</numIndex>
+                                   </numIndex>
+                                   <numIndex index="2" type="array">
+                                       <numIndex index="0">Paginated list</numIndex>
+                                       <numIndex index="1">paginated</numIndex>
+                                   </numIndex>
+                               </items>
+                           </config>
+                       </TCEforms>
+                   </settings.output_style>
+
+                   <settings.items_per_page>
+                      <TCEforms>
+                          <label>Items per page</label>
+                          <config>
+                              <type>input</type>
+                              <eval>number</eval>
+                          </config>
+                      </TCEforms>
+                  </settings.items_per_page>
+
+                  <settings.pagination_top>
+                     <TCEforms>
+                         <label>Top pagination</label>
+                         <config>
+                             <type>check</type>
+                         </config>
+                     </TCEforms>
+                 </settings.pagination_top>
+
+                 <settings.pagination_bottom>
+                    <TCEforms>
+                        <label>Bottom pagination</label>
+                        <config>
+                            <type>check</type>
+                        </config>
+                    </TCEforms>
+                </settings.pagination_bottom>
+
+                  <settings.max_link_number>
+                     <TCEforms>
+                         <label>Maximum number of links in pagination</label>
+                         <config>
+                             <type>input</type>
+                             <eval>number</eval>
+                         </config>
+                     </TCEforms>
+                 </settings.max_link_number>
+
+
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

@@ -4,10 +4,19 @@
 @import 'EXT:osp/Configuration/TypoScript/Plugins/tx_osp_form.typoscript'
 @import 'EXT:osp/Configuration/TypoScript/Modules/tx_osp.typoscript'
 
-config.no_cache = 1
-config.absRefPrefix = {$plugin.tx_osp.settings.site.absRefPrefix}
+config{
+    absRefPrefix = {$plugin.tx_osp.settings.site.absRefPrefix}
+    concatenateCss = 1
+    concatenateJs = 1
+    compressCss = 1
+    compressJs = 1
+    enableContentLengthHeader = 1
+    no_cache = 0
+    sendCacheHeaders = 1
+}
 
 lib.contentElement.layoutRootPaths.800 = EXT:osp/Resources/Private/Ext/fluid_styled_content/Layouts/
+lib.contentElement.templateRootPaths.800 = EXT:osp/Resources/Private/Ext/fluid_styled_content/Templates/
 
 page = PAGE
 page {

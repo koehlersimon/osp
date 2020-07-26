@@ -5,6 +5,7 @@ page_posts_home {
         additionalHeaders = Content-Type:text/html;charset=utf-8
         admPanel = 0
         debug = 0
+        no_cache = 1
     }
     typeNum = {$plugin.tx_osp.settings.pages.types.page_posts_home}
     10 = COA

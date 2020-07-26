@@ -5,7 +5,7 @@ browser_config {
         additionalHeaders = Content-type:application/json
         admPanel = 0
         debug = 0
-        no_cache = 1
+        no_cache = 0
     }
     typeNum = {$plugin.tx_osp.settings.pages.types.browser_config}
     10 = TEXT

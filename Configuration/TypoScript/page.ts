@@ -8,6 +8,9 @@ TCEFORM{
         layout {
             disabled = 1
         }
+        CType {
+            removeItems = header, text, textpic, image, bullets, table, uploads, multimedia, media, mailform, search, login, menu_subpages, menu_abstract,menu_categorized, div
+        }
     }
 }
 
@@ -44,5 +47,20 @@ mod.wizards {
                 }
             }
         }
+        common{
+            elements{
+                osp_menu {
+                    iconIdentifier = osp-menu
+                    title = OSP Menu
+                    description = The form to create a post
+                    tt_content_defValues {
+                        CType = osp_menu
+                    }
+                }
+            }
+            show := addToList(osp_menu)
+        }
     }
 }
+
+web_layout.tt_content.preview.osp_menu = EXT:osp/Resources/Private/Backend/Previews/OspMenu.html

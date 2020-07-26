@@ -60,6 +60,9 @@ page {
 
     headerData{
 
+        5 = TEXT
+        5.value = <link rel="manifest" href="{$plugin.tx_osp.settings.site.absRefPrefix}manifest.json">
+
         // Create page icons dynamically
         10 = COA
         10{
@@ -120,9 +123,6 @@ page {
             140.stdWrap.dataWrap = <meta name="msapplication-TileImage" content="|"/>
         }
 
-        5 = TEXT
-        5.value = <link rel="manifest" href="typo3conf/ext/osp/Resources/Public/Icons/Public/manifest.json">
-
         20 = TEXT
         20.value(
             <style>
@@ -159,17 +159,26 @@ page {
         bootstrap.integrity = sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I
         bootstrap.crossorigin = anonymous
         bootstrap.external = 1
+        bootstrap.excludeFromConcatenation = 1
         fa = https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
         fa.external = 1
+        fa.excludeFromConcatenation = 1
     }
 
     includeJSFooterlibs{
         bootstrap_popper = https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js
         bootstrap_popper.integrity = sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo
         bootstrap_popper.crossorigin = anonymous
+        bootstrap_popper.excludeFromConcatenation = 1
+        bootstrap_popper.disableCompression = 1
         bootstrap = https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js
         bootstrap.integrity = sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/
         bootstrap.crossorigin = anonymous
+        bootstrap.excludeFromConcatenation = 1
+        bootstrap.disableCompression = 1
+    }
+
+    includeJSFooter{
         lightbox = EXT:osp/Resources/Public/Js/fslightbox.js
         root = EXT:osp/Resources/Public/Js/Root.js
         home = EXT:osp/Resources/Public/Js/Home.js

@@ -4,36 +4,25 @@
 		<header/>
 		<body>
 
-			<trans-unit id="be_layout.pagets__default">
+			<trans-unit id="be_layout.pagets__osp_default">
 				<source>OSP Homepage Default</source>
 			</trans-unit>
-			<trans-unit id="be_layout.pagets__default">
-				<source>OSP Homepage Default</source>
+			<trans-unit id="be_layout.pagets__osp_page">
+				<source>OSP Page</source>
+			</trans-unit>
+			<trans-unit id="be_layout.pagets__osp_wall">
+				<source>OSP Wall</source>
+			</trans-unit>
+			<trans-unit id="be_layout.pagets__osp_sidebar">
+				<source>OSP Sidebar</source>
 			</trans-unit>
 
 
-			<trans-unit id="fe.navbar.login">
-				<source>LOGIN</source>
+			<trans-unit id="be_layout.columns.before_content">
+				<source>Before Content</source>
 			</trans-unit>
-			<trans-unit id="fe.navbar.search">
-				<source>Search phrases..</source>
-			</trans-unit>
-			<trans-unit id="fe.post.form.whatsonyourmind">
-				<source>What's on your mind, %1$s ?</source>
-			</trans-unit>
-			<trans-unit id="fe.post.form.thank_you">
-				<source>Thank you!</source>
-			</trans-unit>
-			<trans-unit id="fe.post.form.post_saved">
-				<source>Your post has been saved!</source>
-			</trans-unit>
-			<trans-unit id="fe.post.form.send_btn_label">
-				<source>SAVE POST</source>
-			</trans-unit>
-
-
-			<trans-unit id="be_layout.columns.header">
-				<source>Page Header</source>
+			<trans-unit id="be_layout.columns.after_content">
+				<source>After Content</source>
 			</trans-unit>
 			<trans-unit id="be_layout.columns.left">
 				<source>Left Sidebar</source>
@@ -55,6 +44,26 @@
 			</trans-unit>
 			<trans-unit id="be_layout.columns.footer.four">
 				<source>Footer Four</source>
+			</trans-unit>
+
+
+			<trans-unit id="fe.navbar.login">
+				<source>LOGIN</source>
+			</trans-unit>
+			<trans-unit id="fe.navbar.search">
+				<source>Search phrases..</source>
+			</trans-unit>
+			<trans-unit id="fe.post.form.whatsonyourmind">
+				<source>What's on your mind, %1$s ?</source>
+			</trans-unit>
+			<trans-unit id="fe.post.form.thank_you">
+				<source>Thank you!</source>
+			</trans-unit>
+			<trans-unit id="fe.post.form.post_saved">
+				<source>Your post has been saved!</source>
+			</trans-unit>
+			<trans-unit id="fe.post.form.send_btn_label">
+				<source>SAVE POST</source>
 			</trans-unit>
 
 

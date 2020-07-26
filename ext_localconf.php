@@ -80,7 +80,7 @@ call_user_func(
         }
 
         // Hook into the page module
-        // $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/db_layout.php']['drawHeaderHook']['osp'] = \SIMONKOEHLER\Osp\Hook\PageHook::class . '->render';
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/db_layout.php']['drawHeaderHook']['osp'] = \SIMONKOEHLER\Osp\Hook\PageHook::class . '->render';
 
     }
 );

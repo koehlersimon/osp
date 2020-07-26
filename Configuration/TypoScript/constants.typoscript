@@ -94,7 +94,7 @@ plugin.tx_osp {
                 detail =
             }
             types{
-                page_posts_home = 800
+                page_posts_list = 800
                 page_markdown_preview = 810
                 page_like_click = 820
                 page_external_post_fetch = 830
@@ -127,24 +127,13 @@ plugin.tx_osp {
 
 }
 
-plugin.tx_osp_wall {
+plugin.tx_osp_list {
     view {
-        # cat=plugin.tx_osp_wall/file; type=string; label=Path to template root (FE)
+        # cat=plugin.tx_osp_list/file; type=string; label=Path to template root (FE)
         templateRootPath = EXT:osp/Resources/Private/Templates/
-        # cat=plugin.tx_osp_wall/file; type=string; label=Path to template partials (FE)
+        # cat=plugin.tx_osp_list/file; type=string; label=Path to template partials (FE)
         partialRootPath = EXT:osp/Resources/Private/Partials/
-        # cat=plugin.tx_osp_wall/file; type=string; label=Path to template layouts (FE)
-        layoutRootPath = EXT:osp/Resources/Private/Layouts/
-    }
-}
-
-plugin.tx_osp_form {
-    view {
-        # cat=plugin.tx_osp_form/file; type=string; label=Path to template root (FE)
-        templateRootPath = EXT:osp/Resources/Private/Templates/
-        # cat=plugin.tx_osp_form/file; type=string; label=Path to template partials (FE)
-        partialRootPath = EXT:osp/Resources/Private/Partials/
-        # cat=plugin.tx_osp_form/file; type=string; label=Path to template layouts (FE)
+        # cat=plugin.tx_osp_list/file; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:osp/Resources/Private/Layouts/
     }
 }

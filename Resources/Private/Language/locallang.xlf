@@ -5,7 +5,7 @@
 		<body>
 
 			<trans-unit id="be_layout.pagets__osp_default">
-				<source>OSP Homepage Default</source>
+				<source>OSP Default</source>
 			</trans-unit>
 			<trans-unit id="be_layout.pagets__osp_page">
 				<source>OSP Page</source>
@@ -15,6 +15,9 @@
 			</trans-unit>
 			<trans-unit id="be_layout.pagets__osp_sidebar">
 				<source>OSP Sidebar</source>
+			</trans-unit>
+			<trans-unit id="be_layout.pagets__osp_full">
+				<source>OSP Full</source>
 			</trans-unit>
 
 

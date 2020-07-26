@@ -99,6 +99,8 @@ plugin.tx_osp {
                 page_external_post_provide = 840
                 page_browser_extension = 1100
                 page_browser_extension_form = 1110
+                browser_config = 1120
+                browser_config_manifest = 1130
             }
         }
         storage{

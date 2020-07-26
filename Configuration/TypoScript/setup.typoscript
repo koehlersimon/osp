@@ -6,13 +6,35 @@
 
 config{
     absRefPrefix = {$plugin.tx_osp.settings.site.absRefPrefix}
+    cache_period = 86400
+    debug = 0
+    disablePrefixComment = 1
+    doctype = html5
+    extTarget =
+    index_enable = 1
+    index_externals = 1
+    index_metatags = 1
+    inlineStyle2TempFile = 1
+    intTarget =
+    linkVars = L
+    metaCharset = utf-8
+    no_cache = 0
+    pageTitleFirst = 1
+    prefixLocalAnchors = all
+    removeDefaultJS = 0
+    renderCharset = utf-8
+    sendCacheHeaders = 1
+    enableContentLengthHeader = 1
+    uniqueLinkVars = 1
+
+    // Disable image upscaling
+    noScaleUp = 1
+
+    // Compression and concatenation of CSS and JS Files
     concatenateCss = 1
     concatenateJs = 1
     compressCss = 1
     compressJs = 1
-    enableContentLengthHeader = 1
-    no_cache = 0
-    sendCacheHeaders = 1
 }
 
 lib.contentElement.layoutRootPaths.800 = EXT:osp/Resources/Private/Ext/fluid_styled_content/Layouts/
@@ -37,24 +59,70 @@ page {
     }
 
     headerData{
+
+        // Create page icons dynamically
+        10 = COA
+        10{
+            // Apple touch icons
+            10 = IMG_RESOURCE
+            10{
+                file = EXT:osp/Resources/Public/Icons/osp-large.jpg
+                file {
+                    width = 57c
+                    height = 57c
+                }
+                stdWrap.dataWrap = <link rel="apple-touch-icon" sizes="{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}" href="|">
+            }
+            20 < .10
+            20.file.width = 60c
+            20.file.height = 60c
+            30 < .10
+            30.file.width = 72c
+            30.file.height = 72c
+            40 < .10
+            40.file.width = 76c
+            40.file.height = 76c
+            50 < .10
+            50.file.width = 114c
+            50.file.height = 114c
+            60 < .10
+            60.file.width = 120c
+            60.file.height = 120c
+            70 < .10
+            70.file.width = 144c
+            70.file.height = 144c
+            80 < .10
+            80.file.width = 152c
+            80.file.height = 152c
+            90 < .10
+            90.file.width = 180c
+            90.file.height = 180c
+
+            // Regular icons
+            100 < .10
+            100.file.width = 192c
+            100.file.height = 192c
+            100.stdWrap.dataWrap = <link rel="icon" type="image/png" sizes="{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}" href="|">
+            110 < .100
+            110.file.width = 32c
+            110.file.height = 32c
+            120 < .100
+            120.file.width = 96c
+            120.file.height = 96c
+            130 < .100
+            130.file.width = 16c
+            130.file.height = 16c
+
+            // Microsoft icons
+            140 < .10
+            140.file.width = 144c
+            140.file.height = 144c
+            140.stdWrap.dataWrap = <meta name="msapplication-TileImage" content="|"/>
+        }
+
         5 = TEXT
-        5.value(
-            <link rel="apple-touch-icon" sizes="57x57" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-57x57.png">
-            <link rel="apple-touch-icon" sizes="60x60" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-60x60.png">
-            <link rel="apple-touch-icon" sizes="72x72" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-72x72.png">
-            <link rel="apple-touch-icon" sizes="76x76" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-76x76.png">
-            <link rel="apple-touch-icon" sizes="114x114" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-114x114.png">
-            <link rel="apple-touch-icon" sizes="120x120" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-120x120.png">
-            <link rel="apple-touch-icon" sizes="144x144" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-144x144.png">
-            <link rel="apple-touch-icon" sizes="152x152" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-152x152.png">
-            <link rel="apple-touch-icon" sizes="180x180" href="typo3conf/ext/osp/Resources/Public/Icons/Public/apple-icon-180x180.png">
-            <link rel="icon" type="image/png" sizes="192x192" href="typo3conf/ext/osp/Resources/Public/Icons/Public/android-icon-192x192.png">
-            <link rel="icon" type="image/png" sizes="32x32" href="typo3conf/ext/osp/Resources/Public/Icons/Public/favicon-32x32.png">
-            <link rel="icon" type="image/png" sizes="96x96" href="typo3conf/ext/osp/Resources/Public/Icons/Public/favicon-96x96.png">
-            <link rel="icon" type="image/png" sizes="16x16" href="typo3conf/ext/osp/Resources/Public/Icons/Public/favicon-16x16.png">
-            <link rel="manifest" href="typo3conf/ext/osp/Resources/Public/Icons/Public/manifest.json">
-            <meta name="msapplication-TileImage" content="typo3conf/ext/osp/Resources/Public/Icons/Public/ms-icon-144x144.png">
-        )
+        5.value = <link rel="manifest" href="typo3conf/ext/osp/Resources/Public/Icons/Public/manifest.json">
+
         20 = TEXT
         20.value(
             <style>
@@ -80,6 +148,7 @@ page {
                 };
             </script>
         )
+
         25 = TEXT
         25.data = TSFE:fe_user|user|tx_osp_custom_css
         25.wrap = <style>|</style>

@@ -31,7 +31,7 @@ browser_config_manifest {
     10 = COA
     10{
 
-        wrap = { "short_name": "OSP", "name": "OSP Site Manifest", "description": "Web manifest for OSP", "theme_color":"{$plugin.tx_osp.settings.site.themeColor}", "icons": [ | ]}
+        wrap = {"short_name":"OSP","name":"OSP Site Manifest","description":"Web manifest for OSP","theme_color":"{$plugin.tx_osp.settings.site.themeColor}","icons": [|]}
 
         10 = COA
         10{
@@ -45,7 +45,7 @@ browser_config_manifest {
 
             // Sizes
             15 = TEXT
-            15.dataWrap = "sizes":"{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}","type": "image/jpg"
+            15.dataWrap = "sizes":"{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}","type":"image/jpg"
 
         }
 

@@ -69,6 +69,7 @@ call_user_func(
             'osp-wall' => 'EXT:osp/Resources/Public/Icons/osp.svg',
             'osp-form' => 'EXT:osp/Resources/Public/Icons/osp.svg',
             'osp-home' => 'EXT:osp/Resources/Public/Icons/osp.svg',
+            'osp-menu' => 'EXT:osp/Resources/Public/Icons/osp.svg',
         ];
         $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
         foreach ($icons as $identifier => $path) {

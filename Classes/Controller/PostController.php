@@ -59,9 +59,17 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function listAction(){
         $this->settings['fe_user'] = $GLOBALS['TSFE']->fe_user->user;
-        //echo $GLOBALS['TSFE']->fe_user->user['ses_tstamp'];
         $this->view->assign('settings',$this->settings);
         $this->view->assign('posts',$this->postRepository->findByOwner($GLOBALS['TSFE']->fe_user->user['uid']));
+    }
+
+    /**
+     * action list
+     *
+     * @return void
+     */
+    public function backendListAction(){
+        $this->view->assign('posts',$this->postRepository->findAll());
     }
 
     /**

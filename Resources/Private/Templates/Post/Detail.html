@@ -6,7 +6,7 @@
 
     <div>
         <strong class="text-primary">{post.ownername}</strong> <small><post:date content="{post.crdate}"/></small>
-        <f:format.raw><textile:parse content="{post.content}"/></f:format.raw>
+        <f:format.raw><textile:parse content="{post.content}" defaultLabel="<i class='fa fa-link'></i>" renderLinks="1"/></f:format.raw>
         <f:if condition="{post.media}">
 			<f:render partial="Post/Media" arguments="{media:post.media}"/>
 		</f:if>

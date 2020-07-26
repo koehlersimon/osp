@@ -20,7 +20,7 @@
 
         <f:format.raw>
             <f:format.crop maxCharacters="{settings.frontend.teaserLength}" append="... <a href='{f:uri.action(action:'detail',controller:'Post',pageUid:'{settings.pages.post.detail}',arguments:'{post:post}')}' class=\"link-info\">more</a>">
-                <textile:parse content="{post.content}"/>
+                <textile:parse content="{post.content}" defaultLabel="<i class='fa fa-link'></i>"/>
             </f:format.crop>
         </f:format.raw>
         <f:if condition="{post.media}">

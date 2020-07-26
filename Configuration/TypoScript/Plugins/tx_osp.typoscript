@@ -78,6 +78,8 @@ plugin.tx_osp {
                 page_external_post_provide = {$plugin.tx_osp.settings.pages.types.page_external_post_provide}
                 page_browser_extension = {$plugin.tx_osp.settings.pages.types.page_browser_extension}
                 page_browser_extension_form = {$plugin.tx_osp.settings.pages.types.page_browser_extension_form}
+                browser_config = {$plugin.tx_osp.settings.pages.types.browser_config}
+                browser_config_manifest = {$plugin.tx_osp.settings.pages.types.browser_config_manifest}
             }
         }
         storage{

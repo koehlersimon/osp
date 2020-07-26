@@ -6,7 +6,7 @@
             <ul class="nav flex-column">
                 <f:for each="{menu}" as="page">
                     <li class="nav-item{f:if(condition:page.active, then:' border rounded bg-light')}">
-                        <a class="nav-link{f:if(condition:page.active, then:' font-weight-bold')}" href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">
+                        <a class="nav-link link-dark{f:if(condition:page.active, then:' font-weight-bold')}" href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">
                             <span>{f:if(condition:page.children, then:'<i class="fa fa-file"></i>',else:'<i class="fa fa-file-o"></i>')} {page.title}</span>
                         </a>
                         <f:if condition="{page.children}">

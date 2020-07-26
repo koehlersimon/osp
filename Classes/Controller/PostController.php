@@ -43,13 +43,24 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     }
 
     /**
-     * action homeData
+     * action listAjaxAction
      *
      * @return void
      */
-    public function homeDataAction(){
+    public function listAjaxAction(){
         $this->view->assign('settings',$this->settings);
-        $this->view->assign('posts',$this->postRepository->findAll());
+        $this->view->assign('posts',$this->postRepository->findAllAjax());
+    }
+
+    /**
+     * action listUser
+     *
+     * @return void
+     */
+    public function listUserAction(){
+        $this->settings['fe_user'] = $GLOBALS['TSFE']->fe_user->user;
+        $this->view->assign('settings',$this->settings);
+        $this->view->assign('posts',$this->postRepository->findByOwner($GLOBALS['TSFE']->fe_user->user['uid']));
     }
 
     /**
@@ -58,9 +69,8 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @return void
      */
     public function listAction(){
-        $this->settings['fe_user'] = $GLOBALS['TSFE']->fe_user->user;
         $this->view->assign('settings',$this->settings);
-        $this->view->assign('posts',$this->postRepository->findByOwner($GLOBALS['TSFE']->fe_user->user['uid']));
+        $this->view->assign('posts',$this->postRepository->findAll());
     }
 
     /**
@@ -144,7 +154,6 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
                 $array['content'] = $post->getContent();
                 $array['crdate'] = $post->getCrdate();
                 $array['owner'] = $post->getOwner();
-                $array['ownername'] = $post->getOwnername();
                 $this->view->assign('dataJson',json_encode($array));
             }
             else{
@@ -172,7 +181,6 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
                 $newPost->setFeGroup('-2');
                 $newPost->setLikes(0);
                 $newPost->setOwner($this->request->getArgument('owner'));
-                $newPost->setOwnername($this->request->getArgument('ownername'));
                 $newPost->setContent($this->request->getArgument('content'));
                 $this->postRepository->add($newPost);
                 $this->persistenceManager->persistAll();

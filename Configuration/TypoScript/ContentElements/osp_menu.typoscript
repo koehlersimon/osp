@@ -10,7 +10,7 @@ tt_content {
                 titleField = nav_title // title
                 special = directory
                 special.value.field = pages
-                expandAll.field = osp_menu_expand_all
+                expandAll = 0
                 includeSpacer = 1
                 as = menu
             }

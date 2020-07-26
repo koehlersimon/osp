@@ -1,6 +1,6 @@
 // Importing main plugins and modules
 @import 'EXT:osp/Configuration/TypoScript/Plugins/tx_osp.typoscript'
-@import 'EXT:osp/Configuration/TypoScript/Plugins/tx_osp_wall.typoscript'
+@import 'EXT:osp/Configuration/TypoScript/Plugins/tx_osp_list.typoscript'
 @import 'EXT:osp/Configuration/TypoScript/Plugins/tx_osp_form.typoscript'
 @import 'EXT:osp/Configuration/TypoScript/Modules/tx_osp.typoscript'
 
@@ -151,7 +151,7 @@ page {
                 var osp = {
                     absRefPrefix: '{$plugin.tx_osp.settings.site.absRefPrefix}',
                     typeNum: {
-                        page_posts_home: {$plugin.tx_osp.settings.pages.types.page_posts_home},
+                        page_posts_list: {$plugin.tx_osp.settings.pages.types.page_posts_list},
                         page_markdown_preview: {$plugin.tx_osp.settings.pages.types.page_markdown_preview},
                         page_like_click: {$plugin.tx_osp.settings.pages.types.page_like_click},
                         page_external_post_fetch: {$plugin.tx_osp.settings.pages.types.page_external_post_fetch},
@@ -194,7 +194,7 @@ page {
     includeJSFooter{
         lightbox = EXT:osp/Resources/Public/Js/fslightbox.js
         root = EXT:osp/Resources/Public/Js/Root.js
-        home = EXT:osp/Resources/Public/Js/Home.js
+        list = EXT:osp/Resources/Public/Js/List.js
         form = EXT:osp/Resources/Public/Js/Form.js
         like = EXT:osp/Resources/Public/Js/Like.js
         notification = EXT:osp/Resources/Public/Js/Notification.js

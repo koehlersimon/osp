@@ -7,15 +7,7 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Osp',
-            'Home',
-            [\SIMONKOEHLER\Osp\Controller\PostController::class => 'home'],
-            // non-cacheable actions
-            [\SIMONKOEHLER\Osp\Controller\PostController::class => 'home']
-        );
-
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Osp',
-            'Wall',
+            'List',
             [\SIMONKOEHLER\Osp\Controller\PostController::class => 'list'],
             // non-cacheable actions
             [\SIMONKOEHLER\Osp\Controller\PostController::class => 'list']

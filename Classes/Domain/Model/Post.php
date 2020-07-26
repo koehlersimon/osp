@@ -9,13 +9,6 @@ class Post extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $crdate;
 
     /**
-     * uidext
-     *
-     * @var int
-     */
-    protected $uidext = 0;
-
-    /**
      * content
      *
      * @var string
@@ -37,20 +30,6 @@ class Post extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $owner = 0;
 
     /**
-     * owner
-     *
-     * @var string
-     */
-    protected $ownername = 0;
-
-    /**
-     * posttype
-     *
-     * @var int
-     */
-    protected $posttype = 0;
-
-    /**
      * feGroup
      *
      * @var string
@@ -64,28 +43,6 @@ class Post extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @Cascade remove
      */
     protected $media = null;
-
-
-    /**
-     * Returns the uidext
-     *
-     * @return int $uidext
-     */
-    public function getUidext()
-    {
-        return $this->uidext;
-    }
-
-    /**
-     * Sets the uidext
-     *
-     * @param int $uidext
-     * @return void
-     */
-    public function setUidext($uidext)
-    {
-        $this->uidext = $uidext;
-    }
 
 
     /**
@@ -170,28 +127,6 @@ class Post extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->likes = $likes;
     }
 
-
-    /**
-     * Returns the posttype
-     *
-     * @return int $posttype
-     */
-    public function getPosttype()
-    {
-        return $this->posttype;
-    }
-
-    /**
-     * Sets the posttype
-     *
-     * @param int $posttype
-     * @return void
-     */
-    public function setPosttype($posttype)
-    {
-        $this->posttype = $posttype;
-    }
-
     /**
      * Returns the feGroup
      *
@@ -213,24 +148,4 @@ class Post extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->feGroup = $feGroup;
     }
 
-    /**
-     * Returns the ownername
-     *
-     * @return string $ownername
-     */
-    public function getOwnername()
-    {
-        return $this->ownername;
-    }
-
-    /**
-     * Sets the ownername
-     *
-     * @param string $ownername
-     * @return void
-     */
-    public function setOwnername($ownername)
-    {
-        $this->ownername = $ownername;
-    }
 }

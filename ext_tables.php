@@ -7,14 +7,8 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Osp',
-            'Home',
-            'OSP - Homepage'
-        );
-
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'Osp',
-            'Wall',
-            'OSP - Wall'
+            'List',
+            'OSP - List'
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(

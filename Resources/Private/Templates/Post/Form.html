@@ -1,7 +1,6 @@
 <f:flashMessages />
 <f:form action="form" controller="Post" enctype="multipart/form-data">
     <f:form.hidden name="owner" value="{fe_user.uid}"/>
-    <f:form.hidden name="ownername" value="{fe_user.username}"/>
     <f:form.textarea id="postInput" name="content" rows="4" cols="80" class="form-control mb-4 autoresize" placeholder="{f:translate(id:'fe.post.form.whatsonyourmind', arguments: {0:'{fe_user.first_name}'}, default: 'Buddy', extensionName:'Osp')}"/>
 
     <input type="file" name="tx_osp_form[files][]" id="dropArea" class="form-control p-4" accept="image/*" multiple="true"/>

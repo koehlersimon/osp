@@ -12,6 +12,14 @@ class PostRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
 		'crdate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
 	);
 
+	public function findAllAjax(){
+
+		$query = $this->createQuery();
+	    $query->setLimit(5);
+	    return $query->execute();
+
+	}
+
 	// Moves the file from $tmpName to the default storage of the user and names it like $fileName
 	public function createFileObject($tmpName,$fileName,$storage){
 
@@ -39,6 +47,11 @@ class PostRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
 
 	/*
 	* Creates a file reference for any kind of record!
+	* $file 			UID of file object
+	* $record 			UID or parent record
+	* $pid 				PID of the parent record
+	* $tablenames 		Name of the table, for instance "tt_content"
+	* $fieldname		Name of the reference field in the parent record
 	*/
 	public function createFileReference($file,$record,$pid,$tablenames,$fieldname){
 

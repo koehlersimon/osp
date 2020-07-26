@@ -18,22 +18,13 @@ mod.wizards {
     newContentElement.wizardItems {
         plugins {
             elements {
-                osp_home {
+                osp_list {
                     iconIdentifier = osp-home
-                    title = OSP Home
-                    description = List of external and friends posts
+                    title = OSP List
+                    description = Displays a list of posts with various options
                     tt_content_defValues {
                         CType = list
-                        list_type = osp_home
-                    }
-                }
-                osp_wall {
-                    iconIdentifier = osp-wall
-                    title = OSP Wall
-                    description = List of your own private posts
-                    tt_content_defValues {
-                        CType = list
-                        list_type = osp_wall
+                        list_type = osp_list
                     }
                 }
                 osp_form {
@@ -43,6 +34,15 @@ mod.wizards {
                     tt_content_defValues {
                         CType = list
                         list_type = osp_form
+                    }
+                }
+                osp_post_detail {
+                    iconIdentifier = osp-form
+                    title = OSP Post Detail
+                    description = The Post detail view
+                    tt_content_defValues {
+                        CType = list
+                        list_type = osp_post_detail
                     }
                 }
             }

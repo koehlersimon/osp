@@ -24,10 +24,10 @@ return [
         'iconfile' => 'EXT:osp/Resources/Public/Icons/osp-mini.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, uidext, hidden, owner, ownername, likes',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, owner, likes',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, uidext, hidden, crdate, posttype, content, likes, owner, ownername, --div--;Media, media, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime, fe_group;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:fe_group_formlabel'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, crdate, content, likes, owner, --div--;Media, media, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime, fe_group;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:fe_group_formlabel'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -81,15 +81,6 @@ return [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
                 'eval' => 'datetime',
-            ],
-        ],
-        'uidext' => [
-            'label' => 'External UID',
-            'config' => [
-                'type' => 'input',
-                'size' => 11,
-                'eval' => 'trim,int',
-                'default' => 0
             ],
         ],
         'hidden' => [
@@ -210,20 +201,12 @@ return [
         'owner' => [
             'label' => 'Owner',
             'config' => [
-                'type' => 'input',
-                'size' => 11,
-                'eval' => 'trim,int',
-                'default' => 0
-            ],
-        ],
-        'ownername' => [
-            'exclude' => true,
-            'label' => 'Ownername',
-            'config' => [
-                'type' => 'input',
-                'size' => 40,
-                'eval' => 'trim',
-                'default' => 0
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'size' => 5,
+                'maxitems' => 1,
+                'foreign_table' => 'fe_users',
+                'foreign_table_where' => 'ORDER BY fe_users.username',
             ],
         ],
         'content' => [
@@ -243,20 +226,6 @@ return [
                 'size' => 11,
                 'eval' => 'trim,int',
                 'default' => 0
-            ],
-        ],
-        'posttype' => [
-            'exclude' => true,
-            'label' => 'Post Type',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'default' => 0,
-                'items' => [
-                    ['Default', 0],
-                    ['External Outgoing', 1],
-                    ['External Ingoing', 2],
-                ],
             ],
         ],
 

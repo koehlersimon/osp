@@ -1,8 +1,8 @@
-<article class="post mb-4" data-posttype="{post.posttype}" id="p{post.uid}">
+<article class="post mb-4" id="p{post.uid}">
     <div class="card bg-white border p-3 mb-2">
         <div class="d-flex">
             <div class="mb-2 mr-auto">
-                <strong class="text-primary">{post.ownername}</strong>
+                <strong class="text-primary">{post.owner}</strong>
                 <small><post:date content="{post.crdate}"/></small>
             </div>
             <f:security.ifAuthenticated>

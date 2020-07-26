@@ -72,7 +72,7 @@ plugin.tx_osp {
                 detail = {$plugin.tx_osp.settings.pages.post.detail}
             }
             types{
-                page_posts_home = {$plugin.tx_osp.settings.pages.types.page_posts_home}
+                page_posts_list = {$plugin.tx_osp.settings.pages.types.page_posts_list}
                 page_markdown_preview = {$plugin.tx_osp.settings.pages.types.page_markdown_preview}
                 page_like_click = {$plugin.tx_osp.settings.pages.types.page_like_click}
                 page_external_post_fetch = {$plugin.tx_osp.settings.pages.types.page_external_post_fetch}

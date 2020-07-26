@@ -1,8 +1,8 @@
-<article class="post mb-4" data-posttype="{post.posttype}" data-url="{f:uri.action(action:'fetch',controller:'Post',pageUid:'{settings.pages.home}',arguments:'{post:post.uidext,owner:post.owner}',additionalParams:{type:'{settings.pages.types.page_external_post_fetch}'})}" id="p{post.uid}">
+<article class="post mb-4" id="p{post.uid}">
     <div class="card bg-white border p-3 mb-2">
         <div class="d-flex">
             <div class="mb-2 mr-auto">
-                <strong class="text-primary">{post.ownername}</strong>
+                <strong class="text-primary">{post.owner}</strong>
                 <small><post:date content="{post.crdate}"/></small>
             </div>
             <f:security.ifAuthenticated>

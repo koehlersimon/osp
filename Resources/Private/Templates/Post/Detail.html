@@ -5,7 +5,7 @@
     <f:then>
 
     <div>
-        <strong class="text-primary">{post.ownername}</strong> <small><post:date content="{post.crdate}"/></small>
+        <strong class="text-primary">{post.owner}</strong> <small><post:date content="{post.crdate}"/></small>
         <f:format.raw><textile:parse content="{post.content}" defaultLabel="<i class='fa fa-link'></i>"/></f:format.raw>
         <f:if condition="{post.media}">
 			<f:render partial="Post/Media" arguments="{media:post.media}"/>

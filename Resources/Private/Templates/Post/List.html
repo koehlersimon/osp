@@ -3,9 +3,27 @@
 
 <f:if condition="{posts}">
 	<f:then>
-	<f:for each="{posts}" as="post">
-	<f:render partial="Post/ListItem" arguments="{settings:settings,post:post}"/>
-	</f:for>
+
+	<f:switch expression="{settings.output_style}">
+
+		<f:case value="paginated">
+			<f:widget.paginate objects="{posts}" as="paginated" configuration="{itemsPerPage: '{settings.items_per_page}', insertAbove: '{settings.pagination_top}', insertBelow: '{settings.pagination_bottom}', maximumNumberOfLinks: '{settings.max_link_number}'}">
+			<f:for each="{paginated}" as="post">
+			<f:render partial="Post/ListItem" arguments="{settings:settings,post:post}"/>
+			</f:for>
+			</f:widget.paginate>
+		</f:case>
+
+		<f:case value="infinite">
+			<div id="post-container">
+			    <div class="spinner-border text-primary" role="status">
+			      <span class="sr-only">Loading...</span>
+			    </div>
+			</div>
+		</f:case>
+
+	</f:switch>
+
 	</f:then>
 	<f:else>
 		<div class="card p-4">

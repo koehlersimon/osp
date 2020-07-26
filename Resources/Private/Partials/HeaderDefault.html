@@ -10,7 +10,7 @@
                         <f:image image="{fe_user.0.images.0}" width="180c" height="180c" class="img-circle img-fluid img-thumbnail" style="border-radius:50%;" alt="{fe_user.0.username}"/>
                     </f:then>
                     <f:else>
-                        <f:image src="{fallback:image(url:'{settings.user.profilePicture}')}" width="180c" height="180c" class="img-circle img-fluid img-thumbnail" style="border-radius:50%;" alt="OSP"/>
+                        <f:image src="{fallback:image(url:'{settings.user.admin.profilePicture}')}" width="180c" height="180c" class="img-circle img-fluid img-thumbnail" style="border-radius:50%;" alt="OSP"/>
                     </f:else>
                 </f:if>
             </f:link.page>

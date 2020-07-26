@@ -1,0 +1,76 @@
+browser_config = PAGE
+browser_config {
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-type:application/json
+        admPanel = 0
+        debug = 0
+        no_cache = 1
+    }
+    typeNum = {$plugin.tx_osp.settings.pages.types.browser_config}
+    10 = TEXT
+    10.value = {'test':'browser_config!'}
+}
+
+browser_config_manifest = PAGE
+browser_config_manifest {
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-type:application/json
+        admPanel = 0
+        debug = 0
+        no_cache = 0
+    }
+    typeNum = {$plugin.tx_osp.settings.pages.types.browser_config_manifest}
+
+    10 = COA
+    10{
+
+        wrap = { "name": "OSP", "description": "Web manifest for OSP", "icons": [ | ]}
+
+        10 = COA
+        10{
+
+            wrap = {|},
+
+            // Sizes
+            10 < page.headerData.10.10
+            10.stdWrap.dataWrap >
+            10.stdWrap.wrap = "src":"|",
+
+            // Sizes
+            15 = TEXT
+            15.dataWrap = "sizes":"{TSFE:lastImgResourceInfo|0}x{TSFE:lastImgResourceInfo|1}","type": "image/jpg"
+
+        }
+
+        20 < .10
+        20.10.file.width = 60c
+        20.10.file.height = 60c
+        30 < .10
+        30.10.file.width = 72c
+        30.10.file.height = 72c
+        40 < .10
+        40.10.file.width = 76c
+        40.10.file.height = 76c
+        50 < .10
+        50.10.file.width = 114c
+        50.10.file.height = 114c
+        60 < .10
+        60.10.file.width = 120c
+        60.10.file.height = 120c
+        70 < .10
+        70.10.file.width = 144c
+        70.10.file.height = 144c
+        80 < .10
+        80.10.file.width = 152c
+        80.10.file.height = 152c
+        90 < .10
+        90.10.file.width = 180c
+        90.10.file.height = 180c
+        90.wrap = {|}
+
+    }
+
+
+}

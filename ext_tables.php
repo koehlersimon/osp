@@ -56,7 +56,7 @@ call_user_func(
             'tx_osp',
             'top',
             [
-                \SIMONKOEHLER\Osp\Controller\PostController::class => 'list'
+                \SIMONKOEHLER\Osp\Controller\PostController::class => 'backendList'
             ],
             [
                 'access' => 'admin',

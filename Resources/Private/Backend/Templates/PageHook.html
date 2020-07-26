@@ -1,51 +1,17 @@
 <f:if condition="{page} && {page.doktype} === 1">
 
-    <div class="well">
+    <f:if condition="{page.backend_layout} != ''">
+        Backend layout: <strong><f:translate key="LLL:EXT:osp/Resources/Private/Language/locallang.xlf:be_layout.{page.backend_layout}" /></strong> ({page.backend_layout})
+    </f:if>
 
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#page-settings" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-cogs"></i> Settings</a></li>
-        <li role="presentation"><a href="#page-info" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-info"></i> Info</a></li>
-        <li role="presentation"><a href="#page-media" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-file"></i> Media</a></li>
-      </ul>
-
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active well" id="page-settings">
-            <div class="row">
-                <div class="col-sm-4">
-                    <label><small>SLUG</small></label>
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Slug">
-                      <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><i class="fa fa-save"></i> </button>
-                      </span>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <input type="text" name="slug" class="form-control" value="{page.slug}">
-                </div>
-                <div class="col-sm-4">
-                    <input type="text" name="slug" class="form-control" value="{page.slug}">
-                </div>
+    <f:comment>
+    <div class="row">
+        <f:for each="{files}" as="file">
+            <div class="col-sm-2">
+                <f:image image="{file}" maxHeight="80" class="img-thumbnail img-responsive" />
             </div>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="page-info">
-            <f:if condition="{page.backend_layout} != ''">
-                Backend layout: <strong class="text-primary"><f:translate key="LLL:EXT:osp/Resources/Private/Language/locallang.xlf:be_layout.{page.backend_layout}" /></strong> ({page.backend_layout})
-            </f:if>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="page-media">
-            <div class="row">
-                <f:for each="{files}" as="file">
-                    <div class="col-sm-4">
-                        <f:image image="{file}" maxWidth="140" class="img-thumbnail img-responsive" />
-                    </div>
-                </f:for>
-            </div>
-        </div>
-      </div>
-
+        </f:for>
     </div>
+    </f:comment>
 
 </f:if>

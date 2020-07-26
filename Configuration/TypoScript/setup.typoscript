@@ -278,17 +278,17 @@ page {
             key.data = levelfield:-1, backend_layout_next_level, slide
             key.override.field = backend_layout
 
-            pagets__sidebar_left = TEXT
-            pagets__sidebar_left.value = EXT:osp/Resources/Private/Templates/Sidebar.html
+            pagets__osp_sidebar_left = TEXT
+            pagets__osp_sidebar_left.value = EXT:osp/Resources/Private/Templates/Sidebar.html
 
-            pagets__post_detail = TEXT
-            pagets__post_detail.value = EXT:osp/Resources/Private/Templates/PostDetail.html
+            pagets__osp_post_detail = TEXT
+            pagets__osp_post_detail.value = EXT:osp/Resources/Private/Templates/PostDetail.html
 
-            pagets__page = TEXT
-            pagets__page.value = EXT:osp/Resources/Private/Templates/Page.html
+            pagets__osp_page = TEXT
+            pagets__osp_page.value = EXT:osp/Resources/Private/Templates/Page.html
 
-            pagets__wall = TEXT
-            pagets__wall.value = EXT:osp/Resources/Private/Templates/Wall.html
+            pagets__osp_wall = TEXT
+            pagets__osp_wall.value = EXT:osp/Resources/Private/Templates/Wall.html
 
             default = TEXT
             default.value = EXT:osp/Resources/Private/Templates/Default.html
@@ -357,6 +357,9 @@ lib.userProfileImage {
     page_browser_extension_form.10 = TEXT
     page_browser_extension_form.10.insertData = 1
     page_browser_extension_form.10.value = <div class="alert alert-info">You must be logged in to write a post! <a href="{site:base}" class="link">Login</a></div>
+    page_like_click.10 >
+    page_like_click.10 = TEXT
+    page_like_click.10.value = <div class="alert alert-warning">WARNING: NO PUBLIC ACCESS</div>
 [end]
 
 

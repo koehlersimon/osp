@@ -8,13 +8,13 @@
 <f:section name="Menu">
 
     <f:if condition="{menu}">
-        <ul>
+        <ul class="nav flex-column {indent}">
             <f:for each="{menu}" as="page">
-                <li>
-                    <a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">
+                <li class="nav-item">
+                    <a class="nav-link" href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">
                         <span>{page.title}</span>
                     </a>
-                    <f:render section="Menu" arguments="{menu: page.children}" />
+                    <f:render section="Menu" arguments="{menu: page.children,indent:'pl-4'}" />
                 </li>
             </f:for>
         </ul>

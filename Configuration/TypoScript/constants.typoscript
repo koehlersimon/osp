@@ -7,6 +7,8 @@ plugin.tx_osp {
             navbarLogo = EXT:osp/Resources/Public/Icons/osp.svg
             # cat=OSP Site//a; type=string; label=Copyright text
             copyrightText = &copy; 2020 made with <a href="https://opensocialproject.org" class="link-secondary" target="_blank">OSP <i class="fa fa-link"></i></a>
+            # cat=OSP Site//a; type=string; label=Browser Theme Color
+            themeColor = #ff0000
         }
         user{
             admin{

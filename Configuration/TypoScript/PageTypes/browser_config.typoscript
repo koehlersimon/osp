@@ -16,7 +16,12 @@ browser_config_manifest = PAGE
 browser_config_manifest {
     config {
         disableAllHeaderCode = 1
-        additionalHeaders = Content-type:application/json
+        additionalHeaders{
+            10 {
+                header = Content-Type: application/json
+                replace = 1
+            }
+        }
         admPanel = 0
         debug = 0
         no_cache = 0
@@ -26,7 +31,7 @@ browser_config_manifest {
     10 = COA
     10{
 
-        wrap = { "name": "OSP", "description": "Web manifest for OSP", "icons": [ | ]}
+        wrap = { "short_name": "OSP", "name": "OSP Site Manifest", "description": "Web manifest for OSP", "theme_color":"{$plugin.tx_osp.settings.site.themeColor}", "icons": [ | ]}
 
         10 = COA
         10{

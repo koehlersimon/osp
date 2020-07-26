@@ -4,6 +4,7 @@ plugin.tx_osp {
             absRefPrefix = {$plugin.tx_osp.settings.site.absRefPrefix}
             navbarLogo = {$plugin.tx_osp.settings.site.navbarLogo}
             copyrightText = {$plugin.tx_osp.settings.site.copyrightText}
+            themeColor = {$plugin.tx_osp.settings.site.themeColor}
         }
         user{
             admin{

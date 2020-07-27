@@ -53,6 +53,14 @@ call_user_func(
             [\SIMONKOEHLER\Osp\Controller\AccountController::class => 'overview,edit']
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Osp',
+            'Comment',
+            [\SIMONKOEHLER\Osp\Controller\CommentController::class => 'form,list'],
+            // non-cacheable actions
+            [\SIMONKOEHLER\Osp\Controller\CommentController::class => 'form,list']
+        );
+
         $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects']['TYPO3\CMS\Extbase\Domain\Model\FrontendUser'] = array(
             'className' => 'SIMONKOEHLER\Osp\Domain\Model\User'
         );

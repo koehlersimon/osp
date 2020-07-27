@@ -3,7 +3,7 @@ return [
     'ctrl' => [
         'title' => 'LLL:EXT:osp/Resources/Private/Language/locallang_db.xlf:tx_osp_domain_model_post',
         'label' => 'content',
-        'label_alt' => 'likes',
+        'label_alt' => 'owner',
         'label_alt_force' => '1',
         'default_sortby' => 'ORDER BY crdate DESC',
         'tstamp' => 'tstamp',
@@ -207,6 +207,8 @@ return [
                 'maxitems' => 1,
                 'foreign_table' => 'fe_users',
                 'foreign_table_where' => 'ORDER BY fe_users.username',
+                'eval' => 'int',
+                'default' => 0
             ],
         ],
         'content' => [

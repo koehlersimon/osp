@@ -31,16 +31,6 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     protected $persistenceManager;
 
-    /**
-     * action home
-     *
-     * @return void
-     */
-    public function homeAction(){
-        $this->settings['fe_user'] = $GLOBALS['TSFE']->fe_user->user;
-        $this->view->assign('settings',$this->settings);
-        $this->view->assign('posts',$this->postRepository->findAll());
-    }
 
     /**
      * action listAjaxAction
@@ -49,6 +39,7 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function listAjaxAction(){
         $this->view->assign('settings',$this->settings);
+        $this->view->assign('fe_user',$GLOBALS['TSFE']->fe_user->user);
         $this->view->assign('posts',$this->postRepository->findAllAjax());
     }
 
@@ -58,7 +49,8 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @return void
      */
     public function listUserAction(){
-        $this->settings['fe_user'] = $GLOBALS['TSFE']->fe_user->user;
+        //$this->settings['fe_user'] = $GLOBALS['TSFE']->fe_user->user;
+        $this->view->assign('fe_user',$GLOBALS['TSFE']->fe_user->user);
         $this->view->assign('settings',$this->settings);
         $this->view->assign('posts',$this->postRepository->findByOwner($GLOBALS['TSFE']->fe_user->user['uid']));
     }
@@ -70,6 +62,7 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function listAction(){
         $this->view->assign('settings',$this->settings);
+        $this->view->assign('fe_user',$GLOBALS['TSFE']->fe_user->user);
         $this->view->assign('posts',$this->postRepository->findAll());
     }
 
@@ -175,12 +168,36 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         if($this->request->hasArgument('content')){
             if(strlen($this->request->getArgument('content')) > 0){
 
-                // Create new post record
+                // Set static value for the fe_group value to prevent users to set another value here!
+                if($this->request->hasArgument('privacy')){
+                    switch ($this->request->getArgument('privacy')) {
+                        case '0':
+                            $feGroup = '0';
+                            $hidden = 0;
+                            break;
+                        case '1':
+                            $feGroup = '-2';
+                            $hidden = 1;
+                            break;
+                        default:
+                            $feGroup = '-2';
+                            $hidden = 0;
+                            break;
+                    }
+                }
+                else{
+                    $feGroup = '-2';
+                    $hidden = 0;
+                }
 
+                $owner = $this->frontendUserRepository->findByUid($GLOBALS['TSFE']->fe_user->user['uid']);
+
+                // Create new post record
                 $newPost = new \SIMONKOEHLER\Osp\Domain\Model\Post();
-                $newPost->setFeGroup('-2');
+                $newPost->setFeGroup($feGroup);
+                $newPost->setHidden($hidden);
                 $newPost->setLikes(0);
-                $newPost->setOwner($this->request->getArgument('owner'));
+                $newPost->setOwner($owner);
                 $newPost->setContent($this->request->getArgument('content'));
                 $this->postRepository->add($newPost);
                 $this->persistenceManager->persistAll();

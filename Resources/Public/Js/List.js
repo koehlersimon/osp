@@ -26,9 +26,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Hack: Change classes of TYPO3 pagination ViewHelper to Bootstrap classes
     var paginations = document.querySelectorAll('.f3-widget-paginator');
-    for (var i = 0; i < paginations.length; i++) {
-        var paginator = paginations[i];
-        paginations[i].classList.add('pagination');
+    for (var c = 0; c < paginations.length; c++) {
+        var paginator = paginations[c];
+        paginations[c].classList.add('pagination');
         for (var i = 0; i < paginator.children.length; i++) {
             paginator.children[i].classList.add('page-item');
             if(paginator.children[i].classList.contains('current')){

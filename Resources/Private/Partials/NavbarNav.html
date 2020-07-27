@@ -42,9 +42,11 @@
      <f:security.ifAuthenticated>
      <f:then>
      <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">{f:if(condition:'{fe_user.0.data.name}', then:'{fe_user.0.data.name} / ')}{f:if(condition:'{user}', then:'{user}', else:'Account')}</a>
+         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><span class="bg-success text-white d-inline p-1 rounded">{fe_user.0.data.username}</span></a>
          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-             <li><f:link.page pageUid="{settings.pages.account.login}" class="dropdown-item" additionalParams="{logintype:'logout'}"><i class="fa fa-support"></i> Logout</f:link.page></li>
+            <li><f:link.page pageUid="{settings.pages.account.overview}" class="dropdown-item"><i class="fa fa-dashboard"></i> Account</f:link.page></li>
+            <li><f:link.page pageUid="{settings.pages.account.edit}" class="dropdown-item"><i class="fa fa-cogs"></i> Settings</f:link.page></li>
+            <li><f:link.page pageUid="{settings.pages.account.login}" class="dropdown-item" additionalParams="{logintype:'logout'}"><i class="fa fa-support"></i> Logout</f:link.page></li>
          </ul>
      </li>
      </f:then>

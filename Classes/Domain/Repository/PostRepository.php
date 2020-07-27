@@ -13,11 +13,16 @@ class PostRepository extends \TYPO3\CMS\Extbase\Persistence\Repository{
 	);
 
 	public function findAllAjax(){
-
 		$query = $this->createQuery();
 	    $query->setLimit(5);
 	    return $query->execute();
+	}
 
+	public function findByOwner($owner){
+		$query = $this->createQuery();
+		$query->getQuerySettings()->setIgnoreEnableFields(true);
+		$query->matching($query->contains('owner', $owner));
+	    return $query->execute();
 	}
 
 	// Moves the file from $tmpName to the default storage of the user and names it like $fileName

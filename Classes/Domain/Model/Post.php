@@ -8,6 +8,9 @@ class Post extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /** @var int */
     protected $crdate;
 
+    /** @var int */
+    public $hidden;
+
     /**
      * content
      *
@@ -25,9 +28,9 @@ class Post extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * owner
      *
-     * @var int
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FrontendUser<\TYPO3\CMS\Extbase\Domain\Model\FrontendUser>
      */
-    protected $owner = 0;
+    protected $owner;
 
     /**
      * feGroup
@@ -67,7 +70,7 @@ class Post extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the owner
      *
-     * @return int $owner
+     * @return \TYPO3\CMS\Extbase\Domain\Model\FrontendUser<\TYPO3\CMS\Extbase\Domain\Model\FrontendUser> $owner
      */
     public function getOwner()
     {
@@ -77,10 +80,10 @@ class Post extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the owner
      *
-     * @param int $owner
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FrontendUser
      * @return void
      */
-    public function setOwner($owner)
+    public function setOwner(\TYPO3\CMS\Extbase\Domain\Model\FrontendUser $owner)
     {
         $this->owner = $owner;
     }
@@ -146,6 +149,17 @@ class Post extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setFeGroup($feGroup)
     {
         $this->feGroup = $feGroup;
+    }
+
+    /**
+     * Sets the hidden
+     *
+     * @param int $hidden
+     * @return void
+     */
+    public function setHidden($hidden)
+    {
+        $this->hidden = $hidden;
     }
 
 }

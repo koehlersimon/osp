@@ -2,7 +2,7 @@
     <div class="card bg-white border p-3 mb-2">
         <div class="d-flex">
             <div class="mb-2 mr-auto">
-                <strong class="text-primary">{post.owner}</strong>
+                <strong class="text-primary">{post.owner.username}</strong>
                 <small><post:date content="{post.crdate}"/></small>
             </div>
             <f:security.ifAuthenticated>
@@ -16,7 +16,6 @@
                 </div>
             </f:security.ifAuthenticated>
         </div>
-
         <div class="content d-flex flex-column">
             <div class="alert alert-dark text-light d-flex align-items-center">
                 <div class="spinner-border mr-2" role="status">
@@ -25,7 +24,5 @@
                 <small>Fetching data from external server...</small>
             </div>
         </div>
-
     </div>
-
 </article>

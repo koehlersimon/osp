@@ -81,8 +81,11 @@
 			<trans-unit id="account.overview.member_since">
 				<source>Member since</source>
 			</trans-unit>
+			<trans-unit id="account.delete_account_finally">
+				<source>Yes, delete my account!</source>
+			</trans-unit>
 			<trans-unit id="account.delete_account_finally_question">
-				<source>Do you really want to permanently delete your account?</source>
+				<source>Do you really want to permanently delete your account? All your content and account data will be permanently deleted ad there is NO BACKUP!</source>
 			</trans-unit>
 			<trans-unit id="account.overview.email">
 				<source>Email</source>

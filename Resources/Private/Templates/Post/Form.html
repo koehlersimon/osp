@@ -1,21 +1,25 @@
 <f:flashMessages />
 <f:form action="form" controller="Post" enctype="multipart/form-data">
-    <f:form.hidden name="owner" value="{fe_user.uid}"/>
     <f:form.textarea id="postInput" name="content" rows="4" cols="80" class="form-control mb-4 autoresize" placeholder="{f:translate(id:'fe.post.form.whatsonyourmind', arguments: {0:'{fe_user.first_name}'}, default: 'Buddy', extensionName:'Osp')}"/>
 
     <input type="file" name="tx_osp_form[files][]" id="dropArea" class="form-control p-4" accept="image/*" multiple="true"/>
 
     <div class="row mt-4">
         <div class="col-auto">
+            <f:comment>
             <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-globe"></i> Public</button>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#" title="Anyone can see this post!">Public</a></li>
                 <li><a class="dropdown-item" href="#">Friends</a></li>
                 <li><a class="dropdown-item" href="#">Private</a></li>
             </ul>
-            <f:form.radio name="privacy" value="1" class="btn-check" id="privacy-1" />
-            <f:form.radio name="privacy" value="2" class="btn-check" id="privacy-2" />
-            <f:form.radio name="privacy" value="3" class="btn-check" id="privacy-3" />
+            </f:comment>
+            <div class="btn-group">
+            <f:form.radio name="privacy" value="0" class="btn-check" id="privacy-1" />
+            <label class="btn btn-outline-secondary" for="privacy-1"><i class="fa fa-globe"></i></label>
+            <f:form.radio name="privacy" value="1" class="btn-check" id="privacy-2" />
+            <label class="btn btn-outline-secondary" for="privacy-2"><i class="fa fa-lock"></i></label>
+            </div>
         </div>
         <div class="col">
             <button id="postSubmit" type="submit" class="btn btn-block btn-secondary" disabled><i class="fa fa-angle-right"></i> {f:translate(key:'fe.post.form.send_btn_label')}</button>

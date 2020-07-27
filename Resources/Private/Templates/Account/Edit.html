@@ -3,9 +3,11 @@
 
     <f:then>
         <f:flashMessages />
-        <f:link.action pageUid="{settings.editFormPage}" arguments="{confirmed:'1'}" class="btn btn-danger btn-lg" action="edit" class="text-danger">
-            <i class="fa fa-warning"></i> <f:translate key="account.delete_account_finally"/>
-        </f:link.action>
+        <div class="text-center">
+            <f:link.action pageUid="{settings.editFormPage}" arguments="{confirmed:'1'}" class="btn btn-danger btn-lg" action="edit">
+                <i class="fa fa-warning"></i> <f:translate key="account.delete_account_finally"/>
+            </f:link.action>
+        </div>
     </f:then>
 
     <f:else>

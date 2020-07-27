@@ -1,17 +1,20 @@
 <article class="post mb-4" id="p{post.uid}">
-    <div class="card bg-white border p-3 mb-2">
+    <div class="card bg-white border p-3 mb-2 {f:if(condition:'{post.hidden} === 1', then:' bg-light')}">
         <div class="d-flex">
             <div class="mb-2 mr-auto">
-                <strong class="text-primary">{post.owner}</strong>
+                <strong class="text-primary">{post.owner.username} </strong>
                 <small><post:date content="{post.crdate}"/></small>
             </div>
             <f:security.ifAuthenticated>
                 <div class="dropdown ml-auto">
+                    <f:if condition="{post.hidden}"><i class="fa fa-lock text-primary"></i></f:if>
                   <a class="btn btn-default btn-sm" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-edit"></i></a>
                   <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                    <li><f:link.action action="delete" arguments="{post:post}" controller="Post" class="dropdown-item" title="Delete"><i class="fa fa-trash"></i> delete</f:link.action></li>
-                    <li><f:link.action action="edit" arguments="{post:post}" controller="Post" class="dropdown-item" title="Edit"><i class="fa fa-edit"></i> edit</f:link.action></li>
-                    <li><h6 class="dropdown-header">Other actions</h6></li>
+                    <f:if condition="{post.owner.uid} == {fe_user.uid}">
+                        <li><f:link.action action="delete" arguments="{post:post}" controller="Post" class="dropdown-item" title="Delete"><i class="fa fa-trash"></i> delete</f:link.action></li>
+                        <li><f:link.action action="edit" arguments="{post:post}" controller="Post" class="dropdown-item" title="Edit"><i class="fa fa-edit"></i> edit</f:link.action></li>
+                        <li><h6 class="dropdown-header">Other actions</h6></li>
+                    </f:if>
                     <li><f:link.action pageUid="{settings.pages.post.detail}" action="detail" arguments="{post:post}" controller="Post" class="dropdown-item" title="Permalink"><i class="fa fa-search"></i> detail view</f:link.action></li>
                   </ul>
                 </div>
@@ -29,5 +32,4 @@
         <hr>
         <f:render partial="Post/Buttons" arguments="{_all}"/>
     </div>
-
 </article>

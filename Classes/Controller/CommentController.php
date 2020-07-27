@@ -7,13 +7,22 @@ use TYPO3\CMS\Extbase\Annotation\Inject;
  */
 class CommentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
+
+    /**
+     * Protected Variable FrontendUserRepository wird mit NULL initialisiert.
+     *
+     * @var \TYPO3\CMS\Extbase\Domain\Repository\FrontendUserRepository
+     * @Inject
+     */
+    protected $frontendUserRepository = NULL;
+
     /**
      * commentRepository
      *
      * @var \SIMONKOEHLER\Osp\Domain\Repository\CommentRepository
      * @Inject
      */
-    protected $commentRepository = null;
+    protected $commentRepository = NULL;
 
     /**
      * action list
@@ -23,6 +32,15 @@ class CommentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     public function listAction(){
         $this->view->assign('settings',$this->settings);
         $this->view->assign('comments',$this->commentRepository->findAll());
+    }
+
+    /**
+     * action post
+     *
+     * @return void
+     */
+    public function postAction(){
+        $this->view->assign('settings',$this->settings);
     }
 
     /**
@@ -41,6 +59,8 @@ class CommentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
                 $this->addFlashMessage("Well, that's too little!");
             }
         }
+        $user = $this->frontendUserRepository->findByUid($GLOBALS['TSFE']->fe_user->user['uid']);
+        $this->view->assign('user', $user);
     }
 
     /**

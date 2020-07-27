@@ -38,8 +38,9 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @return void
      */
     public function listAjaxAction(){
+        $fe_user = $this->frontendUserRepository->findByUid($GLOBALS['TSFE']->fe_user->user['uid']);
+        $this->view->assign('fe_user', $fe_user);
         $this->view->assign('settings',$this->settings);
-        $this->view->assign('fe_user',$GLOBALS['TSFE']->fe_user->user);
         $this->view->assign('posts',$this->postRepository->findAllAjax());
     }
 
@@ -49,8 +50,8 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @return void
      */
     public function listUserAction(){
-        //$this->settings['fe_user'] = $GLOBALS['TSFE']->fe_user->user;
-        $this->view->assign('fe_user',$GLOBALS['TSFE']->fe_user->user);
+        $fe_user = $this->frontendUserRepository->findByUid($GLOBALS['TSFE']->fe_user->user['uid']);
+        $this->view->assign('fe_user', $fe_user);
         $this->view->assign('settings',$this->settings);
         $this->view->assign('posts',$this->postRepository->findByOwner($GLOBALS['TSFE']->fe_user->user['uid']));
     }
@@ -61,8 +62,9 @@ class PostController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @return void
      */
     public function listAction(){
+        $fe_user = $this->frontendUserRepository->findByUid($GLOBALS['TSFE']->fe_user->user['uid']);
+        $this->view->assign('fe_user', $fe_user);
         $this->view->assign('settings',$this->settings);
-        $this->view->assign('fe_user',$GLOBALS['TSFE']->fe_user->user);
         $this->view->assign('posts',$this->postRepository->findAll());
     }
 

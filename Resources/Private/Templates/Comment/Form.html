@@ -1,0 +1,6 @@
+<f:form action="post" controller="Comment" class="comment-form position-relative" enctype="multipart/form-data">
+    <f:if condition="{fe_user}">
+        <f:image image="{fe_user.image.0}" width="30c" height="30c" class="img-circle img-fluid ml-2 mt-2 position-absolute" style="border-radius:50%;" alt="{fe_user.username}"/>
+    </f:if>
+    <f:form.textarea property="content" class="form-control bg-light pl-5" rows="2" placeholder="Write a comment, {fe_user.firstName}"/>
+</f:form>

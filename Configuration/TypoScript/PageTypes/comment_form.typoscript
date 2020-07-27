@@ -1,0 +1,32 @@
+comment_form = PAGE
+comment_form {
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-Type:text/html;charset=utf-8
+        admPanel = 0
+        debug = 0
+        no_cache = 1
+    }
+    typeNum = {$plugin.tx_osp.settings.pages.types.comment_form}
+    10 = COA
+    10 {
+        10 = USER
+        10 {
+            userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+            extensionName = Osp
+            pluginName = Comment
+            vendorName = SIMONKOEHLER
+            controller = Comment
+            action = form
+            switchableControllerActions {
+                Post {
+                    1 = form
+                    2 = list
+                }
+            }
+            view < plugin.tx_osp.view
+            persistence < plugin.tx_osp.persistence
+            settings < plugin.tx_osp.settings
+        }
+    }
+}

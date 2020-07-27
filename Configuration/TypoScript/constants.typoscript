@@ -103,6 +103,7 @@ plugin.tx_osp {
                 page_browser_extension_form = 1110
                 browser_config = 1120
                 browser_config_manifest = 1130
+                comment_form = 1140
             }
         }
         storage{

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Comment Plugin Settings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+
+                    <switchableControllerActions>
+                        <TCEforms>
+                            <label>Plugin-Mode</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Comment Form</numIndex>
+                                        <numIndex index="1">Comment->form</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Comment List</numIndex>
+                                        <numIndex index="1">Comment->list</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </switchableControllerActions>
+
+
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

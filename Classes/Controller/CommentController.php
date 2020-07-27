@@ -60,7 +60,7 @@ class CommentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
             }
         }
         $user = $this->frontendUserRepository->findByUid($GLOBALS['TSFE']->fe_user->user['uid']);
-        $this->view->assign('user', $user);
+        $this->view->assign('fe_user', $user);
     }
 
     /**

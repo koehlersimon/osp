@@ -82,6 +82,7 @@ plugin.tx_osp {
                 browser_config = {$plugin.tx_osp.settings.pages.types.browser_config}
                 browser_config_manifest = {$plugin.tx_osp.settings.pages.types.browser_config_manifest}
                 comment_form = {$plugin.tx_osp.settings.pages.types.comment_form}
+                comment_list = {$plugin.tx_osp.settings.pages.types.comment_list}
             }
         }
         storage{

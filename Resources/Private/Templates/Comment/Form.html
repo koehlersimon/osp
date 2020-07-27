@@ -1,6 +1,9 @@
-<f:form action="post" controller="Comment" class="comment-form position-relative" enctype="multipart/form-data">
+<div class="p-3 d-flex align-items-center flex-row mb-2">
     <f:if condition="{fe_user}">
-        <f:image image="{fe_user.image.0}" width="30c" height="30c" class="img-circle img-fluid ml-2 mt-2 position-absolute" style="border-radius:50%;" alt="{fe_user.username}"/>
+        <span>
+        <f:image image="{fe_user.image.0}" width="28c" height="28c" class="img-circle img-fluid mr-3" style="border-radius:50%;" alt="{fe_user.username}"/>
+        </span>
     </f:if>
-    <f:form.textarea property="content" class="form-control bg-light pl-5" rows="2" placeholder="Write a comment, {fe_user.firstName}"/>
-</f:form>
+    <f:form.textarea property="content" class="form-control" rows="1" placeholder="Write a comment, {fe_user.firstName}" style="font-size:0.85rem;"/>
+    <button type="submit" class="btn btn-outline-dark btn-sm ml-2"><i class="fa fa-send"></i></button>
+</div>

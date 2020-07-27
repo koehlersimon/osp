@@ -104,6 +104,7 @@ plugin.tx_osp {
                 browser_config = 1120
                 browser_config_manifest = 1130
                 comment_form = 1140
+                comment_list = 1150
             }
         }
         storage{

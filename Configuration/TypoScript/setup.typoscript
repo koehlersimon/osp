@@ -197,6 +197,7 @@ page {
         list = EXT:osp/Resources/Public/Js/List.js
         form = EXT:osp/Resources/Public/Js/Form.js
         like = EXT:osp/Resources/Public/Js/Like.js
+        comment = EXT:osp/Resources/Public/Js/Comment.js
         notification = EXT:osp/Resources/Public/Js/Notification.js
     }
 

@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 postContainer.innerHTML = request.responseText;
                 refreshFsLightbox();
                 refreshGlobal();
+                initComment();
             }
             else{
                 postContainer.innerHTML = 'Oopps, something went wrong!';

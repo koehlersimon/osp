@@ -1,5 +1,5 @@
-comment_form = PAGE
-comment_form {
+comment_list = PAGE
+comment_list {
     config.contentObjectExceptionHandler = 0
     config {
         disableAllHeaderCode = 1
@@ -8,7 +8,7 @@ comment_form {
         debug = 0
         no_cache = 1
     }
-    typeNum = {$plugin.tx_osp.settings.pages.types.comment_form}
+    typeNum = {$plugin.tx_osp.settings.pages.types.comment_list}
     10 = COA
     10 {
         10 = USER
@@ -18,11 +18,10 @@ comment_form {
             pluginName = Comment
             vendorName = SIMONKOEHLER
             controller = Comment
-            action = form
+            action = list
             switchableControllerActions {
                 Comment {
-                    1 = form
-                    2 = list
+                    1 = list
                 }
             }
             view < plugin.tx_osp.view

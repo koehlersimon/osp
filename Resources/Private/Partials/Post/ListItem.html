@@ -1,8 +1,11 @@
 <article class="post mb-4" id="p{post.uid}">
-    <div class="card bg-white border p-3 mb-2 {f:if(condition:'{post.hidden} === 1', then:' bg-light')}">
+    <div class="card bg-white border p-3 mb-2 shadow-sm {f:if(condition:'{post.hidden} === 1', then:' bg-light')}">
         <div class="d-flex">
             <div class="mb-2 mr-auto">
-                <strong class="text-primary">{post.owner.username} </strong>
+                <f:if condition="{post.owner.image.0}">
+                    <f:image image="{post.owner.image.0}" width="30c" height="30c" class="img-circle img-fluid mr-1" style="border-radius:50%;" alt="{post.owner.username}"/>
+                </f:if>
+                <strong class="text-primary pr-1">{post.owner.username}</strong>
                 <small><post:date content="{post.crdate}"/></small>
             </div>
             <f:security.ifAuthenticated>
@@ -20,7 +23,6 @@
                 </div>
             </f:security.ifAuthenticated>
         </div>
-
         <f:format.raw>
             <f:format.crop maxCharacters="{settings.frontend.teaserLength}" append="... <a href='{f:uri.action(action:'detail',controller:'Post',pageUid:'{settings.pages.post.detail}',arguments:'{post:post}')}' class=\"link-info\">more</a>">
                 <textile:parse content="{post.content}" defaultLabel="<i class='fa fa-link'></i>"/>
@@ -32,4 +34,5 @@
         <hr>
         <f:render partial="Post/Buttons" arguments="{_all}"/>
     </div>
+    <div class="comment-container" data-form="{settings.site.absRefPrefix}?type=1140" data-comments="{settings.site.absRefPrefix}?type=1150"></div>
 </article>

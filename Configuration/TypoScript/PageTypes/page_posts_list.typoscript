@@ -17,10 +17,11 @@ page_posts_list {
             pluginName = List
             vendorName = SIMONKOEHLER
             controller = Post
-            action = list
+            action = listAjax
             switchableControllerActions {
                 Post {
                     1 = listAjax
+                    2 = list
                 }
             }
             view < plugin.tx_osp.view

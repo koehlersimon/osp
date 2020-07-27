@@ -8,9 +8,9 @@ call_user_func(
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Osp',
             'List',
-            [\SIMONKOEHLER\Osp\Controller\PostController::class => 'list'],
+            [\SIMONKOEHLER\Osp\Controller\PostController::class => 'list,listAjax'],
             // non-cacheable actions
-            [\SIMONKOEHLER\Osp\Controller\PostController::class => 'list']
+            [\SIMONKOEHLER\Osp\Controller\PostController::class => 'list,listAjax']
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(

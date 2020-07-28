@@ -79,10 +79,10 @@ plugin.tx_osp {
                 page_external_post_provide = {$plugin.tx_osp.settings.pages.types.page_external_post_provide}
                 page_browser_extension = {$plugin.tx_osp.settings.pages.types.page_browser_extension}
                 page_browser_extension_form = {$plugin.tx_osp.settings.pages.types.page_browser_extension_form}
-                page_browser_config = {$plugin.tx_osp.settings.pages.types.browser_config}
-                page_browser_config_manifest = {$plugin.tx_osp.settings.pages.types.browser_config_manifest}
-                page_comment_form = {$plugin.tx_osp.settings.pages.types.comment_form}
-                page_comment_list = {$plugin.tx_osp.settings.pages.types.comment_list}
+                page_browser_config = {$plugin.tx_osp.settings.pages.types.page_browser_config}
+                page_browser_config_manifest = {$plugin.tx_osp.settings.pages.types.page_browser_config_manifest}
+                page_comment_form = {$plugin.tx_osp.settings.pages.types.page_comment_form}
+                page_comment_list = {$plugin.tx_osp.settings.pages.types.page_comment_list}
             }
         }
         storage{

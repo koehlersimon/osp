@@ -3,10 +3,10 @@
 <f:section name="Main">
 
     <f:if condition="{menu}">
-        <ul>
+        <ul class="nav flex-column">
             <f:for each="{menu}" as="page">
-                <li>
-                    <a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">
+                <li class="nav-item">
+                    <a class="nav-link" href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}">
                         <span>{page.title}</span>
                     </a>
                 </li>

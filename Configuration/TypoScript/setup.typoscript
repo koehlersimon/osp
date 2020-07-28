@@ -40,7 +40,7 @@ config{
 // Fluid paths for content elements
 lib.contentElement {
   templateRootPaths {
-      800 = EXT:osp/Resources/Private/Ext/fluid_styled_content/Layouts/
+      800 = EXT:osp/Resources/Private/Ext/fluid_styled_content/Templates/
       810 = EXT:osp/Resources/Private/Templates/Content/
   }
   partialRootPaths {

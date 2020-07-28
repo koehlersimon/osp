@@ -16,7 +16,9 @@
             </f:link.page>
         </div>
         <div class="col-6 col-sm-9 d-flex align-items-center">
-            <h1 class="m-0 p-0 text-white text-shadow"><span class="font-weight-bold">{data.title}</span> {f:if(condition:'{data.subtitle}', then:'<small>({data.subtitle})</small>')}</h1>
+            <hgroup>
+                <h1 class="m-0 p-0 text-white text-shadow"><span class="font-weight-bold">{data.title}</span></h1>{f:if(condition:'{data.subtitle}', then:'<h2 class="text-white small">{data.subtitle}</h2>')}
+            </hgroup>
         </div>
     </div>
 

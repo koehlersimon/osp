@@ -57,9 +57,9 @@
                                </items>
                            </config>
                        </TCEforms>
-                   </settings.output_style>
+                    </settings.output_style>
 
-                   <settings.items_per_page>
+                    <settings.items_per_page>
                       <TCEforms>
                           <label>Items per page</label>
                           <config>
@@ -67,27 +67,27 @@
                               <eval>number</eval>
                           </config>
                       </TCEforms>
-                  </settings.items_per_page>
+                    </settings.items_per_page>
 
-                  <settings.pagination_top>
+                    <settings.pagination_top>
                      <TCEforms>
                          <label>Top pagination</label>
                          <config>
                              <type>check</type>
                          </config>
                      </TCEforms>
-                 </settings.pagination_top>
+                    </settings.pagination_top>
 
-                 <settings.pagination_bottom>
+                    <settings.pagination_bottom>
                     <TCEforms>
                         <label>Bottom pagination</label>
                         <config>
                             <type>check</type>
                         </config>
                     </TCEforms>
-                </settings.pagination_bottom>
+                    </settings.pagination_bottom>
 
-                  <settings.max_link_number>
+                    <settings.max_link_number>
                      <TCEforms>
                          <label>Maximum number of links in pagination</label>
                          <config>
@@ -95,8 +95,7 @@
                              <eval>number</eval>
                          </config>
                      </TCEforms>
-                 </settings.max_link_number>
-
+                    </settings.max_link_number>
 
                 </el>
             </ROOT>

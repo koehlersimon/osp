@@ -73,6 +73,24 @@ plugin.tx_osp {
         frontend{
             # cat=OSP Frontend//a; type=string; label=Maximum length of post teaser text
             teaserLength = 300
+            features{
+                like{
+                    # cat=OSP Frontend//a; type=boolean; label=Enable LIKE function
+                    enabled = 1
+                }
+                dislike{
+                    # cat=OSP Frontend//a; type=boolean; label=Enable DISLIKE function
+                    enabled = 0
+                }
+                share{
+                    # cat=OSP Frontend//a; type=boolean; label=Enable SHARE function
+                    enabled = 1
+                }
+                comment{
+                    # cat=OSP Frontend//a; type=boolean; label=Enable COMMENT function
+                    enabled = 0
+                }
+            }
         }
         pages{
             # cat=OSP Pages//a; type=string; label=Home page

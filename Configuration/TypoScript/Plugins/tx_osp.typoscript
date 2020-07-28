@@ -58,6 +58,20 @@ plugin.tx_osp {
         }
         frontend{
             teaserLength = {$plugin.tx_osp.settings.frontend.teaserLength}
+            features{
+                like{
+                    enabled = {$plugin.tx_osp.settings.frontend.features.like.enabled}
+                }
+                dislike{
+                    enabled = {$plugin.tx_osp.settings.frontend.features.dislike.enabled}
+                }
+                share{
+                    enabled = {$plugin.tx_osp.settings.frontend.features.share.enabled}
+                }
+                comment{
+                    enabled = {$plugin.tx_osp.settings.frontend.features.comment.enabled}
+                }
+            }
         }
         pages{
             home = {$plugin.tx_osp.settings.pages.home}

@@ -20,7 +20,7 @@
                     <f:render partial="DropIn/Before/All" arguments="{_all}" />
                 </f:render>
                 <f:render section="Header" optional="true">
-                    <f:if condition="{data.frame_class} === 'card'">
+                    <f:if condition="{data.frame_class} === 'card' && {data.header}">
                         <f:then>
                             <div class="card-header">
                                 <f:render partial="Header/All" arguments="{_all}" />

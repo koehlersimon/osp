@@ -37,6 +37,7 @@
             <f:render partial="Post/Media" arguments="{media:post.media}"/>
         </f:if>
         <f:if condition="{settings.frontend.features.like.enabled} || {settings.frontend.features.dislike.enabled} || {settings.frontend.features.share.enabled} || {settings.frontend.features.comment.enabled}">
+        <hr>
         <f:render partial="Post/Buttons" arguments="{_all}"/>
         </f:if>
     </div>

@@ -1,10 +1,10 @@
 <div class="d-flex">
-    <f:if condition="{user.image}">
-        <img src="{f:uri.image(src: user.image)}" alt="{user.username}" width="50" height="50" class="rounded-circle mr-3 mb-3">
+    <f:if condition="{fe_user.image}">
+        <img src="{f:uri.image(image: fe_user.image.0)}" alt="{fe_user.username}" width="50" height="50" class="rounded-circle mr-3 mb-3">
     </f:if>
     <div class="mr-auto text-right text-md-left">
-        <h3 class="m-0">{user.title} {user.name}</h3>
-        <small><f:translate key="account.overview.member_since"/>: <strong><f:format.date format="d.m.Y / H:i">{user.crdate}</f:format.date></strong></small><br>
+        <h3 class="m-0">{fe_user.title} {fe_user.name}</h3>
+        <small><f:translate key="account.overview.member_since"/>: <strong><f:format.date format="d.m.Y / H:i">{fe_user_array.crdate}</f:format.date></strong></small><br>
     </div>
 </div>
 
@@ -14,8 +14,8 @@
     <tr>
         <th>Company</th>
         <td>
-            <f:if condition="{user.company}">
-                <f:then>{user.company}</f:then>
+            <f:if condition="{fe_user.company}">
+                <f:then>{fe_user.company}</f:then>
                 <f:else><span class="text-muted">not given</span></f:else>
             </f:if>
         </td>
@@ -23,8 +23,8 @@
     <tr>
         <th>Name</th>
         <td>
-            <f:if condition="{user.name}">
-                <f:then>{user.title} {user.name}</f:then>
+            <f:if condition="{fe_user.name}">
+                <f:then>{fe_user.title} {fe_user.name}</f:then>
                 <f:else><span class="text-muted">not given</span></f:else>
             </f:if>
         </td>
@@ -32,16 +32,16 @@
     <tr>
         <th><f:translate key="account.overview.email"/></th>
         <td>
-            <f:if condition="{user.email}">
-                <f:link.email email="{user.email}">{user.email}</f:link.email>
+            <f:if condition="{fe_user.email}">
+                <f:link.email email="{fe_user.email}">{fe_user.email}</f:link.email>
             </f:if>
         </td>
     </tr>
     <tr>
         <th>Address</th>
         <td>
-            <f:if condition="{user.address}">
-                <f:then>{user.address}</f:then>
+            <f:if condition="{fe_user.address}">
+                <f:then>{fe_user.address}</f:then>
                 <f:else><span class="text-muted">not given</span></f:else>
             </f:if>
         </td>
@@ -50,11 +50,11 @@
         <th>ZIP / City</th>
         <td>
             <f:if condition="{user.zip}">
-                <f:then>{user.zip}</f:then>
+                <f:then>{fe_user.zip}</f:then>
                 <f:else><span class="text-muted">no zip given</span></f:else>
             </f:if>
             <f:if condition="{user.city}">
-                <f:then>{user.city}</f:then>
+                <f:then>{fe_user.city}</f:then>
                 <f:else><span class="text-muted">no city given</span></f:else>
             </f:if>
         </td>
@@ -62,8 +62,8 @@
     <tr>
         <th>Country</th>
         <td>
-            <f:if condition="{user.country}">
-                <f:then>{user.country}</f:then>
+            <f:if condition="{fe_user.country}">
+                <f:then>{fe_user.country}</f:then>
                 <f:else><span class="text-muted">no country given</span></f:else>
             </f:if>
         </td>
@@ -76,4 +76,4 @@
     <i class="fa fa-edit"></i> <f:translate key="account.overview.edit_account"/>
 </f:link.page>
 
-<f:link.action pageUid="{settings.pages.account.edit}" class="float-right" arguments="{delete:user.uid}" action="edit"><i class="fa fa-trash"></i> <f:translate key="account.overview.delete_account"/></f:link.action>
+<f:link.action pageUid="{settings.pages.account.edit}" class="float-right" arguments="{delete:fe_user.uid}" action="edit"><i class="fa fa-trash"></i> <f:translate key="account.overview.delete_account"/></f:link.action>

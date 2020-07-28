@@ -1,4 +1,8 @@
 {namespace textile=SIMONKOEHLER\Textile\ViewHelpers}
-<f:format.raw>
-    <textile:parse content="{args.bodytext}" defaultLabel="<i class='fa fa-link'></i>"/>
-</f:format.raw>
+
+<f:if condition="{args.bodytext}">
+<div class="card d-block p-3">
+    <span class="badge bg-info float-right">PREVIEW</span>
+    <f:format.raw><textile:parse content="{args.bodytext}" defaultLabel="<i class='fa fa-link'></i>"/></f:format.raw>
+</div>
+</f:if>

@@ -16,13 +16,12 @@ call_user_func(function () {
 		'after'
 	);
 
-	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['osp_menu'] = $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['default'];
-
 	// New palette header
 	$GLOBALS['TCA']['tt_content']['palettes']['header'] = array(
   			'showitem' => 'header,header_layout','canNotCollapse' => 1
 	);
 
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['osp_menu'] = 'osp-menu';
 	$GLOBALS['TCA']['tt_content']['types']['osp_menu'] = [
 		'showitem' => '
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,

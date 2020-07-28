@@ -54,7 +54,7 @@ mod{
                     osp_menu {
                         iconIdentifier = osp-menu
                         title = OSP Menu
-                        description = The form to create a post
+                        description = Creates a custom navigation menu
                         tt_content_defValues {
                             CType = osp_menu
                         }

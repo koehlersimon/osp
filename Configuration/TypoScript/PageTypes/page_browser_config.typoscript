@@ -1,5 +1,5 @@
-browser_config = PAGE
-browser_config {
+page_browser_config = PAGE
+page_browser_config {
     config {
         disableAllHeaderCode = 1
         additionalHeaders = Content-type:application/json
@@ -7,13 +7,13 @@ browser_config {
         debug = 0
         no_cache = 0
     }
-    typeNum = {$plugin.tx_osp.settings.pages.types.browser_config}
+    typeNum = {$plugin.tx_osp.settings.pages.types.page_browser_config}
     10 = TEXT
     10.value = {'test':'browser_config!'}
 }
 
-browser_config_manifest = PAGE
-browser_config_manifest {
+page_browser_config_manifest = PAGE
+page_browser_config_manifest {
     config {
         disableAllHeaderCode = 1
         additionalHeaders{
@@ -26,7 +26,7 @@ browser_config_manifest {
         debug = 0
         no_cache = 0
     }
-    typeNum = {$plugin.tx_osp.settings.pages.types.browser_config_manifest}
+    typeNum = {$plugin.tx_osp.settings.pages.types.page_browser_config_manifest}
 
     10 = COA
     10{

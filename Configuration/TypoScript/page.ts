@@ -9,7 +9,7 @@ TCEFORM{
             disabled = 1
         }
         CType {
-            removeItems = header, text, textpic, image, bullets, table, uploads, multimedia, media, mailform, search, login, menu_subpages, menu_abstract,menu_categorized, div
+            removeItems = header, textmedia, textpic, bullets, table, uploads, multimedia, media, mailform, search, login, menu_pages, menu_categorized_content, menu_sitemap_pages, menu_categorized_pages, menu_subpages, menu_abstract,menu_categorized, div
         }
     }
 }
@@ -47,7 +47,7 @@ mod.wizards {
                 }
             }
         }
-        common{
+        menu{
             elements{
                 osp_menu {
                     iconIdentifier = osp-menu

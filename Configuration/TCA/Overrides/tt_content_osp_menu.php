@@ -8,7 +8,7 @@ call_user_func(function () {
 		'tt_content',
 		'CType',
 		[
-			'LLL:EXT:osp/Resources/Private/Language/locallang_db.xlf:content.tx_osp.wizard.title',
+			'LLL:EXT:osp/Resources/Private/Language/locallang.xlf:content_element.osp_menu.title',
 			'osp_menu',
 			'osp-menu'
 		],

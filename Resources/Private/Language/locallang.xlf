@@ -50,6 +50,11 @@
 			</trans-unit>
 
 
+			<trans-unit id="content_element.osp_menu.title">
+				<source>Menu</source>
+			</trans-unit>
+
+
 			<trans-unit id="fe.navbar.login">
 				<source>LOGIN</source>
 			</trans-unit>

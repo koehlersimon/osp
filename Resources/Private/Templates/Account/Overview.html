@@ -49,11 +49,11 @@
     <tr>
         <th>ZIP / City</th>
         <td>
-            <f:if condition="{user.zip}">
+            <f:if condition="{fe_user.zip}">
                 <f:then>{fe_user.zip}</f:then>
                 <f:else><span class="text-muted">no zip given</span></f:else>
             </f:if>
-            <f:if condition="{user.city}">
+            <f:if condition="{fe_user.city}">
                 <f:then>{fe_user.city}</f:then>
                 <f:else><span class="text-muted">no city given</span></f:else>
             </f:if>

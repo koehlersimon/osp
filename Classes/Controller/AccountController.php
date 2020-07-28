@@ -132,7 +132,9 @@ class AccountController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
                 }
             }
 
-            $this->view->assign('user', $feUser);
+            $fe_user = $this->frontendUserRepository->findByUid($GLOBALS['TSFE']->fe_user->user['uid']);
+            $this->view->assign('fe_user', $fe_user);
+            $this->view->assign('fe_user_array', $GLOBALS['TSFE']->fe_user->user);
             $this->view->assign('settings',$this->settings);
 
         }

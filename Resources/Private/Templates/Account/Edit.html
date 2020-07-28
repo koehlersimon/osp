@@ -19,59 +19,59 @@
                 <f:for each="{settings.user.account.editfields}" as="field" key="key">
 
                     <f:if condition="{key} === 'username' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/Username" arguments="{field:field,user:user,settings:settings}"/>
+                        <f:render partial="Account/FormFields/Username" arguments="{field:field,fe_user:fe_user,settings:settings}"/>
                     </f:if>
 
                     <f:if condition="{key} === 'title' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/Title" arguments="{field:field,user:user}"/>
+                        <f:render partial="Account/FormFields/Title" arguments="{field:field,fe_user:fe_user}"/>
                     </f:if>
 
                     <f:if condition="{key} === 'name' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/Name" arguments="{field:field,user:user}"/>
+                        <f:render partial="Account/FormFields/Name" arguments="{field:field,fe_user:fe_user}"/>
                     </f:if>
 
                     <f:if condition="{key} === 'first_name' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/FirstName" arguments="{field:field,user:user}"/>
+                        <f:render partial="Account/FormFields/FirstName" arguments="{field:field,fe_user:fe_user}"/>
                     </f:if>
 
                     <f:if condition="{key} === 'middle_name' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/MiddleName" arguments="{field:field,user:user}"/>
+                        <f:render partial="Account/FormFields/MiddleName" arguments="{field:field,fe_user:fe_user}"/>
                     </f:if>
 
                     <f:if condition="{key} === 'last_name' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/LastName" arguments="{field:field,user:user}"/>
+                        <f:render partial="Account/FormFields/LastName" arguments="{field:field,fe_user:fe_user}"/>
                     </f:if>
 
                     <f:if condition="{key} === 'email' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/Email" arguments="{field:field,user:user}"/>
+                        <f:render partial="Account/FormFields/Email" arguments="{field:field,fe_user:fe_user}"/>
                     </f:if>
 
                     <f:if condition="{key} === 'telephone' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/Telephone" arguments="{field:field,user:user}"/>
+                        <f:render partial="Account/FormFields/Telephone" arguments="{field:field,fe_user:fe_user}"/>
                     </f:if>
 
                     <f:if condition="{key} === 'company' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/Company" arguments="{field:field,user:user}"/>
+                        <f:render partial="Account/FormFields/Company" arguments="{field:field,fe_user:fe_user}"/>
                     </f:if>
 
                     <f:if condition="{key} === 'city' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/City" arguments="{field:field,user:user}"/>
+                        <f:render partial="Account/FormFields/City" arguments="{field:field,fe_user:fe_user}"/>
                     </f:if>
 
                     <f:if condition="{key} === 'address' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/Address" arguments="{field:field,user:user}"/>
+                        <f:render partial="Account/FormFields/Address" arguments="{field:field,fe_user:fe_user}"/>
                     </f:if>
 
                     <f:if condition="{key} === 'zip' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/Zip" arguments="{field:field,user:user}"/>
+                        <f:render partial="Account/FormFields/Zip" arguments="{field:field,fe_user:fe_user}"/>
                     </f:if>
 
                     <f:if condition="{key} === 'country' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/Country" arguments="{field:field,user:user}"/>
+                        <f:render partial="Account/FormFields/Country" arguments="{field:field,fe_user:fe_user}"/>
                     </f:if>
 
                     <f:if condition="{key} === 'password' && {field.show} === '1'">
-                        <f:render partial="Account/FormFields/Password" arguments="{field:field,user:user}"/>
+                        <f:render partial="Account/FormFields/Password" arguments="{field:field,fe_user:fe_user}"/>
                     </f:if>
 
                 </f:for>

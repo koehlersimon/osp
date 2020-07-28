@@ -104,6 +104,12 @@
 			<trans-unit id="account.successfully_saved">
 				<source>Successfully saved!</source>
 			</trans-unit>
+			<trans-unit id="account.edit.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="account.edit.username">
+				<source>Username</source>
+			</trans-unit>
 			<trans-unit id="account.edit.address">
 				<source>Address</source>
 			</trans-unit>
@@ -134,11 +140,23 @@
 			<trans-unit id="account.edit.password">
 				<source>Password</source>
 			</trans-unit>
+			<trans-unit id="account.edit.password_current">
+				<source>Current Password</source>
+			</trans-unit>
+			<trans-unit id="account.edit.password_current_confirmation">
+				<source>Current Password confirmation</source>
+			</trans-unit>
+			<trans-unit id="account.edit.password_new">
+				<source>New Password</source>
+			</trans-unit>
 			<trans-unit id="account.edit.telephone">
 				<source>Telephone</source>
 			</trans-unit>
 			<trans-unit id="account.edit.zip">
 				<source>ZIP</source>
+			</trans-unit>
+			<trans-unit id="account.edit.save">
+				<source>Save</source>
 			</trans-unit>
 
 

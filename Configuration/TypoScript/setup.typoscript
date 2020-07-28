@@ -40,16 +40,16 @@ config{
 // Fluid paths for content elements
 lib.contentElement {
   templateRootPaths {
-      800 = EXT:osp/Resources/Private/Ext/fluid_styled_content/Templates/
-      810 = EXT:osp/Resources/Private/Templates/Content/
+      20 = EXT:osp/Resources/Private/Ext/fluid_styled_content/Templates/
+      10 = EXT:osp/Resources/Private/Templates/Content/
   }
   partialRootPaths {
-      800 = EXT:osp/Resources/Private/Ext/fluid_styled_content/Partials/
-      810 = EXT:osp/Resources/Private/Layouts/Partials/
+      20 = EXT:osp/Resources/Private/Ext/fluid_styled_content/Partials/
+      10 = EXT:osp/Resources/Private/Partials/Content/
   }
   layoutRootPaths {
-      800 = EXT:osp/Resources/Private/Ext/fluid_styled_content/Layouts/
-      810 = EXT:osp/Resources/Private/Layouts/Content/
+      20 = EXT:osp/Resources/Private/Ext/fluid_styled_content/Layouts/
+      10 = EXT:osp/Resources/Private/Layouts/Content/
   }
 }
 

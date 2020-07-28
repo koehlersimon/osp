@@ -5,7 +5,7 @@
 
             <f:switch expression="{data.frame_class}">
                 <f:case value="card">
-                    <f:variable name="frameClass" value="card p-3 mb-2 "/>
+                    <f:variable name="frameClass" value="card mb-2 "/>
                 </f:case>
                 <f:defaultCase>
                     <f:variable name="frameClass" value=""/>
@@ -20,9 +20,27 @@
                     <f:render partial="DropIn/Before/All" arguments="{_all}" />
                 </f:render>
                 <f:render section="Header" optional="true">
-                    <f:render partial="Header/All" arguments="{_all}" />
+                    <f:if condition="{data.frame_class} === 'card'">
+                        <f:then>
+                            <div class="card-header">
+                                <f:render partial="Header/All" arguments="{_all}" />
+                            </div>
+                        </f:then>
+                        <f:else>
+                            <f:render partial="Header/All" arguments="{_all}" />
+                        </f:else>
+                    </f:if>
                 </f:render>
-                <f:render section="Main" optional="true" />
+                <f:if condition="{data.frame_class} === 'card'">
+                    <f:then>
+                        <div class="card-body">
+                            <f:render section="Main" optional="true" />
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <f:render section="Main" optional="true" />
+                    </f:else>
+                </f:if>
                 <f:render section="Footer" optional="true">
                     <f:render partial="Footer/All" arguments="{_all}" />
                 </f:render>

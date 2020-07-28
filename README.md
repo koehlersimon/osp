@@ -2,7 +2,8 @@
 
 The alternative Social Media application based on TYPO3, Extbase, Fluid and Bootstrap 5. All you need to run your own OSP is a web server that supports the TYPO3 CMS from version 10.4 or higher.
 
-Website: https://opensocialproject.org
+- Official Website & Demo: <strong>https://opensocialproject.org</strong>
+- Documentation: <strong>https://opensocialproject.org/docs</strong>
 
 ## What is OSP?
 
@@ -18,13 +19,16 @@ OSP uses a template that is almost 100% based on the Bootstrap 5 framework. All 
 - More freedom and individuality in the design
 - Social media and Enterprise CMS features combined
 
-## Key Features
+## OSP Features
 
-- Post editor with Markdown language
-- Personal wall
-- Frontend user management
-- Static content management
-- Based on Bootstrap 5
+- Combination of social network and CMS
+- Various custom page layouts
+- Various custom content elements
+- Basic configuration with TypoScript constants
+- Almost 100% based on brand new Bootstrap 5
+- Configurable frontend plugin for list view of posts
+- Frontend plugin for creating posts
+- Front-end plugin for post detail view
 
 ## Upcoming Features
 
@@ -32,16 +36,13 @@ OSP uses a template that is almost 100% based on the Bootstrap 5 framework. All 
 - Comment functionality
 - Friends API
 - External wall
-- User settings page
 - Static page builder
 
-## OSP on Packagist
+## For Developers
 
-https://packagist.org/packages/simonkoehler/osp#dev-master
-
-## Composer Install
-
-```composer req simonkoehler/osp```
+- Code on GitHub: https://github.com/koehlersimon/osp
+- OSP on Packagist: https://packagist.org/packages/simonkoehler/osp#dev-master
+- Composer Install: ```composer req simonkoehler/osp```
 
 ## When will OSP be officially released?
 
@@ -49,10 +50,16 @@ A first official release of OSP is planned for late August 2020. Then the extens
 
 You can download and test the extension here, but at your own risk! We ask you to refrain from feature requests as we are still in the process of integrating planned features.
 
-## Questions?
+## Questions or Issues?
 
-If you are interested in contributing or have any other questions: https://simon-koehler.com/en/contact
+If you are interested in contributing or have any other questions: https://simon-koehler.com/en/contact<br>
+Or simply open a technical issue directly on Github: https://github.com/koehlersimon/osp/issues
 
 ## Do you want to learn TYPO3? Here's what you need:
 Video Training TYPO3 9 LTS (German language)
 https://www.digistore24.com/redir/246076/GOCHILLA/
+
+## If you like it, support it!
+Developing Open Source Software costs a lot of time and effort. Your donation helps to keep developers motivated and get them a  beer or coffee from time to time ;-) Thank you som much!
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/typo3freelancer/5)

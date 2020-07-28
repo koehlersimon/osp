@@ -1,3 +1,6 @@
+{namespace textile=SIMONKOEHLER\Textile\ViewHelpers}
+{namespace post=SIMONKOEHLER\Osp\ViewHelpers}
+
 <f:for each="{posts}" as="post" >
     <f:render partial="Post/ListItem" arguments="{settings:settings,post:post,fe_user:fe_user}"/>
 </f:for>

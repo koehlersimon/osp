@@ -410,3 +410,5 @@ plugin.tx_felogin_login {
         templateRootPaths.900 = EXT:osp/Resources/Private/Ext/felogin/Templates/
     }
 }
+
+// Images lightbox

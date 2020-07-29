@@ -29,9 +29,6 @@
                       </ul>
                     </div>
                     </f:then>
-                    <f:else>
-                        <f:link.action pageUid="{settings.pages.post.detail}" action="detail" arguments="{post:post}" controller="Post" class="btn" title="Permalink"><i class="fa fa-link"></i></f:link.action>
-                    </f:else>
                 </f:security.ifAuthenticated>
             </div>
             <f:format.raw>

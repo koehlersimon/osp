@@ -108,6 +108,7 @@ plugin.tx_osp {
         }
         layout{
             disableHeader = {$plugin.tx_osp.settings.layout.disableHeader}
+            bodyClasses = {$plugin.tx_osp.settings.layout.bodyClasses}
             headerClasses = {$plugin.tx_osp.settings.layout.headerClasses}
         }
     }

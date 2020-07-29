@@ -147,6 +147,8 @@ plugin.tx_osp {
         layout{
             # cat=OSP: Layout//a; type=integer; label=Disables the "header" block of all pages
             disableHeader = 0
+            # cat=OSP: Layout//a; type=string; label=HTML Body CSS classes
+            bodyClasses = bg-light
             # cat=OSP: Layout//a; type=string; label=Header CSS classes
             headerClasses = container h-50
         }

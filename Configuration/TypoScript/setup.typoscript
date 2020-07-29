@@ -54,10 +54,18 @@ lib.contentElement {
 }
 
 page = PAGE
+page.bodyTag >
+page.bodyTagCObject = TEXT
+page.bodyTagCObject.value = {$plugin.tx_osp.settings.layout.bodyClasses}
+[frontend.user.isLoggedIn == 1]
+page.bodyTag >
+page.bodyTagCObject.data = TSFE:fe_user|user|tx_osp_body_classes
+[end]
+page.bodyTagCObject.wrap = <body class="|">
+
 page {
     typeNum = 0
     config.contentObjectExceptionHandler = 0
-    bodyTagAdd = class="{$plugin.tx_osp.settings.layout.bodyClasses}"
 
     meta {
         viewport = width=device-width, initial-scale=1
@@ -75,6 +83,9 @@ page {
 
         5 = TEXT
         5.value = <link rel="manifest" href="{$plugin.tx_osp.settings.site.absRefPrefix}manifest.json">
+
+        #6 = TEXT
+        #6.data = TSFE:fe_user|user|tx_osp_body_classes
 
         // Create page icons dynamically
         10 = COA

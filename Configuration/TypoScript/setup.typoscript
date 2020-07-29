@@ -55,9 +55,10 @@ lib.contentElement {
 
 page = PAGE
 page.bodyTag >
-page.bodyTagCObject = COA
+page.bodyTagCObject = TEXT
 page.bodyTagCObject.value = {$plugin.tx_osp.settings.layout.bodyClasses}
 [frontend.user.isLoggedIn == 1]
+page.bodyTag >
 page.bodyTagCObject.data = TSFE:fe_user|user|tx_osp_body_classes
 [end]
 page.bodyTagCObject.wrap = <body class="|">

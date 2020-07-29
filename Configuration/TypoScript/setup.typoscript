@@ -3,6 +3,7 @@
 @import 'EXT:osp/Configuration/TypoScript/Plugins/tx_osp_list.typoscript'
 @import 'EXT:osp/Configuration/TypoScript/Plugins/tx_osp_form.typoscript'
 @import 'EXT:osp/Configuration/TypoScript/Modules/tx_osp.typoscript'
+@import 'EXT:osp/Configuration/TypoScript/Modules/tx_felogin_login.typoscript'
 
 config{
     absRefPrefix = {$plugin.tx_osp.settings.site.absRefPrefix}
@@ -403,13 +404,6 @@ lib.headerImage {
 }
 
 lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines >
-
-// Set template path for Frontend Login
-plugin.tx_felogin_login {
-    view {
-        templateRootPaths.900 = EXT:osp/Resources/Private/Ext/felogin/Templates/
-    }
-}
 
 // Max gallery width 825 according to bootstrap 5 default grid size
 tt_content.image.dataProcessing.20.maxGalleryWidth = 825

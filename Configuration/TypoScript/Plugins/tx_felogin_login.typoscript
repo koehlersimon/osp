@@ -1,0 +1,6 @@
+// Set template path for Frontend Login
+plugin.tx_felogin_login {
+    view {
+        templateRootPaths.900 = EXT:osp/Resources/Private/Ext/felogin/Templates/
+    }
+}

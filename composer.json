@@ -1,7 +1,7 @@
 {
     "name": "simonkoehler/osp",
     "type": "typo3-cms-extension",
-    "version": "0.0.1",
+    "version": "0.0.5",
     "description": "The open social project for TYPO3",
     "homepage": "https://opensocialproject.org",
     "authors": [
@@ -14,7 +14,7 @@
     ],
     "license": "GPL-3.0-or-later",
     "require": {
-        "typo3/cms-core": "^9.5.17 || ^10.4.2",
+        "typo3/cms-core": "^9.5.17 || ^10.4.6",
         "simonkoehler/textile": "^1.0"
     },
     "replace": {

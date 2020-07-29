@@ -42,7 +42,9 @@
             <hr>
             <f:render partial="Post/Buttons" arguments="{_all}"/>
         </div>
+        <f:if condition="{settings.frontend.features.comment.enabled}">
         <div class="comment-container" data-form="{settings.site.absRefPrefix}?type=1140" data-comments="{settings.site.absRefPrefix}?type=1150"></div>
+        </f:if>
     </article>
 
     </f:then>

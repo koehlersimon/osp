@@ -2,20 +2,29 @@
 <f:if condition="{data.header_layout} != 100">
     <f:if condition="{data.header} || {data.subheader} || {data.date}">
         <header>
+            <f:if condition="{data.frame_class} === 'card'">
+                <f:then>
+                    <f:variable name="frame_class" value=" m-0"/>
+                </f:then>
+                <f:else>
+                    <f:variable name="frame_class" value=""/>
+                </f:else>
+            </f:if>
+
             <f:render partial="Header/Header" arguments="{
                 header: data.header,
                 layout: data.header_layout,
-                positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
+                positionClass: '{f:if(condition: data.header_position, then: \'text-{data.header_position}\')} {frame_class}',
                 link: data.header_link,
                 default: settings.defaultHeaderType}" />
             <f:render partial="Header/SubHeader" arguments="{
                 subheader: data.subheader,
                 layout: data.header_layout,
-                positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
+                positionClass: '{f:if(condition: data.header_position, then: \'text-{data.header_position}\')}',
                 default: settings.defaultHeaderType}" />
             <f:render partial="Header/Date" arguments="{
                 date: data.date,
-                positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}'}" />
+                positionClass: '{f:if(condition: data.header_position, then: \'text-{data.header_position}\')}'}" />
         </header>
     </f:if>
 </f:if>

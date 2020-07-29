@@ -1,28 +1,35 @@
+# customsubcategory=100=General Site Settings
+# customsubcategory=120=User Settings
+# customsubcategory=130=Frontend Features
+# customsubcategory=140=Main Pages
+# customsubcategory=150=Account Pages
+# customsubcategory=160=Post Pages
+
 plugin.tx_osp {
     settings{
         site{
-            # cat=OSP Site//a; type=string; label=URL prefix ('auto' will not work here, please enter at least '/')
+            # cat=OSP: Site/100/a; type=string; label=URL prefix ('auto' will not work here, please enter at least '/')
             absRefPrefix = /
-            # cat=OSP Site//a; type=string; label=Logo for navbar
+            # cat=OSP: Site/100/a; type=string; label=Logo for navbar
             navbarLogo = EXT:osp/Resources/Public/Icons/osp.svg
-            # cat=OSP Site//a; type=string; label=Copyright text
+            # cat=OSP: Site/100/a; type=string; label=Copyright text
             copyrightText = &copy; 2020 made with <a href="https://opensocialproject.org" class="link-secondary" target="_blank">OSP <i class="fa fa-link"></i></a>
-            # cat=OSP Site//a; type=string; label=Browser Theme Color
+            # cat=OSP: Site/100/a; type=string; label=Browser Theme Color
             themeColor = #ff0000
         }
         user{
             admin{
-                # cat=OSP User//a; type=string; label=Profile Picture
+                # cat=OSP: User/120/a; type=string; label=Profile Picture
                 profilePicture = fileadmin/profile/pp.jpeg
-                # cat=OSP User//a; type=string; label=Usergroup of admin users
+                # cat=OSP: User/120/a; type=string; label=Usergroup of admin users
                 usergroup =
             }
             visitor{
-                # cat=OSP User//a; type=string; label=Usergroup of visitors
+                # cat=OSP: User/120/a; type=string; label=Usergroup of visitors
                 usergroup =
             }
             external{
-                # cat=OSP User//a; type=string; label=Usergroup for external users or other OSP platforms
+                # cat=OSP: User/120/a; type=string; label=Usergroup for external users or other OSP platforms
                 usergroup =
             }
             account{
@@ -71,44 +78,44 @@ plugin.tx_osp {
             }
         }
         frontend{
-            # cat=OSP Frontend//a; type=string; label=Maximum length of post teaser text
+            # cat=OSP: Frontend//a; type=string; label=Maximum length of post teaser text
             teaserLength = 300
             features{
                 like{
-                    # cat=OSP Frontend//a; type=boolean; label=Enable LIKE function
+                    # cat=OSP: Frontend/130/a; type=boolean; label=Enable LIKE function
                     enabled = 1
                 }
                 dislike{
-                    # cat=OSP Frontend//a; type=boolean; label=Enable DISLIKE function
+                    # cat=OSP: Frontend/130/a; type=boolean; label=Enable DISLIKE function
                     enabled = 0
                 }
                 share{
-                    # cat=OSP Frontend//a; type=boolean; label=Enable SHARE function
+                    # cat=OSP: Frontend/130/a; type=boolean; label=Enable SHARE function
                     enabled = 1
                 }
                 comment{
-                    # cat=OSP Frontend//a; type=boolean; label=Enable COMMENT function
+                    # cat=OSP: Frontend/130/a; type=boolean; label=Enable COMMENT function
                     enabled = 0
                 }
             }
         }
         pages{
-            # cat=OSP Pages//a; type=string; label=Home page
+            # cat=OSP: Pages/140/a; type=string; label=Home page
             home =
-            # cat=OSP Pages//a; type=string; label=Main Wall
+            # cat=OSP: Pages/140/a; type=string; label=Main Wall
             wall =
             account{
-                # cat=OSP Pages//a; type=string; label=Page with login form
+                # cat=OSP: Pages/150/a; type=string; label=Page with login form
                 login =
-                # cat=OSP Pages//a; type=string; label=Account overview page
+                # cat=OSP: Pages/150/a; type=string; label=Account overview page
                 overview =
-                # cat=OSP Pages//a; type=string; label=Account edit page
+                # cat=OSP: Pages/150/a; type=string; label=Account edit page
                 edit =
             }
             post{
-                # cat=OSP Pages//a; type=string; label=Post Form
+                # cat=OSP: Pages/160/a; type=string; label=Post Form
                 form =
-                # cat=OSP Pages//a; type=string; label=Post Detail
+                # cat=OSP: Pages/160/a; type=string; label=Post Detail
                 detail =
             }
             types{
@@ -126,22 +133,25 @@ plugin.tx_osp {
             }
         }
         storage{
-            # cat=OSP Storage//a; type=string; label=Media Storage
+            # cat=OSP: Storage//a; type=string; label=Media Storage
             media =
-            # cat=OSP Storage//a; type=string; label=Post Storage
+            # cat=OSP: Storage//a; type=string; label=Post Storage
             posts =
-            # cat=OSP Storage//a; type=string; label=Comment Storage
+            # cat=OSP: Storage//a; type=string; label=Comment Storage
             comments =
-            # cat=OSP Storage//a; type=string; label=Likes Storage
+            # cat=OSP: Storage//a; type=string; label=Likes Storage
             likes =
-            # cat=OSP Storage//a; type=string; label=Frontend User Storage
+            # cat=OSP: Storage//a; type=string; label=Frontend User Storage
             user =
         }
         layout{
-            # cat=OSP Layout//a; type=integer; label=Disables the "header" block of all pages
+            # cat=OSP: Layout//a; type=integer; label=Disables the "header" block of all pages
             disableHeader = 0
-            # cat=OSP Layout//a; type=string; label=Header CSS classes
+            # cat=OSP: Layout//a; type=string; label=Header CSS classes
             headerClasses = container h-50
+        }
+        tracking{
+
         }
     }
 
@@ -149,11 +159,8 @@ plugin.tx_osp {
 
 plugin.tx_osp_list {
     view {
-        # cat=plugin.tx_osp_list/file; type=string; label=Path to template root (FE)
         templateRootPath = EXT:osp/Resources/Private/Templates/
-        # cat=plugin.tx_osp_list/file; type=string; label=Path to template partials (FE)
         partialRootPath = EXT:osp/Resources/Private/Partials/
-        # cat=plugin.tx_osp_list/file; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:osp/Resources/Private/Layouts/
     }
 }

@@ -1,6 +1,16 @@
 {namespace fallback=SIMONKOEHLER\Fallback\ViewHelpers}
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark {navbar-mb}">
+<f:if condition="{tx_osp_navbar_classes}">
+    <f:then>
+        <f:variable name="navbar_classes" value="{tx_osp_navbar_classes}"/>
+    </f:then>
+    <f:else>
+        <f:variable name="navbar_classes" value="navbar-expand-lg navbar-dark bg-dark"/>
+    </f:else>
+</f:if>
+
+
+<nav class="navbar {navbar_classes} {f:if(condition:'{menu.active} === 1', then:'active')} {navbar-mb}">
   <div class="container-md">
     <f:link.page pageUid="{site.rootPageId}" class="navbar-brand mr-auto">
         <f:if condition="{settings.site.navbarLogo}">

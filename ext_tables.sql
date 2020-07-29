@@ -96,6 +96,7 @@ CREATE TABLE fe_users (
 	tx_osp_header_image int(11) unsigned DEFAULT '0' NOT NULL,
 	tx_osp_custom_css text,
 	tx_osp_body_classes varchar(255) DEFAULT '' NOT NULL,
+	tx_osp_navbar_classes varchar(255) DEFAULT '' NOT NULL,
 );
 
 CREATE TABLE tt_content (

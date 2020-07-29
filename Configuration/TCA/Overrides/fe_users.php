@@ -28,6 +28,14 @@ $temporaryColumns = [
                 'size' => '40'
             ]
         ],
+        'tx_osp_navbar_classes' => [
+            'exclude' => 0,
+            'label' => 'Overwrite CSS classes of the navbar tag',
+            'config' => [
+                'type' => 'input',
+                'size' => '40'
+            ]
+        ],
         'tx_osp_header_image' => [
             'exclude' => true,
             'label' => 'Header Image',
@@ -89,7 +97,7 @@ $temporaryColumns = [
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'fe_users',
-        '--div--;OSP Settings,tx_osp_header_image,tx_osp_url,tx_osp_apikey,tx_osp_custom_css,tx_osp_body_classes',
+        '--div--;OSP Settings,tx_osp_header_image,tx_osp_url,tx_osp_apikey,tx_osp_custom_css,tx_osp_body_classes,tx_osp_navbar_classes',
         '',
         'after:image'
 );

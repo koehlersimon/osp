@@ -411,4 +411,5 @@ plugin.tx_felogin_login {
     }
 }
 
-// Images lightbox
+// Max gallery width 825 according to bootstrap 5 default grid size
+tt_content.image.dataProcessing.20.maxGalleryWidth = 825

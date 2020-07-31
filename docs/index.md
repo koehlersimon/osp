@@ -1,8 +1,14 @@
-Welcome to OSP Docs
+Official Documentation OSP
 ==========================
 
-.. toctree::
-   :glob:
-   :maxdepth: 2
+The documentation for: https://opensocialproject.org
 
-   Configuration/Index
+Support
+-------
+
+https://simon-koehler.com/en/contact
+
+License
+-------
+
+Copyright opensocialproject.com

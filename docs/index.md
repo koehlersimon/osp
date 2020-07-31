@@ -1,5 +1,3 @@
-.. include:: Includes.txt
-
 ==============
 Official Documentation OSP
 ==============
@@ -7,4 +5,5 @@ Official Documentation OSP
 .. toctree::
    :glob:
 
+   Installation/Index
    Configuration/Index

@@ -5,46 +5,50 @@
 
 .. _start:
 
-=============================================================
-osp
-=============================================================
+===========================================
+Documentation for ext:osp
+===========================================
 
-.. only:: html
+:Extension:    `osp <https://extensions.typo3.org/extension/osp/>`_
+               for TYPO3
 
-	:Classification:
-		osp
+:Version:      |release|
 
-	:Version:
-		|release|
+:Description:
+	OSP is a free Social Media Software, based on TYPO3
 
-	:Language:
-		en
+:Keywords:
+    TYPO3, Extensions, News, news comments, comments, blog, blog comments, comment
 
-	:Keywords:
-		osp
+:Author:       Simon Köhler [TYPO3 Freelancer] <info@simon-koehler.com>
 
-	:Copyright:
-		2020
+:Company:
+   [TYPO3 Freelancer] https://simon-koehler.com/en
 
-	:Author:
-		Simon Köhler
+:License:
+   |cc-license| This work is licensed under a
+   `Creative Commons Attribution 4.0 International License
+   <http://creativecommons.org/licenses/by/4.0/>`_.
 
-	:License:
-		This document is published under the Open Content License
-		available from http://www.opencontent.org/opl.shtml
+:Context:
+   The content of this document is related to TYPO3, a GNU/GPL CMS framework
+   available from https://typo3.org/.
 
-	:Rendered:
-		|today|
+:Repository:   https://github.com/koehlersimon/osp
 
-	The content of this document is related to TYPO3,
-	a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`_.
+:Contribute:   Please `report issues at Github
+               <https://github.com/koehlersimon/osp/issues>`__.
+
+:Rendered:     |today|
 
 
-	**Table of Contents**
+.. |cc-license| image:: license.png
+                :alt: alt="Creative Commons License"
+                :target: http://creativecommons.org/licenses/by/4.0/
+
 
 .. toctree::
-	:maxdepth: 3
-	:titlesonly:
-	:glob:
+    :hidden:
 
-	Introduction/Index
+    Documentation
+    Support

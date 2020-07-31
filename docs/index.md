@@ -1,6 +1,5 @@
-==============
 Official Documentation OSP
-==============
+==========================
 
 .. toctree::
    :glob:

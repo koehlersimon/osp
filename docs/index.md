@@ -1,14 +1,10 @@
+.. include:: Includes.txt
+
+==============
 Official Documentation OSP
-==========================
+==============
 
-The documentation for: https://opensocialproject.org
+.. toctree::
+   :glob:
 
-Support
--------
-
-https://simon-koehler.com/en/contact
-
-License
--------
-
-Copyright opensocialproject.com
+   Configuration/Index

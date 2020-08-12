@@ -1,0 +1,25 @@
+.widget-identifier-widgets-frontendUser{
+    border-radius: 20px;
+    background-color: #2b2b2b;
+    box-shadow: 0 10px 10px 10px rgba(0,0,0,.15);
+    color: #ccc;
+}
+
+.widget-identifier-widgets-frontendUser .widget-content-title{
+    color: #fff;
+    background-color: #2b2b2b;
+    border-bottom: 1px solid #000;
+}
+
+.widget-identifier-widgets-frontendUser .widget-content-main{
+    border-top: 1px solid #666;
+}
+
+.widget-identifier-widgets-frontendUser .table{
+    background-color: #333 !important;
+}
+
+.widget-identifier-widgets-frontendUser .table th,
+.widget-identifier-widgets-frontendUser .table td{
+    border-color: #666 !important;
+}

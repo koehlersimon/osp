@@ -83,5 +83,17 @@ call_user_func(
         // Hook into the page module
         $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/db_layout.php']['drawHeaderHook']['osp'] = \SIMONKOEHLER\Osp\Hook\PageHook::class . '->render';
 
+        // Add TypoScript Setup for tx_dashboard module directly from here
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+            '
+            module.tx_dashboard {
+                view {
+                    templateRootPaths.2325235 = EXT:osp/Resources/Private/Templates/
+                    partialRootPaths.2325235 = EXT:osp/Resources/Private/Partials/
+                    layoutRootPaths.2325235 = EXT:osp/Resources/Private/Layouts/
+                }
+            }'
+        );
+
     }
 );

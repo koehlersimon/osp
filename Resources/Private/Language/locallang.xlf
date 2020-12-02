@@ -95,6 +95,9 @@
 			<trans-unit id="account.overview.email">
 				<source>Email</source>
 			</trans-unit>
+			<trans-unit id="account.overview.phone">
+				<source>Phone</source>
+			</trans-unit>
 			<trans-unit id="account.overview.edit_account">
 				<source>Edit account</source>
 			</trans-unit>

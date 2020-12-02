@@ -3,7 +3,7 @@
         <img src="{f:uri.image(image: fe_user.image.0)}" alt="{fe_user.username}" width="50" height="50" class="rounded-circle mr-3 mb-3">
     </f:if>
     <div class="mr-auto text-right text-md-left">
-        <h3 class="m-0">{fe_user.title} {fe_user.name}</h3>
+        <h3 class="m-0">{fe_user.title} {fe_user.first_name} {fe_user.middle_name} {fe_user.last_name}</h3>
         <small><f:translate key="account.overview.member_since"/>: <strong><f:format.date format="d.m.Y / H:i">{fe_user_array.crdate}</f:format.date></strong></small><br>
     </div>
 </div>

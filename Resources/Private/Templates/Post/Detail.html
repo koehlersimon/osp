@@ -32,9 +32,7 @@
                 </f:security.ifAuthenticated>
             </div>
             <f:format.raw>
-                <f:format.crop maxCharacters="{settings.frontend.teaserLength}" append="... <a href='{f:uri.action(action:'detail',controller:'Post',pageUid:'{settings.pages.post.detail}',arguments:'{post:post}')}' class=\"link-info\">more</a>">
-                    <textile:parse content="{post.content}" defaultLabel="<i class='fa fa-link'></i>"/>
-                </f:format.crop>
+                <textile:parse content="{post.content}" defaultLabel="<i class='fa fa-link'></i>"/>
             </f:format.raw>
             <f:if condition="{post.media}">
                 <f:render partial="Post/Media" arguments="{media:post.media}"/>

@@ -30,6 +30,14 @@
         </td>
     </tr>
     <tr>
+        <th><f:translate key="account.overview.phone"/></th>
+        <td>
+            <f:if condition="{fe_user.phone}">
+                {fe_user.phone}
+            </f:if>
+        </td>
+    </tr>
+    <tr>
         <th>Address</th>
         <td>
             <f:if condition="{fe_user.address}">

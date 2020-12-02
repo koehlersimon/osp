@@ -15,14 +15,14 @@
             </ul>
             </f:comment>
             <div class="btn-group">
-            <f:form.radio name="privacy" value="0" class="btn-check" id="privacy-1" />
-            <label class="btn btn-outline-secondary" for="privacy-1"><i class="fa fa-globe"></i></label>
-            <f:form.radio name="privacy" value="1" class="btn-check" id="privacy-2" />
-            <label class="btn btn-outline-secondary" for="privacy-2"><i class="fa fa-lock"></i></label>
+                <f:form.radio name="privacy" value="0" class="btn-check" id="privacy-1" />
+                <label class="btn btn-outline-secondary" for="privacy-1" title="post public"><i class="fa fa-globe"></i></label>
+                <f:form.radio name="privacy" value="1" class="btn-check" id="privacy-2" />
+                <label class="btn btn-outline-secondary" for="privacy-2" title="post private"><i class="fa fa-lock"></i></label>
             </div>
         </div>
         <div class="col">
-            <button id="postSubmit" type="submit" class="btn btn-block btn-secondary" disabled><i class="fa fa-angle-right"></i> {f:translate(key:'fe.post.form.send_btn_label')}</button>
+            <button id="postSubmit" type="submit" class="btn btn-block btn-primary" disabled><i class="fa fa-check-circle"></i> {f:translate(key:'fe.post.form.send_btn_label')}</button>
         </div>
     </div>
 
